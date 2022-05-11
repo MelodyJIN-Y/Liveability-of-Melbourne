@@ -1,0 +1,102 @@
+{% extends 'sidebar.html' %}
+
+
+{% block content %}
+
+<!-- aurin map here -->
+<div style="height: 50%; width: 50%; margin-left: auto; margin-right: auto">
+    <canvas id="myChart2"></canvas> 
+</div>
+
+<!-- tweet map here -->
+<div style="height: 50%; width: 50%; margin-left: auto; margin-right: auto">
+    <canvas id="myChart"></canvas> 
+</div>
+
+
+<script>
+    // 
+    const geoUrl = '../static/health_num_tweets_topo.json';
+    fetch(geoUrl).then((result) => result.json()).then((datapoint) =>{
+        const lgas = ChartGeo.topojson.feature(datapoint, datapoint.objects.health_num_tweets).features;
+
+        console.log(lgas.map(lga_name => lga_name.properties.vic_lga__3));
+        const data = {
+            labels: lgas.map(lga_name => lga_name.properties.vic_lga__3),
+            datasets: [
+                    {
+                    label: "lgas",
+                    outline: lgas,
+                    data: lgas.map(lga_name => ({feature: lga_name, value: lga_name.properties.positive})),
+                    }
+            ]       
+        };
+
+         const config = {
+            type: 'choropleth',
+            data: data,
+            
+            options: {
+                //showOutline: true,
+                scales: {
+                    xy: {
+                            projection: 'equalEarth'
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                            display: true,
+                            text: 'Number of tweets about environment'
+                        }
+                }
+            }
+        }
+
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+        const myChart2 = new Chart(
+            document.getElementById('myChart2'),
+            config
+        );
+    })
+
+
+
+
+
+
+
+
+    // // config the graph
+    // const config2 = {
+    //     type: 'choropleth',
+    //     data: data2,
+    //     options: {
+    //         //showOutline: true,
+    //         scales: {
+    //             xy: {
+    //                 projection: 'equalEarth'
+    //             }
+    //         },
+    //         plugins: {
+    //             legend: {
+    //                 display: false
+    //             },
+    //             title: {
+    //                     display: true,
+    //                     text: 'Melbourne waste recycling data'
+    //                 }
+    //         }
+    //     }
+    // };
+
+    
+</script>
+
+
+{% endblock %}

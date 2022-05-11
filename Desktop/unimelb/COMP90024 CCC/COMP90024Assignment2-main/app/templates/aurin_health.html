@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta chartset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1">
+        <title> AURIN Health Data</title>
+        <style type="text/css">
+            .chartBox {
+                max-width: 1000px;
+            }
+            .buttonBox {
+                max-width: 400px;
+            }
+            .buttonBox ul {
+                display: flex;
+            }
+            .buttonBox ul li {
+                list-style: none;
+            }
+            .btn {
+                border-radius: 20ox;
+                text-decoration: none;
+                padding: 5px 10px;
+                margin-right: 5px
+            }
+            .btn .red{
+                background: 'rgba(255, 99, 132, 0.2)';
+            }
+            .btn .blue{
+                background: 'rgba(99, 99, 255, 1)';
+            }
+            .btn .green{
+                background: 'rgba(99, 255, 99, 1)';
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- chart 1 cancer rate ratio data -->
+        <div class="chartbox">
+            <canvas id="myChart"></canvas>>
+            <button onclick="updateChart('allCancerRatio')"> Fetch Data Now!!</button>
+        </div>
+        
+        <div class="buttonBox">
+            <ul>
+                <li><a href="#" class="btn red" onclick="updateChart('allCancerRatio')">all</a></li>
+                <li><a href="#" class="btn blue"onclick="updateChart('leukaemiaRatio')">leukaemia</a></li>
+                <li><a href="#" class="btn green"onclick="updateChart('lymphomaRatio')">lymphoma</a></li>
+                <li><a href="#" class="btn red" onclick="updateChart('pancreasRatio')">pancreas</a></li>
+                <li><a href="#" class="btn blue"onclick="updateChart('lungRatio')">lung</a></li>
+                <li><a href="#" class="btn green"onclick="updateChart('colortlRatio')">colortl</a></li>
+
+            </ul>>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"></script>
+
+        <script>
+            function updateChart(cancerName) {
+                    const datapoints = {{ cancer_ratio_json|safe }};
+                    const location = datapoints.map(item => item.doc.gccsa_name);
+                    const dataTodisplay = [];
+                    if (cancerName == 'allCancerRatio') {
+                        const dataTodisplay = datapoints.map(item => item.doc.all_cancs_combined_rt_ratio);
+                        myChart.config.data.labels = location;
+                        myChart.config.data.datasets[0].data = dataTodisplay;
+                        myChart.config.data.datasets[0].backgroundColor = 'rgba(255, 99, 132, 0.2)';
+                        myChart.config.data.datasets[0].label = cancerName;
+                        myChart.update();
+
+                    }
+                    if (cancerName == 'leukaemiaRatio') {
+                        const dataTodisplay = datapoints.map(item => item.doc.leukaemia_c91_c95_rt_ratio);
+                        myChart.config.data.labels = location;
+                        myChart.config.data.datasets[0].data = dataTodisplay;
+                        myChart.config.data.datasets[0].backgroundColor = 'rgba(99, 99, 255, 1)';
+                        myChart.config.data.datasets[0].label = cancerName;
+                        myChart.update();
+                    }
+
+                    if (cancerName == 'lymphomaRatio') {
+                        const dataTodisplay = datapoints.map(item => item.doc.lymphoma_c81_c86_rt_ratio);
+                        myChart.config.data.labels = location;
+                        myChart.config.data.datasets[0].data = dataTodisplay;
+                        myChart.config.data.datasets[0].backgroundColor = 'rgba(99, 255, 99, 1)';
+                        myChart.config.data.datasets[0].label = cancerName;
+                        myChart.update();
+                    }
+
+                    if (cancerName == 'pancreasRatio') {
+                        const dataTodisplay = datapoints.map(item => item.doc.pancreas_c25_rt_ratio);
+                        myChart.config.data.labels = location;
+                        myChart.config.data.datasets[0].data = dataTodisplay;
+                        myChart.config.data.datasets[0].backgroundColor = 'rgba(255, 99, 132, 0.2)';
+                        myChart.config.data.datasets[0].label = cancerName;
+                        myChart.update();
+                    }
+
+                    if (cancerName == 'lungRatio') {
+                        const dataTodisplay = datapoints.map(item => item.doc.lung_c33_c34_rt_ratio);
+                        myChart.config.data.labels = location;
+                        myChart.config.data.datasets[0].data = dataTodisplay;
+                        myChart.config.data.datasets[0].backgroundColor = 'rgba(99, 99, 255, 1)';
+                        myChart.config.data.datasets[0].label = cancerName;
+                        myChart.update();
+                    }
+                    
+                    if (cancerName == 'colortlRatio') {
+                        const dataTodisplay = datapoints.map(item => item.doc.colortl_c18_c20_rt_ratio);
+                        myChart.config.data.labels = location;
+                        myChart.config.data.datasets[0].data = dataTodisplay;
+                        myChart.config.data.datasets[0].backgroundColor = 'rgba(99, 255, 99, 1)';
+                        myChart.config.data.datasets[0].label = cancerName;
+                        myChart.update();
+                    }
+                
+            }  
+            const ctx = document.getElementById('myChart');
+
+            const data = {
+                labels:[],
+                datasets: [{
+                    label:'All cancer Ratio',
+                    data: [],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }
+                ]
+            };
+
+            const horizontalDottedLine = {
+                id: 'horizontalDottedLine',
+                beforeDatasetsDraw(chart, args, options) {
+                    const { ctx, chartArea:{top, right, bottom, left, width, height},
+                        scales: {x,y}} = chart;
+                    ctx.save();
+                    ctx.strokeStyle = 'red';
+                    ctx.setLineDash([50,25]);
+                    ctx.strokeRect(left, y.getPixelForValue(1), width, 0);
+                    ctx.restore();    
+                }
+            }
+
+                // config
+            const config = {
+                type: 'bar',
+                data: data,
+                
+                options:{
+                    plugins: {
+                        title: {
+                                display: true,
+                                text: 'Cancer rate ratio between greater cities'
+                            }
+                    }
+                },
+                plugins: [horizontalDottedLine]
+            };
+
+            const myChart = new Chart(
+                ctx,
+                config
+            );
+        </script>
+
+        <!-- chart 2 essential services -->
+        <div class="chartbox">
+            <canvas id="myChart1"></canvas>>
+            <button onclick="updateChart1('access_to_hospital')"> Fetch Data Now!!</button>
+        </div>
+        <!--install dependency for chartgeo-->>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs"></script>
+        <script type="text/javascript" src="https://unpkg.com/chartjs-chart-geo@3.5.2/build/index.umd.min.js"></script>
+        <div class="buttonBox">
+            <ul>
+                <li><a href="#" class="btn red" onclick="updateChart1('access_to_hospital')">hospital services</a></li>
+                <li><a href="#" class="btn blue"onclick="updateChart1('access_to_gp')">gp services</a></li>
+
+            </ul>
+        </div>
+        <script>
+        const geoUrl = '../static/melbourne_shape_topo.json';
+        
+        function updateChart1(info) {
+                
+
+                    const datapoints = {{ essential_json|safe }};
+
+
+                // read data files
+                    const objArray = [];
+                    // convert lga names
+                    for (let i = 0; i < datapoints.length; i++) {
+                        const tempArray1 = datapoints[i].doc.lga_name.split(" ", 6);
+                        const tempArray2 = [];
+                        
+                        for (let j = 0; j < tempArray1.length; j++) {
+                            if (tempArray1[j] != '') {
+                                tempArray2.push(tempArray1[j]);
+                            }
+                        }
+                        
+                        if (tempArray2.length == 2) {
+                            datapoints[i].doc.lga_name = tempArray2[0].toUpperCase();
+                        }
+                        
+                        if (tempArray2.length == 3) {
+                            datapoints[i].doc.lga_name = tempArray2[0].toUpperCase() + ' ' + tempArray2[1].toUpperCase();
+                        }
+                        objArray.push(datapoints[i].doc);
+                    }
+
+                    // read map data
+                    fetch(geoUrl).then((result) => result.json()).then((datapoint) => {
+                    const lgas = ChartGeo.topojson.feature(datapoint, datapoint.objects.melbourne_shape).features;
+                    
+                    // filter the data
+                    const filtered_array = [];
+
+                    for (let i = 0; i < objArray.length; i++) {
+                        if (lgas.map(lga => lga.properties.vic_lga__3).includes(objArray[i].lga_name)) {
+                            filtered_array.push(objArray[i]);
+                        }
+                    }
+                    // get sorted data array
+                    const data_array = [];
+                    for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++){
+                        for (let j = 0; j < filtered_array.length; j++) {
+                            if (filtered_array[j].lga_name == lgas.map(lga => lga.properties.vic_lga__3)[i]) {
+                                data_array.push(filtered_array[j]);
+                            }
+                        }
+                    }
+
+                     //fill the data in sorted array in to the map
+                    if (info == 'access_to_hospital') {
+                        for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++) {
+                            lgas[i].properties.vic_lga__1 = data_array[i].hs_meas;
+                        }
+                        myChart1.config.data.datasets[0].data = lgas.map(lga => ({feature: lga, value: lga.properties.vic_lga__1}));
+                        myChart1.config.data.datasets[0].label = info;
+                        myChart1.config.data.datasets[0].outline = lgas;
+                        myChart1.config.data.labels = lgas.map(lga => lga.properties.vic_lga__3);
+                        myChart1.update();
+                        
+                    }
+
+                    if (info == 'access_to_gp') {
+                        for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++) {
+                            lgas[i].properties.vic_lga__1 = data_array[i].gpsrv_meas;
+                        }
+                        myChart1.config.data.datasets[0].data = lgas.map(lga => ({feature: lga, value: lga.properties.vic_lga__1}));
+                        myChart1.config.data.datasets[0].label = info;
+                        myChart1.config.data.datasets[0].outline = lgas;
+                        myChart1.config.data.labels = lgas.map(lga => lga.properties.vic_lga__3);
+                        myChart1.update();
+                
+                    }
+                })
+            }
+            const ctx1 = document.getElementById('myChart1');
+            const data1 = {
+                labels: [],
+                datasets: [
+                        {
+                        label: "",
+                        outline: false,
+                        data:[],
+                        }
+                        ]       
+                        };
+            
+            // config the graph
+            const config1 = {
+                type: 'choropleth',
+                data: data1,
+                options: {
+                    //showOutline: true,
+                    scales: {
+                        xy: {
+                            projection: 'equalEarth'
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                                display: true,
+                                text: 'Infraustracture and essential serivice data'
+                            }
+                    }
+                }
+            };
+
+            const myChart1 = new Chart(
+                ctx1,
+                config1
+            );
+            
+        </script>
+
+        <!-- chart 3 gp data -->
+        <div class="chartbox">
+            <canvas id="myChart2"></canvas>>
+            <button onclick="updateChart2('ppl_who_attended_a_gp_perc')"> Fetch Data Now!!</button>
+        </div>
+        <!--install dependency for chartgeo-->>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs"></script>
+        <script type="text/javascript" src="https://unpkg.com/chartjs-chart-geo@3.5.2/build/index.umd.min.js"></script>
+        <div class="buttonBox">
+            <ul>
+                <li><a href="#" class="btn red" onclick="updateChart2('specialist_attendances_bulk_billed_perc')">specialty services bulk billed</a></li>
+                <li><a href="#" class="btn blue"onclick="updateChart2('gp_attendances_bulk_billed_perc')">gp services bulk billed</a></li>
+                <li><a href="#" class="btn blue"onclick="updateChart2('ppl_who_attended_a_gp_perc')">population bulk billed</a></li>
+            </ul>
+        </div>
+        <script>
+        //const geoUrl = '../static/melbourne_shape_topo.json';
+        
+        function updateChart2(info) {
+                
+                    const datapoints = {{ gp_hospital_json|safe }};
+                    const objArray1 = [];
+                    // convert lga names
+                    for (let i = 0; i < datapoints.length; i++) {
+                        const tempArray1 = datapoints[i].doc.lga_name.split(" ", 6);
+                        const tempArray2 = [];
+                        
+                        for (let j = 0; j < tempArray1.length; j++) {
+                            if (tempArray1[j] != '') {
+                                tempArray2.push(tempArray1[j]);
+                            }
+                        }
+                        
+                        if (tempArray2.length == 2) {
+                            datapoints[i].doc.lga_name = tempArray2[0].toUpperCase();
+                        }
+                        
+                        if (tempArray2.length == 3) {
+                            datapoints[i].doc.lga_name = tempArray2[0].toUpperCase() + ' ' + tempArray2[1].toUpperCase();
+                        }
+                        objArray1.push(datapoints[i].doc);
+                    }
+
+                    // read map data
+                    fetch(geoUrl).then((result) => result.json()).then((datapoint) => {
+                    const lgas = ChartGeo.topojson.feature(datapoint, datapoint.objects.melbourne_shape).features;
+                    
+                    // filter the data
+                    const filtered_array = [];
+
+                    for (let i = 0; i < objArray1.length; i++) {
+                        if (lgas.map(lga => lga.properties.vic_lga__3).includes(objArray1[i].lga_name)) {
+                            filtered_array.push(objArray1[i]);
+                        }
+                    }
+                    // get sorted data array
+                    const data_array = [];
+                    for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++){
+                        for (let j = 0; j < filtered_array.length; j++) {
+                            if (filtered_array[j].lga_name == lgas.map(lga => lga.properties.vic_lga__3)[i]) {
+                                data_array.push(filtered_array[j]);
+                            }
+                        }
+                    }
+
+                     //fill the data in sorted array in to the map
+                    if (info == 'specialist_attendances_bulk_billed_perc') {
+                        for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++) {
+                            lgas[i].properties.vic_lga__1 = data_array[i].specialist_attendances_bulk_billed_perc;
+                        }
+                        myChart2.config.data.datasets[0].data = lgas.map(lga => ({feature: lga, value: lga.properties.vic_lga__1}));
+                        myChart2.config.data.datasets[0].label = info;
+                        myChart2.config.data.datasets[0].outline = lgas;
+                        myChart2.config.data.labels = lgas.map(lga => lga.properties.vic_lga__3);
+                        myChart2.update();
+                        
+                    }
+
+                    if (info == 'gp_attendances_bulk_billed_perc') {
+                        for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++) {
+                            lgas[i].properties.vic_lga__1 = data_array[i].gp_attendances_bulk_billed_perc;
+                        }
+                        myChart2.config.data.datasets[0].data = lgas.map(lga => ({feature: lga, value: lga.properties.vic_lga__1}));
+                        myChart2.config.data.datasets[0].label = info;
+                        myChart2.config.data.datasets[0].outline = lgas;
+                        myChart2.config.data.labels = lgas.map(lga => lga.properties.vic_lga__3);
+                        myChart2.update();
+                
+                    }
+
+                    if (info == 'ppl_who_attended_a_gp_perc') {
+                        for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++) {
+                            lgas[i].properties.vic_lga__1 = data_array[i].ppl_who_attended_a_gp_perc;
+                        }
+                        myChart2.config.data.datasets[0].data = lgas.map(lga => ({feature: lga, value: lga.properties.vic_lga__1}));
+                        myChart2.config.data.datasets[0].label = info;
+                        myChart2.config.data.datasets[0].outline = lgas;
+                        myChart2.config.data.labels = lgas.map(lga => lga.properties.vic_lga__3);
+                        myChart2.update();
+                
+                    }
+                })
+            }
+            const ctx2 = document.getElementById('myChart2');
+            const data2 = {
+                labels: [],
+                datasets: [
+                        {
+                        label: "",
+                        outline: false,
+                        data:[],
+                        }
+                        ]       
+                        };
+            
+            // config the graph
+            const config2 = {
+                type: 'choropleth',
+                data: data2,
+                options: {
+                    //showOutline: true,
+                    scales: {
+                        xy: {
+                            projection: 'equalEarth'
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                                display: true,
+                                text: 'bulk billed specialty and gp services data (%)'
+                            }
+                    }
+                }
+            };
+
+            const myChart2 = new Chart(
+                ctx2,
+                config2
+            );
+        </script>
+
+        <!-- chart 4 median age -->
+        <div class="chartbox">
+            <canvas id="myChart3"></canvas>>
+            <button onclick="updateChart3('median_age_at_death_of_persons_2014_to_2018_median_age_years')"> Fetch Data Now!!</button>
+        </div>
+        <!--install dependency for chartgeo-->>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs"></script>
+        <script type="text/javascript" src="https://unpkg.com/chartjs-chart-geo@3.5.2/build/index.umd.min.js"></script>
+        <script>
+        function updateChart3(info) {
+                    const datapoints = {{ median_age_json|safe }};
+                    const objArray2 = [];
+                    // convert lga names
+                    for (let i = 0; i < datapoints.length; i++) {
+                        const tempArray1 = datapoints[i].doc.lga_name.split(" ", 6);
+                        const tempArray2 = [];
+                        
+                        for (let j = 0; j < tempArray1.length; j++) {
+                            if (tempArray1[j] != '') {
+                                tempArray2.push(tempArray1[j]);
+                            }
+                        }
+                        if (tempArray2.length == 2) {
+                            datapoints[i].doc.lga_name = tempArray2[0].toUpperCase();
+                        }
+                        
+                        if (tempArray2.length == 3) {
+                            datapoints[i].doc.lga_name = tempArray2[0].toUpperCase() + ' ' + tempArray2[1].toUpperCase();
+                        }
+                        objArray2.push(datapoints[i].doc);
+                    }
+
+                    // read map data
+                    fetch(geoUrl).then((result) => result.json()).then((datapoint) => {
+                    const lgas = ChartGeo.topojson.feature(datapoint, datapoint.objects.melbourne_shape).features;
+                    
+                    // filter the data
+                    const filtered_array = [];
+
+                    for (let i = 0; i < objArray2.length; i++) {
+                        if (lgas.map(lga => lga.properties.vic_lga__3).includes(objArray2[i].lga_name)) {
+                            filtered_array.push(objArray2[i]);
+                        }
+                    }
+                    // get sorted data array
+                    const data_array = [];
+                    for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++){
+                        for (let j = 0; j < filtered_array.length; j++) {
+                            if (filtered_array[j].lga_name == lgas.map(lga => lga.properties.vic_lga__3)[i]) {
+                                data_array.push(filtered_array[j]);
+                            }
+                        }
+                    }
+
+                     //fill the data in sorted array in to the map
+                    if (info == 'median_age_at_death_of_persons_2014_to_2018_median_age_years') {
+                        for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++) {
+                            lgas[i].properties.vic_lga__1 = data_array[i].median_age_at_death_of_persons_2014_to_2018_median_age_years;
+                        }
+                        myChart3.config.data.datasets[0].data = lgas.map(lga => ({feature: lga, value: lga.properties.vic_lga__1}));
+                        myChart3.config.data.datasets[0].label = info;
+                        myChart3.config.data.datasets[0].outline = lgas;
+                        myChart3.config.data.labels = lgas.map(lga => lga.properties.vic_lga__3);
+                        myChart3.update();
+                        
+                    }
+                })
+
+            }
+            const ctx3 = document.getElementById('myChart3');
+            const data3 = {
+                labels: [],
+                datasets: [
+                        {
+                        label: "",
+                        outline: false,
+                        data:[],
+                        }
+                        ]       
+                        };
+            
+            // config the graph
+            const config3 = {
+                type: 'choropleth',
+                data: data3,
+                options: {
+                    //showOutline: true,
+                    scales: {
+                        xy: {
+                            projection: 'equalEarth'
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                                display: true,
+                                text: 'median age between 2014 and 2018'
+                            }
+                    }
+                }
+            };
+            const myChart3 = new Chart(
+                ctx3,
+                config3
+            );
+
+
+        </script>
+    </body>>
+</html>>
+
+            

@@ -1,0 +1,468 @@
+{% extends 'sidebar.html' %}
+
+{% block content %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta chartset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1">
+        <title> AURIN Environment Data</title>
+
+        <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin=""
+        />
+
+        <script
+        src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+        crossorigin=""
+        ></script>
+
+        <style>
+            #issMap {
+              height: 800px;
+              width: 1000px;
+            }
+        </style>
+
+        <style type="text/css">
+            .chartBox {
+                max-width: 1000px;
+
+            }
+            .buttonBox {
+                max-width: 400px;
+            }
+            .buttonBox ul {
+                display: flex;
+            }
+            .buttonBox ul li {
+                list-style: none;
+            }
+            .btn {
+                border-radius: 20ox;
+                text-decoration: none;
+                padding: 5px 10px;
+                margin-right: 5px
+            }
+        </style>
+    </head>
+    <body>
+            <!-- chart 1-->
+        <div class="chartbox">
+            <canvas id="myChart"></canvas>>
+            <button onclick="updateChart()"> Fetch Data Now!!</button>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"></script>
+        <script type="text/javascript">
+
+            
+            function updateChart() {
+                const datapoints = {{ air_pollute_json|safe }};
+                    // read x-axis
+                const time = datapoints.map(item => item.doc.report_year).reverse();
+                    
+                    // read y-axis
+                const allData = datapoints.map(item => item.doc.air_total_emission_kg).reverse();
+                myChart.config.data.labels = time;
+                myChart.config.data.datasets[0].data = allData;
+                myChart.config.data.datasets[0].backgroundColor = 'rgba(255, 99, 132, 0.2)';
+                myChart.update();
+            }    
+            const ctx = document.getElementById('myChart');
+
+            const data = {
+                labels:[],
+                datasets: [{
+                    label:'emssion in kg',
+                    data: [],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }
+                ]
+            };
+                // config
+            const config = {
+                type: 'line',
+                data: data,
+                options:{
+                    scales: {
+                        y:{
+                            beginAtZero: true,
+                            display: true,
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Air total emission of PAPER AUSTRALIA PTY LTD'
+                        }           
+                    }         
+                }
+            };
+            const myChart = new Chart(
+                ctx,
+                config
+            );
+        </script>
+
+            <!-- chart 2 -->
+        <div class="chartbox">
+            <canvas id="myChart1"></canvas>>
+            <button onclick="updateChart1('maxTemp in degree')"> Fetch Data Now!!</button>
+        </div>
+        
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"></script>
+
+        <div class="buttonBox">
+            <ul>
+                <li><a href="#" class="btn red" onclick="updateChart1('maxTemp in degree')">Max Temperature</a></li>
+                <li><a href="#" class="btn blue"onclick="updateChart1('minTemp in degree')">Min Temperature</a></li>
+                <li><a href="#" class="btn green"onclick="updateChart1('sunshine in hour')">Sunshine</a></li>
+                <li><a href="#" class="btn red" onclick="updateChart1('rainfall in mm')">Rainfall</a></li>
+            </ul>>
+        </div>
+
+        <script>
+            function updateChart1(info) {
+                    const datapoints = {{ weather_climate_json|safe }};
+                    const objArray = [];
+                    // push to an array
+                    for (let i = 0; i < datapoints.length; i++) {
+                        objArray.push(datapoints[i]);
+                    }
+
+                    // sort by time
+                    objArray.sort(function (a, b) {
+                        return a.doc.Date.localeCompare(b.doc.Date);
+                    });
+                    // read x-axis
+                    const time = [];
+                    for (let i = 0; i < datapoints.length; i++) {
+                        time.push(objArray[i].doc.Date);
+                    }
+                    // read y-axis
+                    if (info == 'maxTemp in degree') {
+                        const dataSet = [];
+                        for (let i = 0; i < datapoints.length; i++) {
+                            dataSet.push(objArray[i].doc.maxTemp);
+                        }
+                        myChart1.config.data.labels = time;
+                        myChart1.config.data.datasets[0].data = dataSet;
+                        myChart1.config.data.datasets[0].label = info;
+                        myChart1.update();
+                    }
+
+                    if (info == 'minTemp in degree') {
+                        const dataSet = [];
+                        for (let i = 0; i < datapoints.length; i++) {
+                            dataSet.push(objArray[i].doc.minTemp);
+                        }
+                        myChart1.config.data.labels = time;
+                        myChart1.config.data.datasets[0].data = dataSet;
+                        myChart1.config.data.datasets[0].label = info;
+                        myChart1.update();
+                    }
+
+                    if (info == 'sunshine in hour') {
+                        const dataSet = [];
+                        for (let i = 0; i < datapoints.length; i++) {
+                            dataSet.push(objArray[i].doc.sunshine);
+                        }
+                        myChart1.config.data.labels = time;
+                        myChart1.config.data.datasets[0].data = dataSet;
+                        myChart1.config.data.datasets[0].label = info;
+                        myChart1.update();
+                    }
+
+                    if (info == 'rainfall in mm') {
+                        const dataSet = [];
+                        for (let i = 0; i < datapoints.length; i++) {
+                            dataSet.push(objArray[i].doc.rainfall);
+                        }
+                        myChart1.config.data.labels = time;
+                        myChart1.config.data.datasets[0].data = dataSet;
+                        myChart1.config.data.datasets[0].label = info;
+                        myChart1.update();
+                    }
+
+        
+                
+            }    
+            const ctx1 = document.getElementById('myChart1');
+
+            const data1 = {
+                labels:[],
+                datasets: [{
+                    label:'emssion in kg',
+                    data: [],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }
+
+                ]
+            };
+
+                // config
+            const config1 = {
+                type: 'line',
+                data: data1,
+                options:{
+                    scales: {
+                        y:{
+                            beginAtZero: true,
+                            display: true,
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Melbourne weather climate in 2021 and 2022'
+                        }           
+                    }         
+                }
+            };
+
+            const myChart1 = new Chart(
+                ctx1,
+                config1
+            );
+
+        </script>
+
+        <!-- chart 3 -->
+        <div class="chartbox">
+            <canvas id="myChart2"></canvas>>
+            <button onclick="updateChart2('household_yield_kg')"> Fetch Data Now!!</button>
+        </div>
+        <!--install dependency for chartgeo-->>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs"></script>
+        <script type="text/javascript" src="https://unpkg.com/chartjs-chart-geo@3.5.2/build/index.umd.min.js"></script>
+        <div class="buttonBox">
+            <ul>
+                <li><a href="#" class="btn red" onclick="updateChart2('household_yield_kg')">household yield(kg)</a></li>
+                <li><a href="#" class="btn blue"onclick="updateChart2('diversion_rate_1')">diversion rate 1 (%)</a></li>
+                <li><a href="#" class="btn green"onclick="updateChart2('diversion_rate_2')">diversion rate 2 (%)</a></li>
+                <li><a href="#" class="btn red" onclick="updateChart2('diversion_rate_3')">diversion rate 3 (%)</a></li>
+            </ul>
+        </div>
+        <script>
+        // original geoJson url:
+        const geoUrl = '../static/melbourne_shape_topo.json';
+        
+        function updateChart2(info) {
+                // read waste data
+
+                const datapoints = {{ waste_recycling_json|safe }};
+                //console.log(datapoints);
+                const objArray = [];
+                    // convert lga names
+                for (let i = 0; i < Object.keys(datapoints).length; i++) {
+                    const tempArray1 = datapoints[i].doc.lga.split(" ", 6);
+                    const tempArray2 = [];
+                    //console.log( tempArray1);
+                    for (let j = 0; j < tempArray1.length; j++) {
+                        if (tempArray1[j] != '') {
+                            tempArray2.push(tempArray1[j]);
+                        }
+                    }
+                    //console.log( tempArray2);
+                        
+                    if (tempArray2.length == 3) {
+                        datapoints[i].doc.lga = tempArray2[0].toUpperCase();
+                    }
+                        
+                    if (tempArray2.length == 4) {
+                        //console.log( datapoints[i].docs.lga);
+                        datapoints[i].doc.lga = tempArray2[0].toUpperCase() + ' ' + tempArray2[1].toUpperCase();
+                    }
+                    objArray.push(datapoints[i].doc);
+                }
+
+                    // read map data
+                fetch(geoUrl).then((result) => result.json()).then((datapoint) => {
+                    const lgas = ChartGeo.topojson.feature(datapoint, datapoint.objects.melbourne_shape).features;
+                    
+                    // filter the waste data
+                    const filtered_array = [];
+
+                    for (let i = 0; i < objArray.length; i++) {
+                        if (lgas.map(lga => lga.properties.vic_lga__3).includes(objArray[i].lga)) {
+                        filtered_array.push(objArray[i]);
+                        }
+                    }
+                    // get sorted data array
+                    const data_array = [];
+                    for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++){
+                        for (let j = 0; j < filtered_array.length; j++) {
+                            if (filtered_array[j].lga == lgas.map(lga => lga.properties.vic_lga__3)[i]) {
+                                data_array.push(filtered_array[j]);
+                            }
+                        }
+                    }
+
+                        //fill the data in sorted array in to the map
+                    if (info == "household_yield_kg") {
+                        for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++) {
+                            lgas[i].properties.vic_lga__1 = data_array[i].household_yield_kg;
+                        }
+                        myChart2.config.data.datasets[0].data = lgas.map(lga => ({feature: lga, value: lga.properties.vic_lga__1}));
+                        myChart2.config.data.datasets[0].label = info;
+                        myChart2.config.data.datasets[0].outline = lgas;
+                        myChart2.config.data.labels = lgas.map(lga => lga.properties.vic_lga__3);
+                        myChart2.update();
+                            
+                    }
+
+                    if (info == "diversion_rate_1") {
+                        for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++) {
+                            lgas[i].properties.vic_lga__1 = data_array[i].diversion_rate_1;
+                        }
+                        myChart2.config.data.datasets[0].data = lgas.map(lga => ({feature: lga, value: lga.properties.vic_lga__1}));
+                        myChart2.config.data.datasets[0].label = info;
+                        myChart2.config.data.datasets[0].outline = lgas;
+                        myChart2.config.data.labels = lgas.map(lga => lga.properties.vic_lga__3);
+                        myChart2.update();
+                    
+                    }
+
+                    if (info == "diversion_rate_2") {
+                        for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++) {
+                            lgas[i].properties.vic_lga__1 = data_array[i].diversion_rate_2;
+                        }
+                        myChart2.config.data.datasets[0].data = lgas.map(lga => ({feature: lga, value: lga.properties.vic_lga__1}));
+                        myChart2.config.data.datasets[0].label = info;
+                        myChart2.config.data.datasets[0].outline = lgas;
+                        myChart2.config.data.labels = lgas.map(lga => lga.properties.vic_lga__3);
+                        myChart2.update();
+                            
+                    }
+
+                    if (info == "diversion_rate_3") {
+                        for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++) {
+                            lgas[i].properties.vic_lga__1 = data_array[i].diversion_rate_3;
+                        }
+                        myChart2.config.data.datasets[0].data = lgas.map(lga => ({feature: lga, value: lga.properties.vic_lga__1}));
+                        myChart2.config.data.datasets[0].label = info;
+                        myChart2.config.data.datasets[0].outline = lgas;
+                        myChart2.config.data.labels = lgas.map(lga => lga.properties.vic_lga__3);
+                        myChart2.update();
+                            
+                    }
+                })
+            }
+            
+            
+            const ctx2 = document.getElementById('myChart2');
+            const data2 = {
+                labels: [],
+                datasets: [
+                        {
+                        label: "",
+                        outline: false,
+                        data:[],
+                        }
+                        ]       
+                        };
+            
+            // config the graph
+            const config2 = {
+                type: 'choropleth',
+                data: data2,
+                options: {
+                    //showOutline: true,
+                    scales: {
+                        xy: {
+                            projection: 'equalEarth'
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                                display: true,
+                                text: 'Melbourne waste recycling data'
+                            }
+                    }
+                }
+            };
+
+            const myChart2 = new Chart(
+                ctx2,
+                config2
+            );
+            
+        </script>
+        <!-- chart 4 airmonitoring locations -->
+        <h1>Air monitoring locations and incident-type between 2010 and 2019</h1>
+        <div id="issMap"></div>
+
+        <script>
+            const mymap = L.map('issMap').setView([-37.840935, 144.946457], 10);
+            const attribution =
+                '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+
+            const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+            const tiles = L.tileLayer(tileUrl, { attribution });
+            tiles.addTo(mymap);
+            const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
+            // a marker
+            const issIcon = L.icon({
+                iconUrl: '../static/marker-icon-orange.png',
+                iconSize: [25, 40],
+                iconAnchor: [25, 16]
+            });
+
+            const datapoints = {{ air_monitoring_json|safe }};
+            const locations = [];
+                // get all location coordinates
+            for (let i = 0; i < datapoints.length; i++) {
+                if (typeof datapoints[i].doc.sites_longitude == "number" && typeof datapoints[i].doc.sites_latitude == "number") {
+                    locations.push(datapoints[i].doc);
+                }
+            }
+                // reach ISS api and initiate markers
+            async function getISS(locations) {
+                const response = await fetch(api_url);
+                const data = await response.json();
+                const { latitude, longitude, altitude } = data;
+
+                    // put markers
+                for (var i = 0; i < locations.length; i++) {
+                        // use another marker to indicate the incident if it is not Non-incident
+                    if (locations[i].sites_incidenttype == "Non-incident") {
+                        marker = new L.marker([locations[i].sites_latitude, locations[i].sites_longitude]).addTo(mymap);
+                    } else {
+                        marker = new L.marker([locations[i].sites_latitude, locations[i].sites_longitude],{ icon: issIcon }).addTo(mymap);
+                    }
+                }
+
+            }
+            getISS(locations);
+        </script>
+        
+
+    </body>
+</html>
+
+{% endblock %}

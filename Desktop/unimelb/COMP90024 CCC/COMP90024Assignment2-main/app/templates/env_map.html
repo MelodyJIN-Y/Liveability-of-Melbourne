@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <title>Heatmaps</title>
+
+    
+  </head>
+  <body>
+
+    <link rel="stylesheet" type="text/css" href="../static/map.css" />
+    <!-- google map api -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="module">
+        let map, heatmap;
+        var points = {{ coords|safe }};
+        function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 13,
+            center: { lat: -37.813628, lng: 144.963058 },
+            
+            mapId: '4ccda735faae7ca0'
+        });
+        heatmap = new google.maps.visualization.HeatmapLayer({
+            data: getPoints(),
+            map: map,
+        });
+        document
+            .getElementById("toggle-heatmap")
+            .addEventListener("click", toggleHeatmap);
+        document
+            .getElementById("change-gradient")
+            .addEventListener("click", changeGradient);
+        document
+            .getElementById("change-opacity")
+            .addEventListener("click", changeOpacity);
+        document
+            .getElementById("change-radius")
+            .addEventListener("click", changeRadius);
+        }
+        
+
+    function getPoints(){
+        var result = [];
+        for (let i in points){
+            var coord = points[i]['key'];
+            var weight = points[i]['value'];
+            var cur_point = {location: new google.maps.LatLng(coord[1], coord[0]), weight: weight};
+            result.push(cur_point);
+            
+        }
+        console.log(result);
+        return result;
+    }
+
+
+    function toggleHeatmap() {
+        heatmap.setMap(heatmap.getMap() ? null : map);
+    }
+
+    function changeGradient() {
+    const gradient = [
+        "rgba(0, 255, 255, 0)",
+        "rgba(0, 255, 255, 1)",
+        "rgba(0, 191, 255, 1)",
+        "rgba(0, 127, 255, 1)",
+        "rgba(0, 63, 255, 1)",
+        "rgba(0, 0, 255, 1)",
+        "rgba(0, 0, 223, 1)",
+        "rgba(0, 0, 191, 1)",
+        "rgba(0, 0, 159, 1)",
+        "rgba(0, 0, 127, 1)",
+        "rgba(63, 0, 91, 1)",
+        "rgba(127, 0, 63, 1)",
+        "rgba(191, 0, 31, 1)",
+        "rgba(255, 0, 0, 1)",
+    ];
+
+    heatmap.set("gradient", heatmap.get("gradient") ? null : gradient);
+    }
+
+    function changeRadius() {
+    heatmap.set("radius", heatmap.get("radius") ? null : 20);
+    }
+
+    function changeOpacity() {
+    heatmap.set("opacity", heatmap.get("opacity") ? null : 1);
+    }
+
+    window.initMap = initMap;
+
+    </script>
+
+    <div id="map"></div>
+    <div id="floating-panel">
+        <button id="toggle-heatmap">Toggle Heatmap</button>
+        <button id="change-gradient">Change gradient</button>
+        <button id="change-radius">Change radius</button>
+        <button id="change-opacity">Change opacity</button>
+    </div>
+
+    <!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIGLMigON3sL4XlYd8iPuMILNprRDlsig&callback=initMap&libraries=visualization&v=weekly&language=en"
+      defer
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+{% extends 'sidebar.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta chartset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1">
+        <title> AURIN Median Age Data</title>
+        <style type="text/css">
+            .chartBox {
+                max-width: 1000px;
+            }
+            .buttonBox {
+                max-width: 400px;
+            }
+            .buttonBox ul {
+                display: flex;
+            }
+            .buttonBox ul li {
+                list-style: none;
+            }
+            .btn {
+                border-radius: 20ox;
+                text-decoration: none;
+                padding: 5px 10px;
+                margin-right: 5px
+            }
+            .btn .red{
+                background: 'rgba(255, 99, 132, 0.2)';
+            }
+            .btn .blue{
+                background: 'rgba(99, 99, 255, 1)';
+            }
+            .btn .green{
+                background: 'rgba(99, 255, 99, 1)';
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <!-- chart 4 median age -->
+        <div class="chartbox">
+            <canvas id="myChart3"></canvas>>
+        </div>
+        <!--install dependency for chartgeo-->>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs"></script>
+        <script type="text/javascript" src="https://unpkg.com/chartjs-chart-geo@3.5.2/build/index.umd.min.js"></script>
+        <script>
+        function updateChart3(info) {
+                    const datapoints = {{ median_age_json|safe }};
+                    const objArray2 = [];
+                    // convert lga names
+                    for (let i = 0; i < datapoints.length; i++) {
+                        const tempArray1 = datapoints[i].doc.lga_name.split(" ", 6);
+                        const tempArray2 = [];
+                        
+                        for (let j = 0; j < tempArray1.length; j++) {
+                            if (tempArray1[j] != '') {
+                                tempArray2.push(tempArray1[j]);
+                            }
+                        }
+                        if (tempArray2.length == 2) {
+                            datapoints[i].doc.lga_name = tempArray2[0].toUpperCase();
+                        }
+                        
+                        if (tempArray2.length == 3) {
+                            datapoints[i].doc.lga_name = tempArray2[0].toUpperCase() + ' ' + tempArray2[1].toUpperCase();
+                        }
+                        objArray2.push(datapoints[i].doc);
+                    }
+
+                    // read map data
+                    const geoUrl = '../static/melbourne_shape_topo.json';
+                    fetch(geoUrl).then((result) => result.json()).then((datapoint) => {
+                    const lgas = ChartGeo.topojson.feature(datapoint, datapoint.objects.melbourne_shape).features;
+                    
+                    // filter the data
+                    const filtered_array = [];
+
+                    for (let i = 0; i < objArray2.length; i++) {
+                        if (lgas.map(lga => lga.properties.vic_lga__3).includes(objArray2[i].lga_name)) {
+                            filtered_array.push(objArray2[i]);
+                        }
+                    }
+                    // get sorted data array
+                    const data_array = [];
+                    for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++){
+                        for (let j = 0; j < filtered_array.length; j++) {
+                            if (filtered_array[j].lga_name == lgas.map(lga => lga.properties.vic_lga__3)[i]) {
+                                data_array.push(filtered_array[j]);
+                            }
+                        }
+                    }
+
+                     //fill the data in sorted array in to the map
+                    if (info == 'median_age_at_death_of_persons_2014_to_2018_median_age_years') {
+                        for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++) {
+                            lgas[i].properties.vic_lga__1 = data_array[i].median_age_at_death_of_persons_2014_to_2018_median_age_years;
+                        }
+                        myChart3.config.data.datasets[0].data = lgas.map(lga => ({feature: lga, value: lga.properties.vic_lga__1}));
+                        myChart3.config.data.datasets[0].label = info;
+                        myChart3.config.data.datasets[0].outline = lgas;
+                        myChart3.config.data.labels = lgas.map(lga => lga.properties.vic_lga__3);
+                        myChart3.update();
+                        
+                    }
+                })
+
+            }
+            const ctx3 = document.getElementById('myChart3');
+            const data3 = {
+                labels: [],
+                datasets: [
+                        {
+                        label: "",
+                        outline: false,
+                        data:[],
+                        }
+                        ]       
+                        };
+            
+            // config the graph
+            const config3 = {
+                type: 'choropleth',
+                data: data3,
+                options: {
+                    //showOutline: true,
+                    scales: {
+                        xy: {
+                            projection: 'equalEarth'
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                                display: true,
+                                text: 'median age between 2014 and 2018'
+                            }
+                    }
+                }
+            };
+            const myChart3 = new Chart(
+                ctx3,
+                config3
+            );
+            updateChart3('median_age_at_death_of_persons_2014_to_2018_median_age_years')
+        </script>
+    </body>
+
+</html>
+{% endblock %}
