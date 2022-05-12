@@ -42,7 +42,10 @@ def get_tweets(db_name):
     selected_data = data
     df = pd.DataFrame(selected_data)
 
-    df = df.loc[:, ["text", "author_id", "lang", "created_at", "coordinates"]].dropna()
+    if "coordinates" in db_name:
+        df = df.loc[:, ["text", "author_id", "lang", "created_at", "coordinates"]].dropna()
+    else:
+        df = df.loc[:, ["text", "author_id", "lang", "created_at"]].dropna()
     df = df.loc[df["lang"] == "en", :]
 
     # convert date
@@ -111,7 +114,7 @@ def get_sentiment_label(df, text_column_name):
 # do sentimental analysis and draw plots
 def env_sentiment_analysis():
 
-    raw_df = get_tweets(db_name="environment_tweets_coordinates")
+    raw_df = get_tweets(db_name="environment_tweets_text")
     df = get_sentiment_label(df=raw_df, text_column_name="text")
     print(df.label.value_counts())
     # Positive    248
@@ -131,17 +134,16 @@ def env_sentiment_analysis():
     plt.imshow(wordcloud, interpolation="bilinear")
     plt.axis("off")
     plt.savefig("./static/env_word_cloud.png")
-    df.to_json('./static/env_sent.json')
 
     return df
 
-# env_sentiment_analysis()
 
 def health_sentiment_analysis():
 
-    raw_df = get_tweets(db_name="health_tweets_coordinates")
+    raw_df = get_tweets(db_name="health_tweets_text")
     df = get_sentiment_label(df=raw_df, text_column_name="text")
-    print(df.label.value_counts())
+    # print(df.label.value_counts())
+    print(df)
     # Positive    248
     # Neutral      97
     # Negative     76
@@ -159,6 +161,31 @@ def health_sentiment_analysis():
     plt.imshow(wordcloud, interpolation="bilinear")
     plt.axis("off")
     plt.savefig("./static/health_word_cloud.png")
-    df.to_json('./static/health_sent.json')
 
     return df
+
+
+# do sentimental analysis and draw plots
+def env_coords_sentimental_analysis():
+
+    raw_df = get_tweets(db_name="environment_tweets_text")
+    df = get_sentiment_label(df=raw_df, text_column_name="text")
+    # Positive    248
+    # Neutral      97
+    # Negative     76
+
+    df.to_json('./static/env_sent.json')
+    return df
+
+
+def health_coords_sentiment_analysis():
+
+    raw_df = get_tweets(db_name="health_tweets_text")
+    df = get_sentiment_label(df=raw_df, text_column_name="text")
+    # print(df.label.value_counts())
+    # Positive    248
+    # Neutral      97
+    # Negative     76
+    df.to_json('./static/health_sent.json')
+    return df
+

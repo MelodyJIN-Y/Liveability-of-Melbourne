@@ -79,13 +79,20 @@
                     }
 
                     // sort by time
-                    objArray.sort(function (a, b) {
-                        return a.doc.Date.localeCompare(b.doc.Date);
-                    });
+                    // create Date objects for each row for comparison
+                    for (let i = 0; i < objArray.length; i++) {
+                        console.log(objArray[i].doc.Date);
+                        objArray[i].doc.Date = [objArray[i].doc.Date, new Date(objArray[i].doc.Date)]
+                    }
+                    // sort it by Date
+                    objArray.sort((a, b) => b.doc.Date[1] - a.doc.Date[1]);
+                    // reverse it from old to new
+                    objArray.reverse();
+            
                     // read x-axis
                     const time = [];
                     for (let i = 0; i < datapoints.length; i++) {
-                        time.push(objArray[i].doc.Date);
+                        time.push(objArray[i].doc.Date[0]);
                     }
                     // read y-axis
                     if (info == 'maxTemp in degree') {
