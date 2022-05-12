@@ -230,11 +230,15 @@ def aurin_hea_age():
 
 @app.route('/env_rel1')
 def scenario1():
-    return render_template('env_rel.html')
+    weather_climate_data = requests.get("http://admin:admin@172.26.132.125:5984/environment_aurin_weather_climate/_all_docs?include_docs=true")
+    weather_climate_data = json.loads(weather_climate_data.text)["rows"]
+    return render_template('env_rel.html', weather_climate_json = weather_climate_data)
 
 @app.route('/env_rel2')
 def scenario2():
-    return render_template('negative.html')
+    weather_climate_data = requests.get("http://admin:admin@172.26.132.125:5984/environment_aurin_weather_climate/_all_docs?include_docs=true")
+    weather_climate_data = json.loads(weather_climate_data.text)["rows"]
+    return render_template('negative.html', weather_climate_json = weather_climate_data)
 
 @app.route('/env_rel3')
 def scenario3():
