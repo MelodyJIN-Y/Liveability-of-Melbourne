@@ -242,7 +242,9 @@ def scenario2():
 
 @app.route('/env_rel3')
 def scenario3():
-    return render_template('health_positive.html')
+    essential_data = requests.get("http://admin:admin@172.26.132.125:5984/health_aurin_essential_services_data/_all_docs?include_docs=true")
+    essential_data = json.loads(essential_data.text)["rows"]
+    return render_template('health_positive.html', essential_json=essential_data)
 
 @app.route('/env_rel4')
 def scenario4():
