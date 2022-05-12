@@ -1,0 +1,123 @@
+{% extends 'sidebar.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta chartset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1">
+        <title> AURIN air pollute Data</title>
+
+        <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin=""
+        />
+
+        <script
+        src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+        crossorigin=""
+        ></script>
+
+        <style>
+            #issMap {
+              height: 800px;
+              width: 1000px;
+            }
+        </style>
+
+        <style type="text/css">
+            .chartBox {
+                max-width: 1000px;
+
+            }
+            .buttonBox {
+                max-width: 400px;
+            }
+            .buttonBox ul {
+                display: flex;
+            }
+            .buttonBox ul li {
+                list-style: none;
+            }
+            .btn {
+                border-radius: 20ox;
+                text-decoration: none;
+                padding: 5px 10px;
+                margin-right: 5px
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- chart 1 air pollute emssion-->
+        <div class="chartbox">
+            <canvas id="myChart"></canvas>>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"></script>
+        <script type="text/javascript">
+
+            
+            function updateChart() {
+                const datapoints = {{ air_pollute_json|safe }};
+                    // read x-axis
+                const time = datapoints.map(item => item.doc.report_year).reverse();
+                    
+                    // read y-axis
+                const allData = datapoints.map(item => item.doc.air_total_emission_kg).reverse();
+                myChart.config.data.labels = time;
+                myChart.config.data.datasets[0].data = allData;
+                myChart.config.data.datasets[0].backgroundColor = 'rgba(255, 99, 132, 0.2)';
+                myChart.update();
+            }    
+            const ctx = document.getElementById('myChart');
+
+            const data = {
+                labels:[],
+                datasets: [{
+                    label:'emssion in kg',
+                    data: [],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }
+                ]
+            };
+                // config
+            const config = {
+                type: 'line',
+                data: data,
+                options:{
+                    scales: {
+                        y:{
+                            beginAtZero: true,
+                            display: true,
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Air total emission of PAPER AUSTRALIA PTY LTD'
+                        }           
+                    }         
+                }
+            };
+            const myChart = new Chart(
+                ctx,
+                config
+            );
+            updateChart()
+        </script>
+    </body>
+
+</html>
+
+{% endblock %}

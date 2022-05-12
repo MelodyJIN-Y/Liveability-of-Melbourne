@@ -1,0 +1,12 @@
+flask
+requests
+pandas
+couchdb
+seaboard
+nltk
+wordcloud
+matplotlib
+geopandas
+shapely
+folium
+schedule

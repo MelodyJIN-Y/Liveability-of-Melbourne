@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/sidebar.css">
+    <!-- chartjs for visualisation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"></script>
+    <!-- chartjs choropleth -->
+    <script src="https://unpkg.com/chartjs-chart-geo@3.7.1/build/index.umd.min.js"></script>
+
+    <!-- font awsome -->
+    <script src="https://kit.fontawesome.com/8b68ce8d9c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- side bar part -->
+    <div id="mySidebar" class="sidebar">
+
+        <h2>Twitter</h2>
+
+        <button class="dropdown-btn">Environment 
+            <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <!-- Link to environment page -->
+                <a href="/environment">Charts</a>
+
+                <!-- link to environment heatmap page -->
+                <a href="/envrionment_heatmap" target="_blank">Heatmap <i class="fa-solid fa-link"></i></a>
+
+                <!-- link to environment choropleth page -->
+                <a href="/environment_choropleth" target="_blank">Choropleth <i class="fa-solid fa-link"></i></a>
+            </div>
+
+
+        <button class="dropdown-btn">Health 
+            <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <!-- main charts of Health -->
+                <a href="/health">Health</a>
+
+                <!-- link to environment heatmap page -->
+                <a href="/health_heatmap" target="_blank">Heatmap <i class="fa-solid fa-link"></i></a>
+
+                <!-- link to environment choropleth page -->
+                <a href="/health_choropleth" target="_blank">Choropleth <i class="fa-solid fa-link"></i></a>
+            </div>
+
+            
+            
+            
+
+            
+        <h2>AURIN</h2>
+
+            <button class="dropdown-btn">Environment 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+
+                    <a href="/aurin_environment_pollute">Air Pollute Emission</a>
+    
+                    <a href="/aurin_environment_weather">Weather Climate</a>
+    
+                    <a href="/aurin_environment_waste">Waste Recycling</a>
+
+                    <a href="/aurin_environment_air">Air Monitoring</a>
+                </div>
+
+            <button class="dropdown-btn">Health 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="/aurin_health_cancer">Cancer rate</a>
+        
+                    <a href="/aurin_health_essential">Infraustracture And Essential Services</a>
+        
+                    <a href="/aurin_health_hospital">Bulk Billed Services</a>
+    
+                    <a href="/aurin_health_age">Median Age</a>
+                </div>
+
+        <h2>SCENARIO</h2>
+            <a href="/env_rel1">Environment relationship</a>
+            <a href="/env_rel2">Environment relationship</a>
+            <a href="/env_rel3">Environment relationship</a>
+            <a href="/env_rel4">Environment relationship</a>
+
+
+
+    </div>
+    <!-- main info will be displayed here -->
+    <div id="main">
+        <!-- <a href="/" id="main_page_btn"><h2>CCC project</h2></a> -->
+        {% block content %}
+        {% endblock %}
+    </div>
+    <script src="../static/sidebar.js"></script>
+
+
+
+</body>
+</html> 
