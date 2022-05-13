@@ -21,3 +21,15 @@
 .col-context{
     text-align: center;
 }
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-left: 60%;
+    font-size: 12px;
+    background-color: grey;
+    color: white;
+  }
+  

@@ -9,14 +9,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"></script>
     <!-- chartjs choropleth -->
     <script src="https://unpkg.com/chartjs-chart-geo@3.7.1/build/index.umd.min.js"></script>
-
+    <!-- W3 style -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- font awsome -->
     <script src="https://kit.fontawesome.com/8b68ce8d9c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- side bar part -->
     <div id="mySidebar" class="sidebar">
-
+        <a class="home-btn" href="/">Home page</a>
         <div class="title">Twitter</div>
 
         <button class="dropdown-btn">Environment 
@@ -83,10 +84,10 @@
                 </div>
 
         <div class="title">Scenarios</div>
-            <a href="/env_rel1">rain vs tweets</a>
-            <a href="/env_rel2">temperature vs tweets</a>
-            <a href="/env_rel3">health relationship</a>
-            <a href="/env_rel4">Environment relationship</a>
+            <a class="scenario-btn" href="/env_rel1">rain vs tweets</a>
+            <a class="scenario-btn" href="/env_rel2">temperature vs tweets</a>
+            <a class="scenario-btn" href="/env_rel3">health relationship</a>
+            <a class="scenario-btn" href="/env_rel4">Environment relationship</a>
 
 
 
@@ -96,7 +97,14 @@
         <!-- <a href="/" id="main_page_btn"><h2>CCC project</h2></a> -->
         {% block content %}
         {% endblock %}
+        <!-- footer -->
+    <footer>
+        developed by: Liqin Zhang, Xinhao Hao, Xinyi Jin, Ying Yan.
+    </footer>
     </div>
+
+    
+
     <script src="../static/sidebar.js"></script>
 
 
