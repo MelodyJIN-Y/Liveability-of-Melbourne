@@ -12,10 +12,9 @@
         <style type="text/css">
             .chartBox {
                 max-width: 1000px;
-
             }
             .buttonBox {
-                max-width: 400px;
+                max-width: 500px;
             }
             .buttonBox ul {
                 display: flex;
@@ -26,9 +25,23 @@
             .btn {
                 border-radius: 20ox;
                 text-decoration: none;
+                color: #fff;
                 padding: 5px 10px;
                 margin-right: 5px
             }
+            .btn.red{
+                background: rgba(255,99,132,1);
+            }
+            .btn.yellow{
+                background: rgb(242, 221, 62);
+            }
+            .btn.blue{
+                background: rgb(120, 99, 255);
+            }
+            .btn.green{
+                background: rgb(99, 255, 99);
+            }
+        
         </style>
     </head>
 
@@ -43,9 +56,9 @@
         <div class="buttonBox">
             <ul>
                 <li><a href="#" class="btn red" onclick="updateChart1('maxTemp in degree')">Max Temperature</a></li>
-                <li><a href="#" class="btn blue"onclick="updateChart1('minTemp in degree')">Min Temperature</a></li>
-                <li><a href="#" class="btn green"onclick="updateChart1('sunshine in hour')">Sunshine</a></li>
-                <li><a href="#" class="btn red" onclick="updateChart1('rainfall in mm')">Rainfall</a></li>
+                <li><a href="#" class="btn yellow"onclick="updateChart1('minTemp in degree')">Min Temperature</a></li>
+                <li><a href="#" class="btn blue"onclick="updateChart1('sunshine in hour')">Sunshine</a></li>
+                <li><a href="#" class="btn green" onclick="updateChart1('rainfall in mm')">Rainfall</a></li>
             </ul>>
         </div>
 
