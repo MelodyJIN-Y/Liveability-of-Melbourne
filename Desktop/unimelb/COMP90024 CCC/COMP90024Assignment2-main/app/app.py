@@ -221,7 +221,8 @@ def scenario3():
 
 @app.route('/env_rel4')
 def scenario4():
-    return render_template('health_negative.html')
+    gp_hospital_data = get_data("health_aurin_gp_data", "_all_docs?include_docs=true")
+    return render_template('health_negative.html', gp_hospital_json=gp_hospital_data)
 
 if __name__ == "__main__":
     # schedule.every().day.at("14:10").do(env_sentiment_analysis())

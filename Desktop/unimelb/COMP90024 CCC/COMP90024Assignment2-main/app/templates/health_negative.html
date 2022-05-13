@@ -15,8 +15,139 @@
 
 
 <script>
-    // 
-    const geoUrl = '../static/health_num_tweets_topo.json';
+
+var geoUrl = '../static/melbourne_shape_topo.json';
+        
+        function updateChart2(info) {
+                
+                    const datapoints = {{ gp_hospital_json|safe }};
+                    const objArray1 = [];
+                    // convert lga names
+                    for (let i = 0; i < datapoints.length; i++) {
+                        const tempArray1 = datapoints[i].doc.lga_name.split(" ", 6);
+                        const tempArray2 = [];
+                        
+                        for (let j = 0; j < tempArray1.length; j++) {
+                            if (tempArray1[j] != '') {
+                                tempArray2.push(tempArray1[j]);
+                            }
+                        }
+                        
+                        if (tempArray2.length == 2) {
+                            datapoints[i].doc.lga_name = tempArray2[0].toUpperCase();
+                        }
+                        
+                        if (tempArray2.length == 3) {
+                            datapoints[i].doc.lga_name = tempArray2[0].toUpperCase() + ' ' + tempArray2[1].toUpperCase();
+                        }
+                        objArray1.push(datapoints[i].doc);
+                    }
+
+                    // read map data
+                    fetch(geoUrl).then((result) => result.json()).then((datapoint) => {
+                    const lgas = ChartGeo.topojson.feature(datapoint, datapoint.objects.melbourne_shape).features;
+                    
+                    // filter the data
+                    const filtered_array = [];
+
+                    for (let i = 0; i < objArray1.length; i++) {
+                        if (lgas.map(lga => lga.properties.vic_lga__3).includes(objArray1[i].lga_name)) {
+                            filtered_array.push(objArray1[i]);
+                        }
+                    }
+                    // get sorted data array
+                    const data_array = [];
+                    for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++){
+                        for (let j = 0; j < filtered_array.length; j++) {
+                            if (filtered_array[j].lga_name == lgas.map(lga => lga.properties.vic_lga__3)[i]) {
+                                data_array.push(filtered_array[j]);
+                            }
+                        }
+                    }
+
+                     //fill the data in sorted array in to the map
+                    if (info == 'specialist_attendances_bulk_billed_perc') {
+                        for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++) {
+                            lgas[i].properties.vic_lga__1 = data_array[i].specialist_attendances_bulk_billed_perc;
+                        }
+                        myChart2.config.data.datasets[0].data = lgas.map(lga => ({feature: lga, value: lga.properties.vic_lga__1}));
+                        myChart2.config.data.datasets[0].label = info;
+                        myChart2.config.data.datasets[0].outline = lgas;
+                        myChart2.config.data.labels = lgas.map(lga => lga.properties.vic_lga__3);
+                        myChart2.update();
+                        
+                    }
+
+                    if (info == 'gp_attendances_bulk_billed_perc') {
+                        for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++) {
+                            lgas[i].properties.vic_lga__1 = data_array[i].gp_attendances_bulk_billed_perc;
+                        }
+                        myChart2.config.data.datasets[0].data = lgas.map(lga => ({feature: lga, value: lga.properties.vic_lga__1}));
+                        myChart2.config.data.datasets[0].label = info;
+                        myChart2.config.data.datasets[0].outline = lgas;
+                        myChart2.config.data.labels = lgas.map(lga => lga.properties.vic_lga__3);
+                        myChart2.update();
+                
+                    }
+
+                    if (info == 'ppl_who_attended_a_gp_perc') {
+                        for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++) {
+                            lgas[i].properties.vic_lga__1 = data_array[i].ppl_who_attended_a_gp_perc;
+                        }
+                        myChart2.config.data.datasets[0].data = lgas.map(lga => ({feature: lga, value: lga.properties.vic_lga__1}));
+                        myChart2.config.data.datasets[0].label = info;
+                        myChart2.config.data.datasets[0].outline = lgas;
+                        myChart2.config.data.labels = lgas.map(lga => lga.properties.vic_lga__3);
+                        myChart2.update();
+                
+                    }
+                })
+            }
+            const ctx2 = document.getElementById('myChart2');
+            const data2 = {
+                labels: [],
+                datasets: [
+                        {
+                        label: "",
+                        outline: false,
+                        data:[],
+                        }
+                        ]       
+                        };
+            
+            // config the graph
+            const config2 = {
+                type: 'choropleth',
+                data: data2,
+                options: {
+                    //showOutline: true,
+                    scales: {
+                        xy: {
+                            projection: 'equalEarth'
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                                display: true,
+                                text: 'bulk billed specialty and gp services data 2015(%)'
+                            }
+                    }
+                }
+            };
+
+            const myChart2 = new Chart(
+                ctx2,
+                config2
+            );
+            updateChart2('ppl_who_attended_a_gp_perc')
+
+
+
+    // health negative tweets choropleth
+    geoUrl = '../static/health_num_tweets_topo.json';
     fetch(geoUrl).then((result) => result.json()).then((datapoint) =>{
         const lgas = ChartGeo.topojson.feature(datapoint, datapoint.objects.health_num_tweets).features;
 
@@ -49,7 +180,7 @@
                     },
                     title: {
                             display: true,
-                            text: 'Number of tweets about environment'
+                            text: 'Number of negative tweets about health'
                         }
                 }
             }
@@ -57,10 +188,6 @@
 
         const myChart = new Chart(
             document.getElementById('myChart'),
-            config
-        );
-        const myChart2 = new Chart(
-            document.getElementById('myChart2'),
             config
         );
     })
