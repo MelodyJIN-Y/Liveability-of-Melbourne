@@ -1,0 +1,23 @@
+.main_title{
+    background-position: center;
+    background-size: cover;
+    min-height: 400px;
+    background-image: url("melbourne.jpg");
+}
+
+.main_title_text{
+    text-align: center;
+    padding-top: 15%;
+    color:white;
+    font-size: 48px;
+}
+.main_title_sub_text{
+    text-align: center;
+    padding-bottom: 15%;
+    color:white;
+    font-size: 20px;
+}
+
+.col-context{
+    text-align: center;
+}

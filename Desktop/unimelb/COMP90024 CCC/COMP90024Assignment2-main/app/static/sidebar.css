@@ -1,96 +1,123 @@
 body {
-    font-family: "Lato", sans-serif;
-  }
-  
-  h2{
-      margin-left: 10px;
-      margin-bottom: 10px;
-  }
-  .sidebar {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #818181;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  
-  .sidebar a {
-    padding: 8px 8px 8px 48px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #f1f1f1;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .sidebar a:hover {
-    color: #f1f1f150;
-  }
-  /* abandoned dropdown list functions */
-  .dropdown-btn:hover{
-    color:#111;
-  }
-  
-  .openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-  }
-  
-  .openbtn:hover {
-    background-color: #444;
-  }
+  font-family: "Lato", sans-serif;
+}
+.title{
+margin: 5px 0px 5px 10px;
+color: #f1f1f1;
+font-size: 20px;
+}
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(48, 65, 86);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 10px;
+}
 
-  .dropdown-btn {
-    padding: 6px 16px 6px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #f1f1f1;
-    display: block;
-    border: none;
-    background: none;
-    width:100%;
-    text-align: left;
-    cursor: pointer;
-    outline: none;
-    transition: 0.3s;
-  }
+.sidebar .dropdown-container a {
+  padding: 8px 8px 8px 48px;
+  text-decoration: none;
+  font-size: 16px;
+  color: rgb(191, 203, 217);
+  display: block;
+  transition: 0.3s;
+}
+.sidebar .dropdown-container a:hover {
+  padding: 8px 8px 8px 48px;
+  text-decoration: none;
+  font-size: 16px;
+  color: rgb(205, 215, 228);
+  background-color: rgb(22, 26, 31);
+  display: block;
+  transition: 0.3s;
+}
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  color: rgb(191, 203, 217);
+  display: block;
+  transition: 0.3s;
+}
 
-  .dropdown-container {
-    display: none;
-  }
+.sidebar a:hover {
+  background-color: rgb(38, 52, 69);
+  color:rgb(191, 203, 217);
+}
 
-  .fa-caret-down {
-    float: right;
-    padding-right: 8px;
-  }
+button{
+  color: rgb(191, 203, 217);
+  background-color: rgb(48, 65, 86);
+}
 
-  .active{
-    color: #818181;
-    background-color: #f1f1f1;
-  }
+.dropdown-btn:hover{
+  background-color: rgb(38, 52, 69);
+  color:rgb(191, 203, 217);;
+}
 
-  #main {
-    transition: margin-left .5s;
-    padding: 16px;
-    margin-left: 250px;
-  }
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+.dropdown-btn {
+  padding: 6px 16px 6px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  color: rgb(191, 203, 217);
+  background-color: rgb(48, 65, 86);
+  display: block;
+  border: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: border-color .3s,background-color .3s,color .3s
+}
+
+.dropdown-container {
+  background-color: rgb(41, 52, 67);
+  display: none;
   
-  #main_page_btn{
-    text-decoration: none;
-    color:#111;
-  }
+}
 
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
-  }
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+.active{
+  
+  background-color: rgb(38, 52, 69);
+  color:rgb(191, 203, 217);
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  margin-left: 250px;
+}
+
+#main_page_btn{
+  text-decoration: none;
+  color:#111;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
