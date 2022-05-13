@@ -130,8 +130,8 @@ def health_choro():
 
 @app.route('/aurin_environment_pollute')
 def aurin_env_pol():
-    air_pollute_data = requests.get("http://admin:admin@172.26.132.125:5984/environment_aurin_pollute_emission/_all_docs?include_docs=true")
-    air_pollute_data = json.loads(air_pollute_data.text)["rows"]
+    air_pollute_data = get_data("environment_aurin_pollute_emission", "_all_docs?include_docs=true")
+    # air_pollute_data = json.loads(air_pollute_data.text)["rows"]
     for i in range(len(air_pollute_data)):
         if air_pollute_data[i]["doc"]["air_fugitive_eet"] is None:
             air_pollute_data[i]["doc"]["air_fugitive_eet"] = "null"
@@ -149,20 +149,20 @@ def aurin_env_pol():
 
 @app.route('/aurin_environment_weather')
 def aurin_env_wea():
-    weather_climate_data = requests.get("http://admin:admin@172.26.132.125:5984/environment_aurin_weather_climate/_all_docs?include_docs=true")
-    weather_climate_data = json.loads(weather_climate_data.text)["rows"]
+    weather_climate_data = get_data("environment_aurin_weather_climate", "_all_docs?include_docs=true")
+    # weather_climate_data = json.loads(weather_climate_data.text)["rows"]
     return render_template('aurin_environment_weather_climate.html', weather_climate_json = weather_climate_data)
 
 @app.route('/aurin_environment_waste')
 def aurin_env_was():
-    waste_recycling_data = requests.get("http://admin:admin@172.26.132.125:5984/environment_aurin_waste_recycling/_all_docs?include_docs=true")
-    waste_recycling_data = json.loads( waste_recycling_data.text)["rows"]
+    waste_recycling_data = get_data("environment_aurin_waste_recycling", "_all_docs?include_docs=true")
+    # waste_recycling_data = json.loads( waste_recycling_data.text)["rows"]
     return render_template('aurin_environment_waste_recycling.html', waste_recycling_json = waste_recycling_data)
 
 @app.route('/aurin_environment_air')
 def aurin_env_air():
-    air_monitoring_data = requests.get("http://admin:admin@172.26.132.125:5984/environment_aurin_air_monitoring/_all_docs?include_docs=true")
-    air_monitoring_data = json.loads( air_monitoring_data.text)["rows"]
+    air_monitoring_data = get_data("environment_aurin_air_monitoring", "_all_docs?include_docs=true")
+    # air_monitoring_data = json.loads( air_monitoring_data.text)["rows"]
     for i in range(len(air_monitoring_data)):
         if air_monitoring_data[i]["doc"]["sites_hasincident"] is True:
             air_monitoring_data[i]["doc"]["sites_hasincident"] = "true"
@@ -174,8 +174,8 @@ def aurin_env_air():
 
 @app.route('/aurin_health_cancer')
 def aurin_hea_can():
-    cancer_ratio_data = requests.get("http://admin:admin@172.26.132.125:5984/health_aurin_cancer_betw_greats_data/_all_docs?include_docs=true")
-    cancer_ratio_data = json.loads(cancer_ratio_data.text)["rows"]
+    cancer_ratio_data = get_data("health_aurin_cancer_betw_greats_data", "_all_docs?include_docs=true")
+    # cancer_ratio_data = json.loads(cancer_ratio_data.text)["rows"]
     for i in range(len(cancer_ratio_data)):
         if cancer_ratio_data[i]["doc"]["lymphoma_c81_c86_rt_ratio"] is None:
             cancer_ratio_data[i]["doc"]["lymphoma_c81_c86_rt_ratio"] = 0
@@ -185,38 +185,38 @@ def aurin_hea_can():
 
 @app.route('/aurin_health_essential')
 def aurin_hea_ess():
-    essential_data = requests.get("http://admin:admin@172.26.132.125:5984/health_aurin_essential_services_data/_all_docs?include_docs=true")
-    essential_data = json.loads(essential_data.text)["rows"]
+    essential_data = get_data("health_aurin_essential_services_data", "_all_docs?include_docs=true")
+    # essential_data = json.loads(essential_data.text)["rows"]
     return render_template('aurin_health_essential_services.html', essential_json=essential_data)
 
 @app.route('/aurin_health_hospital')
 def aurin_hea_hos():
-    gp_hospital_data = requests.get("http://admin:admin@172.26.132.125:5984/health_aurin_gp_data/_all_docs?include_docs=true")
-    gp_hospital_data = json.loads(gp_hospital_data.text)["rows"]
+    gp_hospital_data = get_data("health_aurin_gp_data", "_all_docs?include_docs=true")
+    # gp_hospital_data = json.loads(gp_hospital_data.text)["rows"]
     return render_template('aurin_health_hospital_gp.html', gp_hospital_json=gp_hospital_data)
 
 @app.route('/aurin_health_age')
 def aurin_hea_age():
-    median_age_data = requests.get("http://admin:admin@172.26.132.125:5984/health_aurin_median_age_data/_all_docs?include_docs=true")
-    median_age_data = json.loads(median_age_data.text)["rows"]
+    median_age_data = get_data("health_aurin_median_age_data", "_all_docs?include_docs=true")
+    # median_age_data = json.loads(median_age_data.text)["rows"]
     return render_template('aurin_health_median_age.html', median_age_json = median_age_data)
 
 @app.route('/env_rel1')
 def scenario1():
-    weather_climate_data = requests.get("http://admin:admin@172.26.132.125:5984/environment_aurin_weather_climate/_all_docs?include_docs=true")
-    weather_climate_data = json.loads(weather_climate_data.text)["rows"]
+    weather_climate_data = get_data("environment_aurin_weather_climate", "_all_docs?include_docs=true")
+    # weather_climate_data = json.loads(weather_climate_data.text)["rows"]
     return render_template('env_rel.html', weather_climate_json = weather_climate_data)
 
 @app.route('/env_rel2')
 def scenario2():
-    weather_climate_data = requests.get("http://admin:admin@172.26.132.125:5984/environment_aurin_weather_climate/_all_docs?include_docs=true")
-    weather_climate_data = json.loads(weather_climate_data.text)["rows"]
+    weather_climate_data = get_data("environment_aurin_weather_climate", "_all_docs?include_docs=true")
+    # weather_climate_data = json.loads(weather_climate_data.text)["rows"]
     return render_template('negative.html', weather_climate_json = weather_climate_data)
 
 @app.route('/env_rel3')
 def scenario3():
-    essential_data = requests.get("http://admin:admin@172.26.132.125:5984/health_aurin_essential_services_data/_all_docs?include_docs=true")
-    essential_data = json.loads(essential_data.text)["rows"]
+    essential_data = get_data("health_aurin_essential_services_data", "_all_docs?include_docs=true")
+    # essential_data = json.loads(essential_data.text)["rows"]
     return render_template('health_positive.html', essential_json=essential_data)
 
 @app.route('/env_rel4')
