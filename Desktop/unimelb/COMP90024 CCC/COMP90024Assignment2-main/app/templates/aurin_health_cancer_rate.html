@@ -11,9 +11,10 @@
         <style type="text/css">
             .chartBox {
                 max-width: 1000px;
+
             }
             .buttonBox {
-                max-width: 400px;
+                max-width: 500px;
             }
             .buttonBox ul {
                 display: flex;
@@ -24,19 +25,29 @@
             .btn {
                 border-radius: 20ox;
                 text-decoration: none;
+                color: #fff;
                 padding: 5px 10px;
                 margin-right: 5px
             }
-            .btn .red{
-                background: 'rgba(255, 99, 132, 0.2)';
+            .btn.red{
+                background: rgba(255,99,132,1);
             }
-            .btn .blue{
-                background: 'rgba(99, 99, 255, 1)';
+            .btn.yellow{
+                background: rgb(242, 221, 62);
             }
-            .btn .green{
-                background: 'rgba(99, 255, 99, 1)';
+            .btn.blue{
+                background: rgb(120, 99, 255);
             }
-
+            .btn.green{
+                background: rgb(99, 255, 99);
+            }
+            .btn.orange{
+                background: rgb(227, 112, 45);
+            }
+            .btn.purple{
+                background: rgb(255, 99, 234);
+            }
+          
         </style>
     </head>
 
@@ -49,11 +60,11 @@
         <div class="buttonBox">
             <ul>
                 <li><a href="#" class="btn red" onclick="updateChart('allCancerRatio')">all</a></li>
-                <li><a href="#" class="btn blue"onclick="updateChart('leukaemiaRatio')">leukaemia</a></li>
-                <li><a href="#" class="btn green"onclick="updateChart('lymphomaRatio')">lymphoma</a></li>
-                <li><a href="#" class="btn red" onclick="updateChart('pancreasRatio')">pancreas</a></li>
-                <li><a href="#" class="btn blue"onclick="updateChart('lungRatio')">lung</a></li>
-                <li><a href="#" class="btn green"onclick="updateChart('colortlRatio')">colortl</a></li>
+                <li><a href="#" class="btn yellow"onclick="updateChart('leukaemiaRatio')">leukaemia</a></li>
+                <li><a href="#" class="btn blue"onclick="updateChart('lymphomaRatio')">lymphoma</a></li>
+                <li><a href="#" class="btn green" onclick="updateChart('pancreasRatio')">pancreas</a></li>
+                <li><a href="#" class="btn orange"onclick="updateChart('lungRatio')">lung</a></li>
+                <li><a href="#" class="btn purple"onclick="updateChart('colortlRatio')">colortl</a></li>
 
             </ul>>
         </div>
