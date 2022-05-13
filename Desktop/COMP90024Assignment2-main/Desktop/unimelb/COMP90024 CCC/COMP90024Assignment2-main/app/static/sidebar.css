@@ -1,11 +1,11 @@
 body {
     font-family: "Lato", sans-serif;
   }
-  
-  h2{
-      margin-left: 10px;
-      margin-bottom: 10px;
-  }
+.title{
+  margin: 5px 0px 5px 10px;
+  color: #f1f1f1;
+  font-size: 20px;
+}
   .sidebar {
     height: 100%;
     width: 250px;
@@ -13,27 +13,51 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #818181;
+    background-color: rgb(48, 65, 86);
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 10px;
   }
   
-  .sidebar a {
+  .sidebar .dropdown-container a {
     padding: 8px 8px 8px 48px;
     text-decoration: none;
-    font-size: 20px;
-    color: #f1f1f1;
+    font-size: 16px;
+    color: rgb(191, 203, 217);
+    display: block;
+    transition: 0.3s;
+  }
+  .sidebar .dropdown-container a:hover {
+    padding: 8px 8px 8px 48px;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(205, 215, 228);
+    background-color: rgb(22, 26, 31);
+    display: block;
+    transition: 0.3s;
+  }
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(191, 203, 217);
     display: block;
     transition: 0.3s;
   }
   
   .sidebar a:hover {
-    color: #f1f1f150;
+    background-color: rgb(38, 52, 69);
+    color:rgb(191, 203, 217);
   }
-  /* abandoned dropdown list functions */
+  
+  button{
+    color: rgb(191, 203, 217);
+    background-color: rgb(48, 65, 86);
+  }
+
   .dropdown-btn:hover{
-    color:#111;
+    background-color: rgb(38, 52, 69);
+    color:rgb(191, 203, 217);;
   }
   
   .openbtn {
@@ -52,20 +76,22 @@ body {
   .dropdown-btn {
     padding: 6px 16px 6px 32px;
     text-decoration: none;
-    font-size: 20px;
-    color: #f1f1f1;
+    font-size: 16px;
+    color: rgb(191, 203, 217);
+    background-color: rgb(48, 65, 86);
     display: block;
     border: none;
-    background: none;
     width:100%;
     text-align: left;
     cursor: pointer;
     outline: none;
-    transition: 0.3s;
+    transition: border-color .3s,background-color .3s,color .3s
   }
 
   .dropdown-container {
+    background-color: rgb(41, 52, 67);
     display: none;
+    
   }
 
   .fa-caret-down {
@@ -74,8 +100,9 @@ body {
   }
 
   .active{
-    color: #818181;
-    background-color: #f1f1f1;
+    
+    background-color: rgb(38, 52, 69);
+    color:rgb(191, 203, 217);
   }
 
   #main {

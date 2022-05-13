@@ -27,30 +27,21 @@ def env_choro():
 # language page route
 @app.route('/environment')
 def env():
+    
     # send http request to couchdb that calls mapreduce
-    lang_json_text = requests.get("http://admin:admin@172.26.132.125:5984/environment_tweets_text/_design/lang/_view/lang?group_level=1")
-    lang_json_coord = requests.get("http://admin:admin@172.26.132.125:5984/environment_tweets_coordinates/_design/lang/_view/lang?group_level=1")
+    lang_list_text = get_data("environment_tweets_text", "_design/lang/_view/lang?group_level=1")
+    lang_list_coord = get_data("environment_tweets_coordinates", "_design/lang/_view/lang?group_level=1")
 
-    lang_list_text = json.loads(lang_json_text.text)['rows']
-    lang_list_coord = json.loads(lang_json_coord.text)['rows']
-    # print(lang_list_coord)
-    # print(lang_list_text)
     # merge two lists
     lang_total_dict = concat_lists_of_dicts(lang_list_text, lang_list_coord)
-
-
     lang_total_list = [{'key': key, 'value': lang_total_dict[key]} for key in lang_total_dict]
 
     lang_labels = [lang_dict['key'] for lang_dict in lang_total_list]
     lang_values = [lang_dict['value'] for lang_dict in lang_total_list]
     
     # get day data
-    day_json_coord = requests.get("http://admin:admin@172.26.132.125:5984/environment_tweets_coordinates/_design/weekday/_view/weekday_or_weekend?group_level=1")
-    day_json_text = requests.get("http://admin:admin@172.26.132.125:5984/environment_tweets_text/_design/weekday/_view/weekday_or_weekend?group_level=1")
-
-    # convert json into dicts
-    day_list_coord = json.loads(day_json_coord.text)['rows']
-    day_list_text = json.loads(day_json_text.text)['rows']
+    day_list_coord = get_data("environment_tweets_coordinates", "_design/weekday/_view/weekday_or_weekend?group_level=1")
+    day_list_text = get_data("environment_tweets_text", "_design/weekday/_view/weekday_or_weekend?group_level=1")
 
     day_total_dict = concat_lists_of_dicts(day_list_text, day_list_coord)
     print(day_total_dict)
@@ -59,12 +50,9 @@ def env():
     day_values = [day_total_dict[key] for key in day_labels]
 
     # call mapreduce function to retrieve number of tweets of each day in a week
-    each_day_coord = requests.get("http://admin:admin@172.26.132.125:5984/environment_tweets_coordinates/_design/weekday/_view/each_day?group_level=1")
-    each_day_text = requests.get("http://admin:admin@172.26.132.125:5984/environment_tweets_text/_design/weekday/_view/each_day?group_level=1")
-
-    each_day_coord = json.loads(each_day_coord.text)['rows']
-    each_day_text = json.loads(each_day_text.text)['rows']
-
+    each_day_coord = get_data('environment_tweets_coordinates', '_design/weekday/_view/each_day?group_level=1')
+    each_day_text = get_data('environment_tweets_text', '_design/weekday/_view/each_day?group_level=1')
+    # merge lists
     each_day_total = concat_lists_of_dicts(each_day_text, each_day_coord)
     print(each_day_total)
     # order keys for chart drawing
@@ -88,13 +76,9 @@ def env():
 @app.route('/health')
 def health():
     # send http request to couchdb that calls mapreduce
-    lang_json_text = requests.get("http://admin:admin@172.26.132.125:5984/health_tweets_text/_design/lang/_view/lang?group_level=1")
-    lang_json_coord = requests.get("http://admin:admin@172.26.132.125:5984/health_tweets_coordinates/_design/lang/_view/lang?group_level=1")
+    lang_list_text = get_data("health_tweets_text", "_design/lang/_view/lang?group_level=1")
+    lang_list_coord = get_data("health_tweets_coordinates", "_design/lang/_view/lang?group_level=1")
 
-    lang_list_text = json.loads(lang_json_text.text)['rows']
-    lang_list_coord = json.loads(lang_json_coord.text)['rows']
-    # print(lang_list_coord)
-    # print(lang_list_text)
     # merge two lists
     lang_total_dict = concat_lists_of_dicts(lang_list_text, lang_list_coord)
 
@@ -105,25 +89,16 @@ def health():
     lang_values = [lang_dict['value'] for lang_dict in lang_total_list]
     
     # get day data
-    day_json_coord = requests.get("http://admin:admin@172.26.132.125:5984/health_tweets_coordinates/_design/weekday/_view/weekday_or_weekend?group_level=1")
-    day_json_text = requests.get("http://admin:admin@172.26.132.125:5984/health_tweets_text/_design/weekday/_view/weekday_or_weekend?group_level=1")
-
-    # convert json into dicts
-    day_list_coord = json.loads(day_json_coord.text)['rows']
-    day_list_text = json.loads(day_json_text.text)['rows']
+    day_list_coord = get_data("health_tweets_coordinates","_design/weekday/_view/weekday_or_weekend?group_level=1")
+    day_list_text = get_data("health_tweets_text", "_design/weekday/_view/weekday_or_weekend?group_level=1")
 
     day_total_dict = concat_lists_of_dicts(day_list_text, day_list_coord)
-    print(day_total_dict)
-    # day_total_list = [{'key': key, 'value': day_total_dict[key]} for key in day_total_dict]
     day_labels = list(day_total_dict.keys())
     day_values = [day_total_dict[key] for key in day_labels]
 
     # call mapreduce function to retrieve number of tweets of each day in a week
-    each_day_coord = requests.get("http://admin:admin@172.26.132.125:5984/health_tweets_coordinates/_design/weekday/_view/each_day?group_level=1")
-    each_day_text = requests.get("http://admin:admin@172.26.132.125:5984/health_tweets_text/_design/weekday/_view/each_day?group_level=1")
-
-    each_day_coord = json.loads(each_day_coord.text)['rows']
-    each_day_text = json.loads(each_day_text.text)['rows']
+    each_day_coord = get_data("health_tweets_coordinates", "_design/weekday/_view/each_day?group_level=1")
+    each_day_text = get_data("health_tweets_text", "_design/weekday/_view/each_day?group_level=1")
 
     each_day_total = concat_lists_of_dicts(each_day_text, each_day_coord)
     print(each_day_total)
@@ -251,13 +226,7 @@ def scenario4():
     return render_template('health_negative.html')
 
 if __name__ == "__main__":
-    # schedule.every().day.at("14:10").do(env_sentiment_analysis())
+    
     app.run(debug=True)
-    # schedule.every().day.at("14:15").do(draw_health_choropleth())
-    # schedule.every().day.at("14:21").do(print("hello"))
-    # schedule.every().day.at("23:59").do(draw_env_choropleth())
-    # while True:
-    #     schedule.run_pending()
-    # draw_env_choropleth()
-    # draw_health_choropleth()
+    
     

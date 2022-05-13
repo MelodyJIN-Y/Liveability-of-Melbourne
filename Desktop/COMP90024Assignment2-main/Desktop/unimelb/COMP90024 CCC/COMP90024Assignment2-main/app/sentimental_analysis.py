@@ -39,7 +39,7 @@ def get_tweets(db_name):
     data = [row['doc'] for row in rows]
 
     # select the few latest sample
-    selected_data = data
+    selected_data = data[-500:]
     df = pd.DataFrame(selected_data)
 
     if "coordinates" in db_name:
@@ -143,7 +143,6 @@ def health_sentiment_analysis():
     raw_df = get_tweets(db_name="health_tweets_text")
     df = get_sentiment_label(df=raw_df, text_column_name="text")
     # print(df.label.value_counts())
-    print(df)
     # Positive    248
     # Neutral      97
     # Negative     76
@@ -167,8 +166,8 @@ def health_sentiment_analysis():
 
 # do sentimental analysis and draw plots
 def env_coords_sentimental_analysis():
-
-    raw_df = get_tweets(db_name="environment_tweets_text")
+    print('writing env_sent.json...')
+    raw_df = get_tweets(db_name="environment_tweets_coordinates")
     df = get_sentiment_label(df=raw_df, text_column_name="text")
     # Positive    248
     # Neutral      97
@@ -179,8 +178,8 @@ def env_coords_sentimental_analysis():
 
 
 def health_coords_sentiment_analysis():
-
-    raw_df = get_tweets(db_name="health_tweets_text")
+    print('writing health_sent.json...')
+    raw_df = get_tweets(db_name="health_tweets_coordinates")
     df = get_sentiment_label(df=raw_df, text_column_name="text")
     # print(df.label.value_counts())
     # Positive    248
@@ -189,3 +188,8 @@ def health_coords_sentiment_analysis():
     df.to_json('./static/health_sent.json')
     return df
 
+
+# env_sentiment_analysis()
+# health_sentiment_analysis()
+env_coords_sentimental_analysis()
+health_coords_sentiment_analysis()

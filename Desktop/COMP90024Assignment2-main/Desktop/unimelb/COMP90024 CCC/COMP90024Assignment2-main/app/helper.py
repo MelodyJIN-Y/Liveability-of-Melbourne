@@ -48,6 +48,32 @@ def get_coords(db_name):
     
     return result
 
+def get_data(db_name, request_body):
+    # connect to couch db
+    with open("./static/token.json", 'r') as fp:
+        info = json.load(fp)
+    fp.close()
+
+    username = info["CouchDB"]["username"]
+    password = info["CouchDB"]["password"]
+    option = 0
+    ip = info["CouchDB"]["IP"][option]
+    url = f"http://{username}:{password}@{ip}{db_name}/{request_body}"
+
+    result = []
+    try:
+        response = requests.get(url)
+        result = json.loads(response.text)['rows']
+    except:
+        print('url not retrievable')
+        if option == 2:
+            option = 0
+        else:
+            option += 1
+        pass
+
+    
+    return result
 
 # produce a geojson file that only contains lgas of the greater Melbourne which is of the interest in this project
 # this should be done before calling draw_choropleth(), but this only requires to be done once
@@ -61,6 +87,8 @@ def filter_lgas():
         melb_gdfs.append(test)
     df = pd.concat(melb_gdfs)
     filtered_df = df[['vic_lga__3','geometry']]
+    # change column name
+    filtered_df.rename(columns={'vic_lga__3':'lga'},inplace=True)
     gdf = geopandas.GeoDataFrame(filtered_df)
     gdf.to_file("./static/greater_melb.geojson", driver="GeoJSON")
     
@@ -173,3 +201,4 @@ def env_to_json(file_name="./static/greater_melb.geojson"):
 # health_to_json()
 # draw_health_choropleth()
 # draw_env_choropleth()
+# filter_lgas()

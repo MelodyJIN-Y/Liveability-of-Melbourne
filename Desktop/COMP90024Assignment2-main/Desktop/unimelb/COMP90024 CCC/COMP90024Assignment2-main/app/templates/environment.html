@@ -3,20 +3,24 @@
 {% block content %}
 
 
-<div style="height: 800px; width: 800px; margin-left: auto; margin-right: auto;">
+<div style="display:flex; flex-directon:row;">
+    <div style="margin: 50px 0 50px 0;width:45%">
+    <canvas id="weekday-chart" width="400" height="200"></canvas>
+</div>
+
+<div style="margin: 50px 0 50px 0;width:45%;margin-left:50px">
+    <canvas id="each-day-chart" width="400" height="200"></canvas>
+</div>
+</div>
+
+<div style="display:flex;flex-directon:row;">
+    <img style="width:50%" src="../static/env_sentiment_vs_time.png">
+    <img style="width:50%;" src="../static/env_word_cloud.png">
+</div>
+
+<div style="height: 600px; width: 600px; margin-left: auto; margin-right: auto;">
     <canvas id="doughnut-chart"></canvas>
 </div>
-
-<div style="margin: 50px 0 50px 0;">
-    <canvas id="weekday-chart" width="400" height="100"></canvas>
-</div>
-
-<div style="margin: 50px 0 50px 0;">
-    <canvas id="each-day-chart" width="400" height="100"></canvas>
-</div>
-
-<img src="../static/env_sentiment_vs_time.png">
-<img src="../static/env_word_cloud.png">
 
 <script type="text/javascript">
 
@@ -30,9 +34,17 @@
     var each_day_labels = {{ each_day_labels|safe }};
     var each_day_values = {{ each_day_values|safe }};
 
-    console.log(each_day_labels);
-    console.log(each_day_values);
+    // console.log(each_day_labels);
+    // console.log(each_day_values);
+    
 
+    function convert_label(label){
+        const languageNames = new Intl.DisplayNames(['en'], {
+            type: 'language'
+        });
+        return languageNames.of(label)
+    }
+    var full_labels = lang_labels.map(convert_label)
 
     const COLORS = [
     '#4dc9f6',
@@ -43,7 +55,32 @@
     '#166a8f',
     '#00a950',
     '#58595b',
-    '#8549ba'
+    '#8549ba',
+    '#264653',
+    '#2A9D8F',
+    '#E9C46A',
+    '#F4A261',
+    '#E76F51',
+    '#E9D5DA',
+    '#827397',
+    '#4D4C7D',
+    '#363062',
+    '#EDE6DB',
+    '#417D7A',
+    '#1D5C63',
+    '#1A3C40',
+    '#8E3200',
+    '#A64B2A',
+    '#D7A86E',
+    '#FFEBC1',
+    '#B4FF9F',
+    '#F9FFA4',
+    '#FFD59E',
+    '#FFA1A1',
+    '#F73D93',
+    '#16003B',
+    '#413F42',
+    '#7F8487'
     ];
 
     // console.log(day_json);
@@ -51,7 +88,7 @@
     const doughnut_chart = new Chart('doughnut-chart', {
     type: 'doughnut',
     data: {
-    labels: lang_labels,
+    labels: full_labels,
     datasets: [{
         data: lang_values,
         backgroundColor: COLORS,
