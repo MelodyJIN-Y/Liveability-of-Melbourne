@@ -14,8 +14,16 @@
                 max-width: 1000px;
 
             }
+            .btn {
+                border-radius: 20ox;
+                text-decoration: none;
+                color: #fff;
+                padding: 5px 10px;
+                margin-right: 5px
+            }
+
             .buttonBox {
-                max-width: 400px;
+                max-width: 600px;
             }
             .buttonBox ul {
                 display: flex;
@@ -23,13 +31,18 @@
             .buttonBox ul li {
                 list-style: none;
             }
-            .btn {
-                border-radius: 20ox;
-                text-decoration: none;
-                padding: 5px 10px;
-                margin-right: 5px
+            .btn.red{
+                background: rgba(255,99,132,1);
             }
-        </style>
+            .btn.yellow{
+                background: rgb(220, 196, 16);
+            }
+            .btn.blue{
+                background: rgb(120, 99, 255);
+            }
+            .btn.green{
+                background: rgb(14, 129, 14);
+            }
     </head>
 
     <body>
@@ -43,10 +56,10 @@
         <script type="text/javascript" src="https://unpkg.com/chartjs-chart-geo@3.5.2/build/index.umd.min.js"></script>
         <div class="buttonBox">
             <ul>
-                <li><a href="#" class="btn red" onclick="updateChart2('household_yield_kg')">household yield(kg)</a></li>
-                <li><a href="#" class="btn blue"onclick="updateChart2('diversion_rate_1')">diversion rate 1 (%)</a></li>
-                <li><a href="#" class="btn green"onclick="updateChart2('diversion_rate_2')">diversion rate 2 (%)</a></li>
-                <li><a href="#" class="btn red" onclick="updateChart2('diversion_rate_3')">diversion rate 3 (%)</a></li>
+                <li><a href="#" class="btn red" onclick="updateChart2('household_yield_kg')">household yield</a></li>
+                <li><a href="#" class="btn yellow"onclick="updateChart2('diversion_rate_1')">diversion rate 1</a></li>
+                <li><a href="#" class="btn blue"onclick="updateChart2('diversion_rate_2')">diversion rate 2</a></li>
+                <li><a href="#" class="btn green" onclick="updateChart2('diversion_rate_3')">diversion rate 3</a></li>
             </ul>
         </div>
         <script>
