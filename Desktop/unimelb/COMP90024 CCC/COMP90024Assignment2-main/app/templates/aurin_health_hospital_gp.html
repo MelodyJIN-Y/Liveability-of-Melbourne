@@ -28,13 +28,13 @@
                 margin-right: 5px
             }
             .btn.red{
-                background: 'rgba(255, 99, 132, 0.2)';
+                background: rgba(255,99,132,1);
+            }
+            .btn.yellow{
+                background: rgb(160, 143, 16);
             }
             .btn.blue{
-                background: 'rgba(99, 99, 255, 1)';
-            }
-            .btn.green{
-                background: 'rgba(99, 255, 99, 1)';
+                background: rgb(120, 99, 255);
             }
 
         </style>
@@ -51,8 +51,8 @@
         <div class="buttonBox">
             <ul>
                 <li><a href="#" class="btn red" onclick="updateChart2('specialist_attendances_bulk_billed_perc')">specialty services bulk billed</a></li>
-                <li><a href="#" class="btn blue"onclick="updateChart2('gp_attendances_bulk_billed_perc')">gp services bulk billed</a></li>
-                <li><a href="#" class="btn green"onclick="updateChart2('ppl_who_attended_a_gp_perc')">population bulk billed</a></li>
+                <li><a href="#" class="btn yellow"onclick="updateChart2('gp_attendances_bulk_billed_perc')">gp services bulk billed</a></li>
+                <li><a href="#" class="btn blue"onclick="updateChart2('ppl_who_attended_a_gp_perc')">population bulk billed</a></li>
             </ul>
         </div>
         <script>
