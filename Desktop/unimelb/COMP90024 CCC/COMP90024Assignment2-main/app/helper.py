@@ -201,4 +201,4 @@ def env_to_json(file_name="./static/greater_melb.geojson"):
 # health_to_json()
 # draw_health_choropleth()
 # draw_env_choropleth()
-filter_lgas()
+# filter_lgas()
