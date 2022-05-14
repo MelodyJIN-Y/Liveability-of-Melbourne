@@ -5,15 +5,31 @@
 
 <style>
     .serena{text-align:center;}
+    .comment{
+        border: 2px solid grey;
+        border-radius: 10px;
+        width: 50%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .line-chart{
+        display: block;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .comment p{
+        margin-left: 10px;
+        margin-bottom: 2px;
+    }
 </style>
 <!-- aurin map here -->
 <div style="margin-left: auto; margin-right: auto">
     <canvas id="myChart1"></canvas> 
 </div>
 
-<h3 class="serena">Sentiment Ananlysis on tweets data versus time</h3>
+<!-- <h3 class="serena">Sentiment Ananlysis on tweets data versus time</h3> -->
 
-<img src="../static/env_sentiment_vs_time.png" width = "1000" height = "700">
+<img src="../static/env_sentiment_vs_time.png" class="line-chart">
 </img>
 
 <!-- tweet map here
@@ -94,6 +110,8 @@
 
     
 </script>
-<h3 >The time period that has the highest max temperature is in Janurary, we can also observe that there is a huge jump of negative tweets in the same Month.</h3>
+<div class="comment">
+    <p>The time period that has the highest max temperature is in Janurary, we can also observe that there is a huge jump of negative tweets in the same Month.</p>
+</div>
 
 {% endblock %}

@@ -2,7 +2,19 @@
 
 
 {% block content %}
-
+<style>
+    .comment{
+        border: 2px solid grey;
+        border-radius: 10px;
+        width: 50%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .comment p{
+        margin-left: 10px;
+        margin-bottom: 2px;
+    }
+</style>
 <!-- aurin map here -->
 <div class="chartbox">
     <canvas id="myChart1"></canvas>
@@ -20,7 +32,7 @@
     <canvas id="myChart2"></canvas> 
 </div>
 
-<div>
+<div class="comment">
     <p>Regarding Melbourne, there is a positive relationship between the number of people employeed in hospital a region per resident population and the number of positive tweets posted</p>
 </div>
 
@@ -189,34 +201,6 @@
             );
             updateChart1('access_to_hospital')
 
-
-
-
-
-
-
-    // // config the graph
-    // const config2 = {
-    //     type: 'choropleth',
-    //     data: data2,
-    //     options: {
-    //         //showOutline: true,
-    //         scales: {
-    //             xy: {
-    //                 projection: 'equalEarth'
-    //             }
-    //         },
-    //         plugins: {
-    //             legend: {
-    //                 display: false
-    //             },
-    //             title: {
-    //                     display: true,
-    //                     text: 'Melbourne waste recycling data'
-    //                 }
-    //         }
-    //     }
-    // };
 
     
 </script>

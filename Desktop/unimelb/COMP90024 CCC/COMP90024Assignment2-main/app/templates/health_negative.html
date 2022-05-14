@@ -3,6 +3,21 @@
 
 {% block content %}
 
+<style>
+    .comment{
+        border: 2px solid grey;
+        border-radius: 10px;
+        width: 50%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top: 10px;
+    }
+    .comment p{
+        margin-left: 10px;
+        margin-bottom: 2px;
+    }
+</style>
+
 <!-- aurin map here -->
 <div style="height: 50%; width: 50%; margin-left: auto; margin-right: auto">
     <canvas id="myChart2"></canvas> 
@@ -13,7 +28,11 @@
     <canvas id="myChart"></canvas> 
 </div>
 
-
+<div class="comment">
+    <p>Melbourne has the lowest percentage of people get bulk billed and gp services, where in the choropleth below, it also suggests the number
+        of negative tweets in Melbourne is the highest.
+    </p>
+</div>
 <script>
 
 var geoUrl = '../static/melbourne_shape_topo.json';
