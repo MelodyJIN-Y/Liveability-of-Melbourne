@@ -4,18 +4,18 @@
 
 
 <div style="display:flex; flex-directon:row;">
-    <div style="margin: 50px 0 50px 0;width:45%">
-    <canvas id="weekday-chart" width="400" height="200"></canvas>
+    <div style="margin: 50px 0 50px 10%;width:40%">
+    <canvas id="weekday-chart" width="200" height="150"></canvas>
 </div>
 
-<div style="margin: 50px 0 50px 0;width:45%;margin-left:50px">
-    <canvas id="each-day-chart" width="400" height="200"></canvas>
+<div style="margin: 50px 10% 50px 50px;width:40%;">
+    <canvas id="each-day-chart" width="200" height="150"></canvas>
 </div>
 </div>
 
-<div style="display:flex;flex-directon:row;">
-    <img style="width:50%" src="../static/health_sentiment_vs_time.png">
-    <img style="width:50%;" src="../static/health_word_cloud.png">
+<div style="display:flex;flex-directon:row; margin-bottom:30px;">
+    <canvas id="sent_line_chart"></canvas>
+    <img style="width:35%; height:30%;" src="data:image/png;base64,{{ img_b64 }}">
 </div>
 
 <div style="height: 600px; width: 600px; margin-left: auto; margin-right: auto;">
@@ -153,6 +153,8 @@
     }
 
     });
+
+    // sentimental line chart
 
     
 </script>

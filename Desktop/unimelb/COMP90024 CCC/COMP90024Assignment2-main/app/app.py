@@ -7,6 +7,9 @@ from helper import *
 # from sentimental_analysis import env_sentiment_analysis
 import schedule
 import time
+import base64
+import pandas as pd
+from datetime import date
 
 app = Flask(__name__)
 
@@ -62,13 +65,57 @@ def env():
             sorted_each_day[key] = each_day_total[key]
 
     sorted_each_day_values = list(sorted_each_day.values())
-    
-    # retrieve coords for heatmap
-    coords = get_coords('environment_tweets_coordinates')
+
+    # get word cloud
+    # add username and password
+    couch = couchdb.Server('http://172.26.132.125:5984/')
+    couch.resource.credentials = ("admin", "admin")
+    # find the latest id   
+    ids = get_data('environment_tweets_text_wordcloud', '_design/get_id/_view/view')
+
+    max_time = ids[0]["id"]
+    for img_id in ids:
+        if img_id["id"] > max_time:
+            max_time = img_id['id']
+
+    db = couch['environment_tweets_text_wordcloud']
+    doc = db.get_attachment(max_time, 'wc_fig.png').read()
+
+    img_b64 = base64.b64encode(doc).decode("utf-8")
+
+    # get sentimental data for line chart
+
+    pos_data = get_data('environment_tweets_text_sentiment', '_design/label_date/_view/positive?group_level=1')
+    pos = []
+    for i in pos_data:
+        if i['key'] >= '2022-01-01':
+            pos.append(i)
+
+    neg_data = get_data('environment_tweets_text_sentiment', '_design/label_date/_view/negative?group_level=1')
+    neg = []
+
+    for i in neg_data:
+        if i['key'] >= '2022-01-01':
+            neg.append(i)
+
+    neu_data = get_data('environment_tweets_text_sentiment', '_design/label_date/_view/neutral?group_level=1')
+    neu = []
+
+    for i in neu_data:
+        if i['key'] >= '2022-01-01':
+            neu.append(i)
+    today = date.today()
+    date_range = pd.date_range('2022-01-01', today).tolist()
+    simple_date = []
+    for day in date_range:
+        simple_date.append(day.strftime("%Y-%m-%d"))
+    print(simple_date)
+
 
     return render_template('environment.html', lang_json = json.dumps(lang_total_list), lang_labels = json.dumps(lang_labels), lang_values = json.dumps(lang_values),
     day_labels = json.dumps(day_labels), day_values = json.dumps(day_values), 
-    each_day_labels = json.dumps(day_order), each_day_values = json.dumps(sorted_each_day_values))
+    each_day_labels = json.dumps(day_order), each_day_values = json.dumps(sorted_each_day_values),
+    img_b64 = img_b64, pos_data = json.dumps(pos), neg_data = json.dumps(neg), neu_data = json.dumps(neu), date_range = simple_date)
 
 # health charts
 @app.route('/health')
@@ -108,13 +155,28 @@ def health():
             sorted_each_day[key] = each_day_total[key]
 
     sorted_each_day_values = list(sorted_each_day.values())
-    
-    # retrieve coords for heatmap
-    coords = get_coords('environment_tweets_coordinates')
+
+    # get word cloud
+    # add username and password
+    couch = couchdb.Server('http://172.26.132.125:5984/')
+    couch.resource.credentials = ("admin", "admin")
+    # find the latest id   
+    ids = get_data('health_tweets_text_wordcloud', '_design/get_id/_view/view')
+
+    max_time = ids[0]["id"]
+    for img_id in ids:
+        if img_id["id"] > max_time:
+            max_time = img_id['id']
+
+    db = couch['health_tweets_text_wordcloud']
+    doc = db.get_attachment(max_time, 'wc_fig.png').read()
+
+    img_b64 = base64.b64encode(doc).decode("utf-8")
 
     return render_template('health.html', lang_json = json.dumps(lang_total_list), lang_labels = json.dumps(lang_labels), lang_values = json.dumps(lang_values),
     day_labels = json.dumps(day_labels), day_values = json.dumps(day_values), 
-    each_day_labels = json.dumps(day_order), each_day_values = json.dumps(sorted_each_day_values)
+    each_day_labels = json.dumps(day_order), each_day_values = json.dumps(sorted_each_day_values),
+    img_b64 = img_b64
     )
 
 # health heatmap
