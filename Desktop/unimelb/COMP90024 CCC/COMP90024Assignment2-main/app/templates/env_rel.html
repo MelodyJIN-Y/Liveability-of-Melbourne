@@ -11,13 +11,16 @@
         width: 50%;
         margin-left:auto;
         margin-right:auto;
+        margin-top: 40px;
     }
     .line-chart{
         display: block;
         margin-left:auto;
         margin-right:auto;
+        margin-top: 20px
     }
     .comment p{
+        
         margin-left: 10px;
         margin-bottom: 2px;
     }
@@ -29,7 +32,9 @@
 
 <!-- <h3 class="serena">Sentiment Ananlysis on tweets data versus time</h3> -->
 
-<img src="../static/env_sentiment_vs_time.png" class="line-chart">
+<div class="line-chart">
+    <canvas id="myChart2">
+</div>
 
 <!-- tweet map here
 <div style="height: 50%; width: 50%; margin-left: auto; margin-right: auto">
@@ -39,6 +44,9 @@
 
 
 <script>
+
+    var pos_data = {{ pos_data|safe }};
+    console.log(pos_data)
     //aruin
     const datapoints = {{ weather_climate_json|safe }};
     const objArray = [];
@@ -50,7 +58,7 @@
             // sort by time
             // create Date objects for each row for comparison
     for (let i = 0; i < objArray.length; i++) {
-        console.log(objArray[i].doc.Date);
+        // console.log(objArray[i].doc.Date);
         objArray[i].doc.Date = [objArray[i].doc.Date, new Date(objArray[i].doc.Date)]
     }
             // sort it by Date
@@ -95,7 +103,13 @@
             plugins: {
                 title: {
                     display: true,
-                    text: 'rainfall in (mm)'
+                    text: 'rainfall in (mm)',
+                    font:{
+                        size: 20
+                    }
+                },
+                legend:{
+                    display: false
                 }           
             }         
         }
@@ -104,6 +118,44 @@
         document.getElementById('myChart1'),
         config1
     );
+
+
+    // sentimental line chart
+    const line_data = {
+        datasets:[
+            {
+            label: 'positive',
+            data: pos_data,
+            parsing:{
+                xAxisKey: 'key',
+                yAxisKey: 'value'
+            },
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)'
+    
+        }
+    ]
+    }
+
+    const line_chart = new Chart('myChart2', {
+    type: 'line',
+    data: line_data,
+    options: {
+        plugins:{
+            title: {
+            display: true,
+            text: "number of tweets each day 2022",
+            font:{
+                size: 20
+            }
+            },
+            legend:{
+                display: false
+            } 
+        }
+        
+    }
+    });
 
 
 

@@ -17,8 +17,10 @@
         display: block;
         margin-left:auto;
         margin-right:auto;
+        margin-top: 20px
     }
     .comment p{
+        
         margin-left: 10px;
         margin-bottom: 2px;
     }
@@ -27,20 +29,22 @@
 <div style="margin-left: auto; margin-right: auto">
     <canvas id="myChart1"></canvas> 
 </div>
+<div class="line-chart">
+    <canvas id="myChart2">
+</div>
 
+
+<div class="comment">
+    <p>The time period that has the highest max temperature is in Janurary, we can also observe that there are a few similar trends of incremetns at around that time.</p>
+</div>
 <!-- <h3 class="serena">Sentiment Ananlysis on tweets data versus time</h3> -->
 
-<img src="../static/env_sentiment_vs_time.png" class="line-chart">
-</img>
-
-<!-- tweet map here
-<div style="height: 50%; width: 50%; margin-left: auto; margin-right: auto">
-    <canvas id="myChart"></canvas> 
-</div>
--->
 
 
 <script>
+
+    var neg_data = {{ neg_data|safe }};
+
     //aruin
     const datapoints = {{ weather_climate_json|safe }};
     const objArray = [];
@@ -97,8 +101,14 @@
             plugins: {
                 title: {
                     display: true,
-                    text: "highest temperature in degree"
-                }           
+                    text: "highest temperature in degree celcius",
+                    font:{
+                        size: 20
+                    }
+                },
+            legend: {
+                display: false
+            }   
             }         
         }
     };
@@ -107,12 +117,44 @@
         config1
     );
 
+        // sentimental line chart
+        const line_data = {
+        datasets:[
+            {
+            data: neg_data,
+            parsing:{
+                xAxisKey: 'key',
+                yAxisKey: 'value'
+            },
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)'
+    
+        }
+    ]
+    }
 
+    const line_chart = new Chart('myChart2', {
+    type: 'line',
+    data: line_data,
+    options: {
+        plugins:{
+            title: {
+            display: true,
+            text: "number of tweets each day 2022",
+            font:{
+                size: 20
+            }
+            },
+            legend: {
+                display: false
+            }
+        }
+        
+    }
+    });
 
     
 </script>
-<div class="comment">
-    <p>The time period that has the highest max temperature is in Janurary, we can also observe that there is a huge jump of negative tweets in the same Month.</p>
-</div>
+
 
 {% endblock %}

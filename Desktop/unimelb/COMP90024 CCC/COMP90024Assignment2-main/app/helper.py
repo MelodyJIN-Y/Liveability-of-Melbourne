@@ -97,25 +97,26 @@ def draw_env_choropleth(file_name="./static/greater_melb.geojson"):
     print("drawing env choro...")
     gdf = geopandas.read_file(file_name).explode(index_parts = True)
 
-    env_sent = open('./static/env_sent.json')
-    coords = json.load(env_sent)
+    # env_sent = open('./static/env_sent.json')
+    # coords = json.load(env_sent)
+    coords = get_data('environment_tweets_coordinates_sentiment', '_design/label_coords/_view/view')
 
-    gdf['num_tweets'] = [0 for i in gdf.vic_lga__3]
-    gdf['positive'] = [0 for i in gdf.vic_lga__3]
-    gdf['negative'] = [0 for i in gdf.vic_lga__3]
-    gdf['neutral'] = [0 for i in gdf.vic_lga__3]
-    for i in coords['text']:
-        point = geometry.Point(coords['coordinates'][i])
+    gdf['num_tweets'] = [0 for i in gdf.lga]
+    gdf['positive'] = [0 for i in gdf.lga]
+    gdf['negative'] = [0 for i in gdf.lga]
+    gdf['neutral'] = [0 for i in gdf.lga]
+    for i in coords:
+        point = geometry.Point(i['key'])
         count = 1
         # see if a point lays in a polygon
         poly = gdf.geometry.contains(point)
         gdf.num_tweets[poly] += count
         
-        if coords['label'][i] == 'Positive':
+        if i['value'] == 'Positive':
             gdf.positive[poly] += count
-        elif coords['label'][i] == 'Negative':
+        elif i['value'] == 'Negative':
             gdf.negative[poly] += count
-        elif coords['label'][i] == 'Neutral':
+        elif i['value'] == 'Neutral':
             gdf.neutral[poly] += count
             
     m = gdf.explore("num_tweets", cmap = "Dark2")
@@ -126,17 +127,25 @@ def draw_health_choropleth(file_name="./static/greater_melb.geojson"):
     print("drawing health choro...")
     gdf = geopandas.read_file(file_name).explode(index_parts = True)
 
-    coords = get_coords('health_tweets_coordinates')
+    coords = get_data('health_tweets_coordinates_sentiment', '_design/label_coords/_view/view')
 
-    gdf['num_tweets'] = [0 for i in gdf.vic_lga__3]
-    for coord in coords:
-        point = geometry.Point(coord['key'])
-        # print(point)
-        count = coord['value']
-
+    gdf['num_tweets'] = [0 for i in gdf.lga]
+    gdf['positive'] = [0 for i in gdf.lga]
+    gdf['negative'] = [0 for i in gdf.lga]
+    gdf['neutral'] = [0 for i in gdf.lga]
+    for i in coords:
+        point = geometry.Point(i['key'])
+        count = 1
         # see if a point lays in a polygon
         poly = gdf.geometry.contains(point)
         gdf.num_tweets[poly] += count
+        
+        if i['value'] == 'Positive':
+            gdf.positive[poly] += count
+        elif i['value'] == 'Negative':
+            gdf.negative[poly] += count
+        elif i['value'] == 'Neutral':
+            gdf.neutral[poly] += count
     # print(gdf.num_tweets)
     
     m = gdf.explore("num_tweets", cmap = "Dark2")
@@ -150,10 +159,10 @@ def health_to_json(file_name="./static/greater_melb.geojson"):
     env_sent = open('./static/health_sent.json')
     coords = json.load(env_sent)
 
-    gdf['num_tweets'] = [0 for i in gdf.vic_lga__3]
-    gdf['positive'] = [0 for i in gdf.vic_lga__3]
-    gdf['negative'] = [0 for i in gdf.vic_lga__3]
-    gdf['neutral'] = [0 for i in gdf.vic_lga__3]
+    gdf['num_tweets'] = [0 for i in gdf.lga]
+    gdf['positive'] = [0 for i in gdf.lga]
+    gdf['negative'] = [0 for i in gdf.lga]
+    gdf['neutral'] = [0 for i in gdf.lga]
     for i in coords['text']:
         point = geometry.Point(coords['coordinates'][i])
         count = 1
@@ -177,10 +186,10 @@ def env_to_json(file_name="./static/greater_melb.geojson"):
     env_sent = open('./static/env_sent.json')
     coords = json.load(env_sent)
 
-    gdf['num_tweets'] = [0 for i in gdf.vic_lga__3]
-    gdf['positive'] = [0 for i in gdf.vic_lga__3]
-    gdf['negative'] = [0 for i in gdf.vic_lga__3]
-    gdf['neutral'] = [0 for i in gdf.vic_lga__3]
+    gdf['num_tweets'] = [0 for i in gdf.lga]
+    gdf['positive'] = [0 for i in gdf.lga]
+    gdf['negative'] = [0 for i in gdf.lga]
+    gdf['neutral'] = [0 for i in gdf.lga]
     for i in coords['text']:
         point = geometry.Point(coords['coordinates'][i])
         count = 1

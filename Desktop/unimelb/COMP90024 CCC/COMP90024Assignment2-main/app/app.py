@@ -173,10 +173,37 @@ def health():
 
     img_b64 = base64.b64encode(doc).decode("utf-8")
 
+    # get sentimental data for line chart
+
+    pos_data = get_data('health_tweets_text_sentiment', '_design/label_date/_view/positive?group_level=1')
+    pos = []
+    for i in pos_data:
+        if i['key'] >= '2022-01-01':
+            pos.append(i)
+
+    neg_data = get_data('health_tweets_text_sentiment', '_design/label_date/_view/negative?group_level=1')
+    neg = []
+
+    for i in neg_data:
+        if i['key'] >= '2022-01-01':
+            neg.append(i)
+
+    neu_data = get_data('health_tweets_text_sentiment', '_design/label_date/_view/neutral?group_level=1')
+    neu = []
+
+    for i in neu_data:
+        if i['key'] >= '2022-01-01':
+            neu.append(i)
+    today = date.today()
+    date_range = pd.date_range('2022-01-01', today).tolist()
+    simple_date = []
+    for day in date_range:
+        simple_date.append(day.strftime("%Y-%m-%d"))
+
     return render_template('health.html', lang_json = json.dumps(lang_total_list), lang_labels = json.dumps(lang_labels), lang_values = json.dumps(lang_values),
     day_labels = json.dumps(day_labels), day_values = json.dumps(day_values), 
     each_day_labels = json.dumps(day_order), each_day_values = json.dumps(sorted_each_day_values),
-    img_b64 = img_b64
+    img_b64 = img_b64, pos_data = json.dumps(pos), neg_data = json.dumps(neg), neu_data = json.dumps(neu), date_range = simple_date
     )
 
 # health heatmap
@@ -266,14 +293,25 @@ def aurin_hea_age():
 @app.route('/env_rel1')
 def scenario1():
     weather_climate_data = get_data("environment_aurin_weather_climate", "_all_docs?include_docs=true")
-    # weather_climate_data = json.loads(weather_climate_data.text)["rows"]
-    return render_template('env_rel.html', weather_climate_json = weather_climate_data)
+    pos_data = get_data('environment_tweets_text_sentiment', '_design/label_date/_view/positive?group_level=1')
+    pos = []
+    for i in pos_data:
+        if (i['key'] >= '2022-03-08' and i['key'] <= '2022-04-30'):
+            pos.append(i)
+
+    
+    return render_template('env_rel.html', weather_climate_json = weather_climate_data, pos_data = pos)
 
 @app.route('/env_rel2')
 def scenario2():
     weather_climate_data = get_data("environment_aurin_weather_climate", "_all_docs?include_docs=true")
-    # weather_climate_data = json.loads(weather_climate_data.text)["rows"]
-    return render_template('negative.html', weather_climate_json = weather_climate_data)
+    neg_data = get_data('environment_tweets_text_sentiment', '_design/label_date/_view/negative?group_level=1')
+    neg = []
+    for i in neg_data:
+        if (i['key'] >= '2022-01-01' and i['key'] <= '2022-04-01'):
+            neg.append(i)
+
+    return render_template('negative.html', weather_climate_json = weather_climate_data, neg_data = neg)
 
 @app.route('/env_rel3')
 def scenario3():

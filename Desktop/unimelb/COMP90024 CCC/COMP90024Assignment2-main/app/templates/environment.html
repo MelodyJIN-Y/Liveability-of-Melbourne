@@ -4,18 +4,18 @@
 
 
 <div style="display:flex; flex-directon:row;">
-    <div style="margin: 50px 0 50px 0;width:45%">
-    <canvas id="weekday-chart" width="400" height="200"></canvas>
+    <div style="margin: 50px 0 50px 10%;width:40%">
+    <canvas id="weekday-chart" width="200" height="150"></canvas>
 </div>
 
-<div style="margin: 50px 0 50px 0;width:45%;margin-left:50px">
-    <canvas id="each-day-chart" width="400" height="200"></canvas>
+<div style="margin: 50px 10% 50px 50px;width:40%;">
+    <canvas id="each-day-chart" width="200" height="150"></canvas>
 </div>
 </div>
 
-<div style="display:flex;flex-directon:row;">
+<div style="display:flex;flex-directon:row; margin-bottom:30px; margin-left:60px">
     <div style="width: 700px; height:400px"><canvas id="sent_line"></canvas></div>
-    <img style="width:40%; height:30%; margin:20px 0 0 30px" src="data:image/png;base64,{{ img_b64 }}">
+        <img style="width:35%; height:30%; margin:40px 0 0 60px" src="data:image/png;base64,{{ img_b64 }}">
 </div>
 
 <div style="height: 600px; width: 600px; margin-left: auto; margin-right: auto;">
@@ -37,8 +37,6 @@
     var neg_data = {{ neg_data|safe }};
     var neu_data = {{ neu_data|safe }};
     var date_range = {{ date_range|safe }};
-
-    console.log(date_range);
     
 
     function convert_label(label){
@@ -106,6 +104,9 @@
             title:{
                 display: true,
                 text: 'Number of languages used in tweets',
+                font:{
+                    size: 20
+                },
             }
         }
     }
@@ -127,7 +128,10 @@
             legend: {display: false},
             title: {
             display: true,
-            text: "number of tweets on weekdays vs. weekends"
+            text: "number of tweets on weekdays vs. weekends",
+            font:{
+                size: 20
+            }
             }
         }
         
@@ -148,7 +152,10 @@
             legend: {display: false},
             title: {
             display: true,
-            text: "number of tweets day of a week"
+            text: "number of tweets day of a week",
+            font:{
+                size: 20
+            }
             }
         }
         
@@ -156,7 +163,7 @@
 
     });
 
-
+    // sentimental line chart
     const line_data = {
         labels: date_range,
         datasets:[
@@ -199,6 +206,18 @@
     const line_chart = new Chart('sent_line', {
     type: 'line',
     data: line_data,
+    options: {
+        plugins:{
+            title: {
+            display: true,
+            text: "number of tweets each day 2022",
+            font:{
+                size: 20
+            }
+            }
+        }
+        
+    }
     });
 
     
