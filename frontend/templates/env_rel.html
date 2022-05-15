@@ -1,0 +1,169 @@
+{% extends 'sidebar.html' %}
+
+
+{% block content %}
+
+<style>
+    .serena{text-align:center;}
+    .comment{
+        border: 2px solid grey;
+        border-radius: 10px;
+        width: 50%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top: 40px;
+    }
+    .line-chart{
+        display: block;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top: 20px
+    }
+    .comment p{
+        
+        margin-left: 10px;
+        margin-bottom: 2px;
+    }
+</style>
+<!-- aurin map here -->
+<div style="margin-left: auto; margin-right: auto">
+    <canvas id="myChart1"></canvas> 
+</div>
+
+<!-- <h3 class="serena">Sentiment Ananlysis on tweets data versus time</h3> -->
+
+<div class="line-chart">
+    <canvas id="myChart2">
+</div>
+
+<!-- tweet map here
+<div style="height: 50%; width: 50%; margin-left: auto; margin-right: auto">
+    <canvas id="myChart"></canvas> 
+</div>
+-->
+
+
+<script>
+
+    var pos_data = {{ pos_data|safe }};
+    console.log(pos_data)
+    //aruin
+    const datapoints = {{ weather_climate_json|safe }};
+    const objArray = [];
+            // push to an array
+    for (let i = 0; i < datapoints.length; i++) {
+        objArray.push(datapoints[i]);
+    }
+
+            // sort by time
+            // create Date objects for each row for comparison
+    for (let i = 0; i < objArray.length; i++) {
+        // console.log(objArray[i].doc.Date);
+        objArray[i].doc.Date = [objArray[i].doc.Date, new Date(objArray[i].doc.Date)]
+    }
+            // sort it by Date
+    objArray.sort((a, b) => b.doc.Date[1] - a.doc.Date[1]);
+            // reverse it from old to new
+    objArray.reverse();
+            // read x-axis
+    const time = [];
+    for (let i = 0; i < datapoints.length; i++) {
+        time.push(objArray[i].doc.Date[0]);
+        }
+            // read y-axis
+    const dataSet = [];
+    for (let i = 0; i < datapoints.length; i++) {
+        dataSet.push(objArray[i].doc.rainfall);
+    } 
+    const data1 = {
+        labels:time,
+        datasets: [{
+            label: '',
+            data: dataSet,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)'
+            ],
+            borderWidth: 1
+        }
+        ]
+    };
+    const config1 = {
+        type: 'line',
+        data: data1,
+        options:{
+            scales: {
+                y:{
+                    beginAtZero: true,
+                    display: true,
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'rainfall in (mm)',
+                    font:{
+                        size: 20
+                    }
+                },
+                legend:{
+                    display: false
+                }           
+            }         
+        }
+    };
+    const myChart1 = new Chart(
+        document.getElementById('myChart1'),
+        config1
+    );
+
+
+    // sentimental line chart
+    const line_data = {
+        datasets:[
+            {
+            label: 'positive',
+            data: pos_data,
+            parsing:{
+                xAxisKey: 'key',
+                yAxisKey: 'value'
+            },
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)'
+    
+        }
+    ]
+    }
+
+    const line_chart = new Chart('myChart2', {
+    type: 'line',
+    data: line_data,
+    options: {
+        plugins:{
+            title: {
+            display: true,
+            text: "number of positive tweets",
+            font:{
+                size: 20
+            }
+            },
+            legend:{
+                display: false
+            } 
+        }
+        
+    }
+    });
+
+
+
+    
+</script>
+<div class="comment">
+    <p>We can observe the similarity on the trends on both the graph of sentiment analysis and the rainfall data. At the end of April in 2022, there is a rise of positive sentiment tweet and a rise of rainfall in those periods of the time.</p>
+</div>
+    
+
+{% endblock %}

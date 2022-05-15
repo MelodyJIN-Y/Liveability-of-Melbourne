@@ -1,0 +1,9 @@
+requests
+flask
+geopandas
+shapely
+folium
+datetime
+pandas
+couchdb
+matplotlib

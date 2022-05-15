@@ -1,0 +1,179 @@
+{% extends 'sidebar.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta chartset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1">
+        <title> AURIN Essential Services Data</title>
+        <style type="text/css">
+            .chartBox {
+                max-width: 1000px;
+            }
+            .buttonBox {
+                max-width: 600px;
+            }
+            .buttonBox ul {
+                display: flex;
+            }
+            .buttonBox ul li {
+                list-style: none;
+            }
+            .btn {
+                border-radius: 20ox;
+                text-decoration: none;
+                padding: 5px 10px;
+                margin-right: 5px
+            }
+            .btn.red{
+                background: rgba(255,99,132,1);
+            }
+            .btn.blue{
+                background: rgb(120, 99, 255);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <!-- chart 2 essential services -->
+        <div class="chartbox">
+            <canvas id="myChart1"></canvas>
+        </div>
+        <!--install dependency for chartgeo-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs"></script>
+        <script type="text/javascript" src="https://unpkg.com/chartjs-chart-geo@3.5.2/build/index.umd.min.js"></script>
+        <div class="buttonBox">
+            <ul>
+                <li><a href="#" class="btn red" onclick="updateChart1('access_to_hospital')">hospital services</a></li>
+                <li><a href="#" class="btn blue"onclick="updateChart1('access_to_gp')">gp services</a></li>
+
+            </ul>
+        </div>
+        <script>
+        const geoUrl = '../static/melbourne_shape_topo.json';
+        
+        function updateChart1(info) {
+                    const datapoints = {{ essential_json|safe }};
+                // read data files
+                    const objArray = [];
+                    // convert lga names
+                    for (let i = 0; i < datapoints.length; i++) {
+                        const tempArray1 = datapoints[i].doc.lga_name.split(" ", 6);
+                        const tempArray2 = [];
+                        
+                        for (let j = 0; j < tempArray1.length; j++) {
+                            if (tempArray1[j] != '') {
+                                tempArray2.push(tempArray1[j]);
+                            }
+                        }
+                        
+                        if (tempArray2.length == 2) {
+                            datapoints[i].doc.lga_name = tempArray2[0].toUpperCase();
+                        }
+                        
+                        if (tempArray2.length == 3) {
+                            datapoints[i].doc.lga_name = tempArray2[0].toUpperCase() + ' ' + tempArray2[1].toUpperCase();
+                        }
+                        objArray.push(datapoints[i].doc);
+                    }
+
+                    // read map data
+                    fetch(geoUrl).then((result) => result.json()).then((datapoint) => {
+                    const lgas = ChartGeo.topojson.feature(datapoint, datapoint.objects.melbourne_shape).features;
+                    
+                    // filter the data
+                    const filtered_array = [];
+
+                    for (let i = 0; i < objArray.length; i++) {
+                        if (lgas.map(lga => lga.properties.vic_lga__3).includes(objArray[i].lga_name)) {
+                            filtered_array.push(objArray[i]);
+                        }
+                    }
+                    // get sorted data array
+                    const data_array = [];
+                    for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++){
+                        for (let j = 0; j < filtered_array.length; j++) {
+                            if (filtered_array[j].lga_name == lgas.map(lga => lga.properties.vic_lga__3)[i]) {
+                                data_array.push(filtered_array[j]);
+                            }
+                        }
+                    }
+
+                     //fill the data in sorted array in to the map
+                    if (info == 'access_to_hospital') {
+                        for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++) {
+                            lgas[i].properties.vic_lga__1 = data_array[i].hs_meas;
+                        }
+                        myChart1.config.data.datasets[0].data = lgas.map(lga => ({feature: lga, value: lga.properties.vic_lga__1}));
+                        myChart1.config.data.datasets[0].label = info;
+                        myChart1.config.data.datasets[0].outline = lgas;
+                        myChart1.config.data.labels = lgas.map(lga => lga.properties.vic_lga__3);
+                        myChart1.update();
+                        
+                    }
+
+                    if (info == 'access_to_gp') {
+                        for (let i = 0; i < lgas.map(lga => lga.properties.vic_lga__3).length;i++) {
+                            lgas[i].properties.vic_lga__1 = data_array[i].gpsrv_meas;
+                        }
+                        myChart1.config.data.datasets[0].data = lgas.map(lga => ({feature: lga, value: lga.properties.vic_lga__1}));
+                        myChart1.config.data.datasets[0].label = info;
+                        myChart1.config.data.datasets[0].outline = lgas;
+                        myChart1.config.data.labels = lgas.map(lga => lga.properties.vic_lga__3);
+                        myChart1.update();
+                
+                    }
+                })
+            }
+            const ctx1 = document.getElementById('myChart1');
+            const data1 = {
+                labels: [],
+                datasets: [
+                        {
+                        label: "",
+                        outline: false,
+                        data:[],
+                        }
+                        ]       
+                        };
+            
+            // config the graph
+            const config1 = {
+                type: 'choropleth',
+                data: data1,
+                options: {
+                    //showOutline: true,
+                    scales: {
+                        xy: {
+                            projection: 'equalEarth'
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                                display: true,
+                                text: 'Infraustracture and essential serivice data'
+                            }
+                    }
+                }
+            };
+
+            const myChart1 = new Chart(
+                ctx1,
+                config1
+            );
+            updateChart1('access_to_hospital')
+            
+        </script>
+        <h3>GP services measures in number of GP services per capita.</h3>
+        <h3>Hospital services measures in the number of people employeed in hospital a region per resident population.</h3>
+
+    </body>
+
+</html>
+{% endblock %}
