@@ -20,16 +20,12 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![MIT License][license-shield]][license-url]
-![video][video-shield]
 
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/MelodyJIN-Y/Liveability-of-Melbourne">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
 <h3 align="center">The Liveability of Melbourne </h3>
 
