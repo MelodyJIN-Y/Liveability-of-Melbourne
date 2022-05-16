@@ -199,13 +199,13 @@ Project Link: [https://github.com/MelodyJIN-Y/Liveability-of-Melbourne](https://
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/MelodyJIN-Y/Liveability-of-Melbourne.svg?style=for-the-badge
 [contributors-url]: https://github.com//MelodyJIN-Y/Liveability-of-Melbourne/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/Liveability-of-Melbourne.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/MelodyJIN-Y/Liveability-of-Melbourne.svg?style=for-the-badge
 [forks-url]: https://github.com//MelodyJIN-Y/Liveability-of-Melbourne/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/Liveability-of-Melbourne.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/MelodyJIN-Y/Liveability-of-Melbourne.svg?style=for-the-badge
 [stars-url]: https://github.com//MelodyJIN-Y/Liveability-of-Melbourne/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/Liveability-of-Melbourne.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/MelodyJIN-Y/Liveability-of-Melbourne.svg?style=for-the-badge
 [issues-url]: https://github.com//MelodyJIN-Y/Liveability-of-Melbourne/issues
-[license-shield]: https://img.shields.io/github/license/github_username/Liveability-of-Melbourne.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/MelodyJIN-Y/Liveability-of-Melbourne.svg?style=for-the-badge
 [license-url]: https://github.com//MelodyJIN-Y/Liveability-of-Melbourne/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [video-shield]: https://img.shields.io/youtube/channel/views/UCLdeGdBHXeT1GqU83WmMy0w?style=social
