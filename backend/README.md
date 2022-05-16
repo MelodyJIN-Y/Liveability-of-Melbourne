@@ -45,6 +45,6 @@ The main file has functions:
      
 ## Sentiment folder
 ### CouchDB_functions.py 
-Please refer to section [twitter folder - Common files used - 2. CouchDB_functions.py](#### 2. CouchDB_functions.py) above for details.
+Please refer to section [twitter folder - Common files used - 2. CouchDB_functions.py](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/blob/main/backend/README.md#2-couchdb_functionspy) above for details.
 ### couchdb_address.json
 
