@@ -44,11 +44,11 @@ YouTube videos: https://www.youtube.com/playlist?list=PLhue6Y7TCUD3a12XNekhmNJNR
 ### Team members: 
 * [Xinyi Jin (Melody)](https://www.linkedin.com/in/melody-jin/)
 
-* [Yan Ying (Eliza)](linkedin.com/in/yan-ying-602848218)
+* [Yan Ying (Eliza)](https://www.linkedin.com/in/yan-ying-602848218/)
  
 * [Xinhao Hao (Budd)](https://www.linkedin.com/in/xinhao-hao-3a199b23a/)
 
-* [Liqin Zhang](www.linkedin.com/in/liqin-zhang-1480ba1a2)
+* [Liqin Zhang](https://www.linkedin.com/in/liqin-zhang-1480ba1a2)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
