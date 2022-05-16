@@ -20,10 +20,11 @@ contains information:
 * Twitter API information ("API_Key", "API_Key_Secret", "Access_Token", "Access_Token_Secret", "Bearer Token") of 2 Essential access and 2 Elevated access;    
 * query sentences of topics for Twitter API version2 and Twitter API version1 respectively;
 * common information used for both topics, including Cookie for Twitter API, CouchDB information (addresses, username and password), and keys for searching.
+* This file is a common program used to get information of Twitter APIs and queries. (historical_tweets.py, EssentialAPI_process_search+stream.py, and ElevatedAPI_process_search+timeline.py all use it)
 
 #### 2. CouchDB_functions.py
 * It is a python file contains functions to do operations in CouchDB, including opening CouchDB, writing data into CouchDB, collecting top ten user ids that posted the most related tweets, adding a view of database, and deleting a database.
-* This file is used by the above three .py files to modify CouchDB.
+* This file is a common program used to modify CouchDB. (historical_tweets.py, EssentialAPI_process_search+stream.py, ElevatedAPI_process_search+timeline.py, and sentimental_analysis.py all use it)
 
 ### history_data folder
 #### historical_tweets.py
@@ -42,5 +43,8 @@ The main file has functions:
 2. compile user timeline v2 functions for two topics to search related tweets of users that have posted the same kind of tweets recently;
 3. and use scheduler tool to compile following user timeline v2 once a day and recent search v1 once a week.
      
-
+## Sentiment folder
+### CouchDB_functions.py 
+Please refer to section \[twitter folder\]\[Common files used\]\[2. CouchDB_functions.py\] above for details.
+### couchdb_address.json
 
