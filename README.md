@@ -42,7 +42,7 @@ YouTube videos: https://www.youtube.com/playlist?list=PLhue6Y7TCUD3a12XNekhmNJNR
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 ### Team members: 
-* [Xinyi Jin (Melody)](https://www.linkedin.com/in/melody-jin/)
+* [Xinyi Jin (Melody)][linkedin-shield](https://www.linkedin.com/in/melody-jin/)
 * [Yan Ying (Eliza)](yying4@student.unimelb.edu.au)
 * [Xinhao Hao (Budd)](xinhaoh1@student.unimelb.edu.au)
 * [Liqin Zhang](liqizhang@student.unimelb.edu.au)
