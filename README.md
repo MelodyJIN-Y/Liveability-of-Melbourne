@@ -19,7 +19,7 @@
 -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
-[![video][youtube-shield]]
+[![video][youtube-shield]
 [![MIT License][license-shield]][license-url]
 
 
