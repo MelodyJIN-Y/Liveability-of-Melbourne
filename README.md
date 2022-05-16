@@ -92,7 +92,8 @@ YouTube videos: https://www.youtube.com/playlist?list=PLhue6Y7TCUD3a12XNekhmNJNR
 This is an example of how to list things you need to use the software and how to install them.
 * Twitter developer account 
 
-  list your twitter developer account tokens and named it as . See the format in `.json`
+    * list your twitter developer account tokens and named it as `token_and_query.json` . See the sample format in [`token_and_query.json`](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/blob/main/backend/twitter/live_data/essential/token_and_query.json)
+
 * MRC access 
   
     * download the related cloud file and rename it as `clouds.yaml`. Put the file to `host_vars`. This file will be used by OpenStack tools as a source of configuration on how to connect to a cloud. See the example in `clouds-example.yaml`
