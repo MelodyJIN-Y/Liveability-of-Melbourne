@@ -42,7 +42,7 @@ YouTube videos: https://www.youtube.com/playlist?list=PLhue6Y7TCUD3a12XNekhmNJNR
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 ### Team members: 
-* Xinyi Jin (Melody)[![LinkedIn][linkedin-shield]][linkedin-url-Melody]
+* Xinyi Jin (Melody)  [![LinkedIn][linkedin-shield]][linkedin-url-Melody]
 * [Yan Ying (Eliza)](yying4@student.unimelb.edu.au)
 * [Xinhao Hao (Budd)](xinhaoh1@student.unimelb.edu.au)
 * [Liqin Zhang](liqizhang@student.unimelb.edu.au)
@@ -71,8 +71,8 @@ This is an example of how to list things you need to use the software and how to
 * Twitter developer account 
 
   list your twitter developer account token in the file 
-  ```sh
-  npm install npm@latest -g
+  ```json
+  
   ```
 
 ### Installation
@@ -90,10 +90,43 @@ Clone the repo
 ## Usage
 
 ### System deployment 
-1. launch instance 
-2. set up CouchDB and CouchDB cluster
-3. deploy backend applications
-4. deploy front-end applications
+The entire system can be deployed with one single playbook `entire_process.yaml` and the file `run-entire-process.sh`
+
+We also provide a step-by-step version to deploy the system for testing and illustration purpose. The `deployment-intermediate-step` folder contains breakdown steps to configure and deploy the system. We use dynamic inventory methods in the depoloyment thus no inventory files are provided. We need to run dynamic inventory in each intermediate deployment step to get the ip and group inforamtion.  
+* #### Option1: one-step deployment 
+
+  ```sh
+  ./run-entire-process.sh
+  ```
+* #### Option2: step-by-step deployment 
+  1. launch and configure instance: 
+  
+      realted playbook: `s1-create-instances.yaml`
+    
+      ```sh
+      ./s1-run.sh
+      ```
+  2. set up CouchDB and CouchDB cluster  
+      
+      realted playbook: `s2-setup-couchdb.yaml`
+    
+      ```sh
+      ./s2-run.sh
+      ```
+  3. deploy backend applications  
+      
+      realted playbook: `s3-deploy-backend.yaml`
+    
+      ```sh
+      ./s3-run.sh
+      ```
+  4. deploy front-end applications  
+      
+      realted playbook: `s4-deploy-frontend.yaml`
+    
+      ```sh
+      ./s4-run.sh
+      ```
 ### Back-end
 
 ### Front-end 
@@ -117,7 +150,7 @@ Project Link: [https://github.com/MelodyJIN-Y/Liveability-of-Melbourne](https://
 * Xinyi Jin (Melody): xinyij4@student.unimelb.edu.au
 * Yan Ying (Eliza): yying4@student.unimelb.edu.au
 * Xinhao Hao (Budd): xinhaoh1@student.unimelb.edu.au
-* Liqin Zhang:liqizhang@student.unimelb.edu.au
+* Liqin Zhang: liqizhang@student.unimelb.edu.au
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -143,4 +176,4 @@ Project Link: [https://github.com/MelodyJIN-Y/Liveability-of-Melbourne](https://
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url-Melody]: https://www.linkedin.com/in/melody-jin/
 [video-shield]: https://img.shields.io/youtube/channel/views/UCLdeGdBHXeT1GqU83WmMy0w?style=social
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/webpage.png
