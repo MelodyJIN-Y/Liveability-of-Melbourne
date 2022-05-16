@@ -150,12 +150,12 @@ We also provide a step-by-step version to deploy the system for testing and illu
       ```
 ### Back-end
 Functionalities of back-end multiprocessing programs are to to collect tweets, transmit AURIN data, and do sentiment analysis concurrently. Thus, under the "back-end" folder, there are three separate folders consist of their corresponding programs. Within each folder, execution can starts by using "python" command on the main program. The following commands show how to run main functions.
-#### Back-end/[AURIN](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/tree/main/backend/Aurin):
+#### [Back-end/AURIN](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/tree/main/backend/Aurin):
 store local AURIN data to CouchDB
   ```sh
   python write_AURIN_couchdb.py
   ```
-#### Back-end/[Twitter](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/tree/main/backend/twitter):
+#### [Back-end/Twitter](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/tree/main/backend/twitter):
 * [history data](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/tree/main/backend/twitter/history_data)
 do pre-processes on historical tweets and store them to CouchDB
   ```sh
@@ -172,7 +172,7 @@ set up four Twitter harvesters to collect tweets through Twitter APIs
   python ElevatedAPI_process_search+timeline.py
   ```
   
-#### Back-end/[Sentiment](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/tree/main/backend/Sentiment)
+#### [Back-end/Sentiment](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/tree/main/backend/Sentiment)
 Based on tweet text databases, do sentiment analysis and get wordcloud on content of tweets.
   ```sh
   python sentimental_analysis.py
