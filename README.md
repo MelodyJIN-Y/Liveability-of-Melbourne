@@ -155,7 +155,7 @@ store local AURIN data to CouchDB
   ```sh
   python write_AURIN_couchdb.py
   ```
-#### [Back-end/Twitter](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/tree/main/backend/twitter):
+#### [Back-end/twitter](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/tree/main/backend/twitter):
 * [history data](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/tree/main/backend/twitter/history_data)
 do pre-processes on historical tweets and store them to CouchDB
   ```sh
