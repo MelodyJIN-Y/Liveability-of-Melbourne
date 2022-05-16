@@ -42,13 +42,13 @@ YouTube videos: https://www.youtube.com/playlist?list=PLhue6Y7TCUD3a12XNekhmNJNR
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 ### Team members: 
-* Xinyi Jin (Melody)  [![LinkedIn][linkedin-shield]][linkedin-url-Melody]
+* [Xinyi Jin (Melody)](https://www.linkedin.com/in/melody-jin/)
 
-* Yan Ying (Eliza)  [![LinkedIn][linkedin-shield]][linkedin-url-Eliza]
+* [Yan Ying (Eliza)](linkedin.com/in/yan-ying-602848218)
  
-* Xinhao Hao (Budd) [![LinkedIn][linkedin-shield]][linkedin-url-Budd]
+* [Xinhao Hao (Budd)](https://www.linkedin.com/in/xinhao-hao-3a199b23a/)
 
-* Liqin Zhang  [![LinkedIn][linkedin-shield]][linkedin-url-liqin]
+* [Liqin Zhang](www.linkedin.com/in/liqin-zhang-1480ba1a2)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
