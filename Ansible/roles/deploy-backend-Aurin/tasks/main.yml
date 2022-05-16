@@ -1,0 +1,27 @@
+# -----------------------------------------------
+# Author        = Xinyi Jin (Melody)
+# Date          = 2022-04-16 23:19
+# Description   = write AnRIN data to couchDB
+# -----------------------------------------------
+---
+- name: create Aurin directory
+  become: yes
+  file:
+    path: "{{ Aurin_remote_path }}"
+    state: directory
+    mode: 0777
+
+- name: copying file from local to remote server (Aurin data)
+  become: true
+  copy:
+    src: "../{{ Aurin_local_path }}"
+    dest: "{{Aurin_remote_path }}"
+    mode: 0777
+
+- name: Run docker compose (Aurin data)
+  become: yes
+  community.docker.docker_compose:
+    project_src: "{{Aurin_remote_path }}"
+    state: present
+    recreate: always
+    build: yes

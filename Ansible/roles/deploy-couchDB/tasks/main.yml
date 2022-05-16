@@ -1,0 +1,76 @@
+# -----------------------------------------------
+# Author        = Xinyi Jin (Melody)
+# Date          = 2022-04-15 22:01
+# Description   = set up couchDB cluster
+# -----------------------------------------------
+---
+- name: enable couchDB cluster
+  become: yes
+  uri:
+    url: "http://{{ groups['masternode'][0] }}:5984/_cluster_setup"
+    user: "{{ couchdb_user }}"
+    password: "{{ couchdb_pass }}"
+    method: POST
+    force_basic_auth: yes
+    return_content: yes
+    body: "{\"action\":\"enable_cluster\", \"bind_address\":\"0.0.0.0\",\
+             \"username\":\"{{ couchdb_user }}\", \"password\":\"{{ couchdb_pass }}\", \"port\": \"5984\",\
+             \"remote_node\": \"{{ item }}\", \"node_count\": \"{{ groups['database'] | length }}\",\
+             \"remote_current_user\":\"{{ couchdb_user }}\", \"remote_current_password\":\"{{ couchdb_pass }}\"}"
+    body_format: json
+    headers:
+      Content-Type: "application/json"
+    status_code: 201
+  loop: "{{ groups['workers'] }}"
+
+
+- name: add nodes
+  become: yes
+  uri:
+    url: "http://{{ groups['masternode'][0] }}:5984/_cluster_setup"
+    user: "{{ couchdb_user }}"
+    password: "{{ couchdb_pass }}"
+    method: POST
+    force_basic_auth: yes
+    return_content: yes
+    body: "{ \"action\": \"add_node\", \"host\":\"{{ item }}\",\
+             \"port\": \"5984\", \"username\": \"{{ couchdb_user }}\", \"password\":\"{{ couchdb_pass }}\" }"
+    body_format: json
+    headers:
+      Content-Type: "application/json"
+    status_code: 201, 409 # ignore if update conflicts
+  loop: "{{ groups['workers'] }}"
+
+
+- name: finish cluster setup
+  become: yes
+  uri:
+    url: "http://127.0.0.1:5984/_cluster_setup"
+    user: "{{ couchdb_user }}"
+    password: "{{ couchdb_pass }}"
+    method: POST
+    return_content: yes
+    force_basic_auth: yes
+    body: "{\"action\": \"finish_cluster\"}"
+    body_format: json
+    headers:
+      Content-Type: "application/json"
+    status_code: 201,500
+    timeout: 100
+
+- name: check cluster membership - masternode
+  become: yes
+  uri:
+    url: "http://127.0.0.1:5984/_membership"
+    user: "{{ couchdb_user }}"
+    password: "{{ couchdb_pass }}"
+    method: GET
+    return_content: yes
+    body_format: json
+    force_basic_auth: yes
+  register: membership_master_response
+
+
+- name: check masternode membership
+  debug:
+    msg: "{{ ansible_host }} : {{ membership_master_response }}"

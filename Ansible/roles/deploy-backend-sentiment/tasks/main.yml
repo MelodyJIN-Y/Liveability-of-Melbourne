@@ -1,0 +1,29 @@
+# -----------------------------------------------
+# Author        = Xinyi Jin (Melody)
+# Date          = 2022-05-14 22:16
+# Description   = deploy sentimental analyser
+# -----------------------------------------------
+---
+- name: create directory for sentimental analysis
+  become: yes
+  file:
+    path: "{{ sentiment_remote_path }}"
+    state: directory
+    mode: 0777
+
+
+
+- name: copying file from local to remote server (sentimental analysis)
+  become: true
+  copy:
+    src: "../{{ sentiment_local_path }}"
+    dest: "{{sentiment_remote_path }}"
+    mode: 0777
+
+- name: Run docker compose (sentimental analysis)
+  become: yes
+  community.docker.docker_compose:
+    project_src: "{{sentiment_remote_path }}"
+    state: present
+    recreate: always
+    build: yes

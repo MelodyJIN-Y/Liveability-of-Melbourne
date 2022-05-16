@@ -1,0 +1,29 @@
+# -----------------------------------------------
+# Author        = Xinyi Jin (Melody)
+# Date          = 2022-05-02 20:11
+# Description   = deploy live twitter harvester
+# -----------------------------------------------
+---
+- name: create twitter live directory
+  become: yes
+  file:
+    path: "{{ backend_twitter_live_remote }}"
+    state: directory
+    mode: 0777
+
+
+- name: copying file from local to remote server (live twitter related files)
+  become: true
+  copy:
+    src: "../{{ backend_twitter_live_local }}"
+    dest: "{{backend_twitter_live_remote }}"
+    mode: 0777
+
+- name: Run docker compose (live data)
+  become: yes
+  community.docker.docker_compose:
+    project_src: /{{backend_twitter_live_remote }}
+    state: present
+    recreate: always
+    build: yes
+

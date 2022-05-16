@@ -1,0 +1,40 @@
+# -----------------------------------------------
+# Author        = Xinyi Jin (Melody)
+# Date          = 2022-05-02 20:11
+# Description   = deploy historical-twitter-data-convertor
+# -----------------------------------------------
+---
+- name: create project root
+  become: yes
+  file:
+    path: /{{ project_root }}
+    state: directory
+    mode: 0777
+
+- name: create twitter history directory
+  become: yes
+  file:
+    path: "{{ backend_twitter_history_remote }}"
+    state: directory
+    mode: 0777
+
+- name: copying file from local to remote server (historical twitter related files)
+  become: true
+  copy:
+    src: "../{{ backend_twitter_history_local }}"
+    dest: /{{backend_twitter_history_remote }}
+    mode: 0777
+
+- name: Run docker compose (history data)
+  become: yes
+  community.docker.docker_compose:
+    project_src: /{{backend_twitter_history_remote }}
+    state: present
+    recreate: always
+    build: yes
+#
+#- name: close docker compose (history data)
+#  become: yes
+#  community.docker.docker_compose:
+#    project_src: /{{backend_twitter_history_remote }}
+#    state: absent

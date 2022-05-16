@@ -1,0 +1,28 @@
+# -----------------------------------------------
+# Author        = Xinyi Jin (Melody)
+# Date          = 2022-05-01 15:01
+# Description   = deploy front-end applciations
+# Version       = 2022/5/1   
+# -----------------------------------------------
+- name: create frontend directory
+  become: yes
+  file:
+    path: "{{ frontend_remote }}"
+    state: directory
+    mode: 0777
+
+
+- name: copying file from local to remote server (frontend files)
+  become: true
+  copy:
+    src: "../{{ frontend_local }}"
+    dest: "{{frontend_remote }}"
+    mode: 0777
+
+- name: Run docker compose (frontend)
+  become: yes
+  community.docker.docker_compose:
+    project_src: "{{ frontend_remote }}"
+    state: present
+    recreate: always
+    build: yes

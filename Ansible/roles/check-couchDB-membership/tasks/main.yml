@@ -1,0 +1,22 @@
+# -----------------------------------------------
+# Author        = Xinyi Jin (Melody)
+# Date          = 2022-04-16 23:19
+# Description   = couchDB cluster setup
+# -----------------------------------------------
+---
+- name: check cluster membership - workers
+  become: yes
+  uri:
+    url: "http://127.0.0.1:5984/_membership"
+    user: "{{ couchdb_user }}"
+    password: "{{ couchdb_pass }}"
+    method: GET
+    return_content: yes
+    body_format: json
+    force_basic_auth: yes
+  register: membership_worker_response
+
+
+- name: check worker membership
+  debug:
+    msg: "{{ ansible_host }} : {{ membership_worker_response }}"

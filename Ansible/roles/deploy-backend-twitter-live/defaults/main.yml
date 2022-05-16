@@ -1,0 +1,13 @@
+# -----------------------------------------------
+# Author        = Xinyi Jin (Melody)
+# Date          = 2022-04-27 22:20
+# Description   =
+# Version       = 2022/4/27   
+# -----------------------------------------------
+
+---
+# local path of backend files
+backend_twitter_live_local: backend/twitter/live_data/
+# remote path of backend files
+backend_twitter_live_remote: /COMP90024/backend/twitter/live_data
+

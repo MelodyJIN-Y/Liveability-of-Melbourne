@@ -1,0 +1,60 @@
+# -----------------------------------------------
+# Author        = Xinyi Jin (Melody)
+# Date          = 2022-05-10 23:17
+# Description   = intermediate playbook to set up coouchdb
+# Version       = 2022/5/10   
+# -----------------------------------------------
+
+# get dynamic Inventory
+- hosts: localhost
+  vars_files:
+    - host_vars/nectar.yaml
+    - host_vars/clouds.yaml
+  gather_facts: true
+  roles:
+    - role: check_groups
+
+# create couchdb
+- hosts: database
+  vars_files:
+    - host_vars/docker-config.yaml
+    - host_vars/couchDB-config.yml
+  gather_facts: true
+  vars:
+    - ansible_user: ubuntu
+    - ansible_ssh_private_key_file: host_vars/initialisation.pem
+    - ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+
+  roles:
+    - role: common-instance
+    - role: docker-volumes
+    - role: docker
+    - role: create-couchDB
+
+# deploy couchdb
+- hosts: masternode
+  vars_files:
+    - host_vars/docker-config.yaml
+    - host_vars/couchDB-config.yml
+  gather_facts: true
+  vars:
+    - ansible_user: ubuntu
+    - ansible_ssh_private_key_file: host_vars/initialisation.pem
+    - ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+
+  roles:
+    - role: deploy-couchDB
+
+# deploy couchdb
+- hosts: workers
+  vars_files:
+    - host_vars/docker-config.yaml
+    - host_vars/couchDB-config.yml
+  gather_facts: true
+  vars:
+    - ansible_user: ubuntu
+    - ansible_ssh_private_key_file: host_vars/initialisation.pem
+    - ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+
+  roles:
+    - role: check-couchDB-membership

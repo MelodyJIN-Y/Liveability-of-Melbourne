@@ -1,0 +1,39 @@
+# Common vars
+availability_zone: melbourne-qh2-uom
+instance_image: 356ff1ed-5960-4ac2-96a1-0c0198e6a999
+instance_key_name: initialisation
+instance_flavor: uom.mse.2c9g
+
+# Volume
+volumes:
+  - vol_name: back
+    vol_size: 80
+  - vol_name: db-major
+    vol_size: 80
+  - vol_name: db-1
+    vol_size: 70
+  - vol_name: db-2
+    vol_size: 70
+
+# Security group
+security_groups:
+  - name: sg_ssh
+    description: "security group for instances"
+    protocol: tcp
+    port_range_min: 22
+    port_range_max: 25984
+    remote_ip_prefix: 0.0.0.0/0
+
+
+# Instance
+instances:
+  - name: instance1
+    volumes: ['back']
+  - name: instance2
+    volumes: ['db-major']
+  - name: instance3
+    volumes: ['db-1']
+  - name: instance4
+    volumes: ['db-2']
+
+

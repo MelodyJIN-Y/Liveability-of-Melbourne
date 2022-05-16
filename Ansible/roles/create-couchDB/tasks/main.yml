@@ -1,0 +1,23 @@
+# -----------------------------------------------
+# Author        = Xinyi Jin (Melody)
+# Date          = 2022-04-16 12:23
+# Description   = create couchDB
+# -----------------------------------------------
+
+---
+- name: start couchDB container
+  become: yes
+  docker_container:
+    name: "{{ couchdb_container_name}}"
+    image: "{{ couchdb_image }}"
+    ports:
+      - "5984:5984"
+      - "9100:9100"
+      - "4369:4369"
+    env:
+      NODENAME: "{{ ansible_host }}"
+      COUCHDB_USER: "{{ couchdb_user }}"
+      COUCHDB_PASSWORD: "{{ couchdb_pass }}"
+      COUCHDB_SECRET: "{{ couchdb_cookie }}"
+      COUCHDB_ERLANG_COOKIE: "{{ erl_cookie }}"
+

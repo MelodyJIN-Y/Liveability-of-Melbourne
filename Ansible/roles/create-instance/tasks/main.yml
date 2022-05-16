@@ -1,0 +1,82 @@
+# -----------------------------------------------
+# Description   = create instance
+# Acknowledge   = Codes from COMP90024 Workshop, written by Alwyn Pan, modifications are made by Xinyi Jin
+# -----------------------------------------------
+---
+# Create an instance on NeCTAR
+- name: Create an instance
+  openstack.cloud.server:
+    name: '{{ item.name }}'
+    image: '{{ instance_image }}'
+    key_name: '{{ instance_key_name }}'
+    flavor: '{{ instance_flavor }}'
+    availability_zone: '{{ availability_zone }}'
+    security_groups: '{{ sg_names }}'
+    volumes: '{{ item.volumes }}'
+    auto_floating_ip: yes
+    wait: yes
+    timeout: 600
+    state: present
+  loop: '{{ instances }}'
+  register: os_instance
+
+- ansible.builtin.debug:
+    msg: "Instance {{ item.openstack.name }} has been created. IP address is {{ item.openstack.public_v4 }}"
+  loop: '{{ os_instance.results }}'
+  when: item.openstack is defined
+
+- name: Wait for connection
+  ansible.builtin.wait_for:
+    host: "{{ item.openstack.public_v4 }}"
+    port: 22
+    timeout: 120
+    search_regex: OpenSSH
+  loop: '{{ os_instance.results }}'
+  when: item.openstack is defined
+
+- name: fetch all instances
+  openstack.cloud.server_info:
+    cloud: "{{ clouds }}"
+  register: servers_info
+
+# Add instance1 to Ansible in-memory inventory
+- name: Add instance1
+  ansible.builtin.add_host:
+    name: '{{ item.public_v4 }}'
+    #ansible_host: '{{ item.openstack.public_v4 }}'
+    groups: backend
+  loop: '{{ servers_info.openstack_servers }}'
+  when: item.name == 'instance1'
+
+# Add instance2 to Ansible in-memory inventory
+- name: Add instance2
+  ansible.builtin.add_host:
+    name: '{{ item.public_v4 }}'
+    groups: database, masternode
+  loop: '{{ servers_info.openstack_servers }}'
+  when: item.name == 'instance2'
+
+# Add instance3 to Ansible in-memory inventory
+- name: Add instance3
+  ansible.builtin.add_host:
+    name: '{{ item.public_v4 }}'
+    groups: frontend, database, workers
+  loop: '{{ servers_info.openstack_servers }}'
+  when: item.name == 'instance3'
+
+# Add instance4 to Ansible in-memory inventory
+- name: Add instance4
+  ansible.builtin.add_host:
+    name: '{{ item.public_v4 }}'
+    groups: frontend, database, workers
+  loop: '{{ servers_info.openstack_servers }}'
+  when: item.name == 'instance4'
+
+
+- debug:
+    var: groups.keys()
+
+- debug:
+    var: groups
+
+

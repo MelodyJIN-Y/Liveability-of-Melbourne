@@ -1,0 +1,10 @@
+# -----------------------------------------------
+# Author        = Xinyi Jin (Melody)
+# Date          = 2022-04-27 22:20
+# Description   =
+# Version       = 2022/4/27   
+# -----------------------------------------------
+
+---
+Aurin_local_path: backend/Aurin/
+Aurin_remote_path: /COMP90024/backend/Aurin

@@ -1,0 +1,52 @@
+# -----------------------------------------------
+# Author        = Xinyi Jin (Melody)
+# Date          = 2022-04-17 20:32
+# Description   = dynamic inventory
+# -----------------------------------------------
+---
+- name: fetch all instances
+  openstack.cloud.server_info:
+    cloud: "{{ clouds }}"
+  register: servers_info
+
+# Add instance1 to Ansible in-memory inventory
+- name: Add instance1
+  ansible.builtin.add_host:
+    name: '{{ item.public_v4 }}'
+    #ansible_host: '{{ item.openstack.public_v4 }}'
+    groups: backend
+  loop: '{{ servers_info.openstack_servers }}'
+  when: item.name == 'instance1'
+
+# Add instance2 to Ansible in-memory inventory
+- name: Add instance2
+  ansible.builtin.add_host:
+    name: '{{ item.public_v4 }}'
+    groups: database, masternode
+  loop: '{{ servers_info.openstack_servers }}'
+  when: item.name == 'instance2'
+
+# Add instance3 to Ansible in-memory inventory
+- name: Add instance3
+  ansible.builtin.add_host:
+    name: '{{ item.public_v4 }}'
+    groups: frontend, database, workers
+  loop: '{{ servers_info.openstack_servers }}'
+  when: item.name == 'instance3'
+
+# Add instance4 to Ansible in-memory inventory
+- name: Add instance4
+  ansible.builtin.add_host:
+    name: '{{ item.public_v4 }}'
+    groups: frontend, database, workers
+  loop: '{{ servers_info.openstack_servers }}'
+  when: item.name == 'instance4'
+
+
+- debug:
+    var: groups.keys()
+
+- debug:
+    var: groups
+
+

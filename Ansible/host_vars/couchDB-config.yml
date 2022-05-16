@@ -1,0 +1,8 @@
+---
+couchdb_user: admin
+couchdb_pass: admin
+couchdb_image: ibmcom/couchdb3:3.2.1
+couchdb_cookie: 'a192aeb9904e6590849337933b000c99'
+couchdb_container_name: 'couchdb_'
+couchdb_db_name: 'tweets'
+erl_cookie: "brumbrumbrumbrumbrumbrums"

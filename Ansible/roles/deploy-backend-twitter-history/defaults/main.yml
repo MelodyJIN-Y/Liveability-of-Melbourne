@@ -1,0 +1,16 @@
+# -----------------------------------------------
+# Author        = Xinyi Jin (Melody)
+# Date          = 2022-04-27 22:20
+# Description   =
+# Version       = 2022/4/27   
+# -----------------------------------------------
+
+---
+# root directory
+project_root: COMP90024
+# remote path of backend files
+backend_twitter_history_remote: /COMP90024/backend/twitter/history_data
+# local path of backend files
+backend_twitter_history_local: backend/twitter/history_data/
+
+
