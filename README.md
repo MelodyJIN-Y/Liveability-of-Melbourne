@@ -149,7 +149,7 @@ We also provide a step-by-step version to deploy the system for testing and illu
       ./s4-run.sh
       ```
 ### Back-end
-Functionalities of back-end multiprocessing programs are to to collect tweets, transmit AURIN data, and do sentiment analysis concurrently. Thus, under the "back-end" folder, there are three separate folders consist of their corresponding programs. Within each folder, execution can starts by using "python" command on the main program. The following commands show how to run main functions.
+Functionalities of back-end multiprocessing programs are to to collect tweets, transmit AURIN data, and do sentiment analysis concurrently. Thus, under the "back-end" folder, there are three separate folders consist of their corresponding programs. Within each folder, execution can starts by using "python" command on the main program. The following commands show how to run main functions. Since the overall design of the back-end system is complexed, some more details are described in another [README.md](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/blob/main/backend/README.md) file under the "backend" folder.
 #### [Back-end/AURIN](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/tree/main/backend/Aurin):
 store local AURIN data to CouchDB
   ```sh
