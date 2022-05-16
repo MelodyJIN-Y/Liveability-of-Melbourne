@@ -150,20 +150,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 <!-- LICENSE -->
 ## License
 
@@ -176,9 +162,12 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Project Link: [https://github.com/MelodyJIN-Y/Liveability-of-Melbourne](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne) 
+* [Xinyi Jin (Melody)]: xinyij4@student.unimelb.edu.au
+* [Yan Ying (Eliza)]: yying4@student.unimelb.edu.au
+* [Xinhao Hao (Budd)]: xinhaoh1@student.unimelb.edu.au
+* [Liqin Zhang]: liqizhang@student.unimelb.edu.au
 
-Project Link: [https://github.com/MelodyJIN-Y/Liveability-of-Melbourne](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -187,10 +176,7 @@ Project Link: [https://github.com/MelodyJIN-Y/Liveability-of-Melbourne](https://
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
-
+* [README template](https://github.com/othneildrew/Best-README-Template)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
