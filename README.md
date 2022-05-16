@@ -98,14 +98,11 @@ This is a group project for COMP90024 Cluster and Cloud Computing (2022 Semester
 
 ### Built With
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Melbourne Research Cloud](https://dashboard.cloud.unimelb.edu.au)
+* [AURIN](https://portal.aurin.org.au)
+* [Ansible](https://www.ansible.com)
+* [Docker](https://www.docker.com)
+* [Twitter API](https://dev.twitter.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -202,16 +199,16 @@ Project Link: [https://github.com/MelodyJIN-Y/Liveability-of-Melbourne](https://
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/Liveability-of-Melbourne.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/Liveability-of-Melbourne/graphs/contributors
+[contributors-shield]: https://img.shields.io/github/contributors/MelodyJIN-Y/Liveability-of-Melbourne.svg?style=for-the-badge
+[contributors-url]: https://github.com//MelodyJIN-Y/Liveability-of-Melbourne/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/github_username/Liveability-of-Melbourne.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/Liveability-of-Melbourne/network/members
+[forks-url]: https://github.com//MelodyJIN-Y/Liveability-of-Melbourne/network/members
 [stars-shield]: https://img.shields.io/github/stars/github_username/Liveability-of-Melbourne.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/Liveability-of-Melbourne/stargazers
+[stars-url]: https://github.com//MelodyJIN-Y/Liveability-of-Melbourne/stargazers
 [issues-shield]: https://img.shields.io/github/issues/github_username/Liveability-of-Melbourne.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/Liveability-of-Melbourne/issues
+[issues-url]: https://github.com//MelodyJIN-Y/Liveability-of-Melbourne/issues
 [license-shield]: https://img.shields.io/github/license/github_username/Liveability-of-Melbourne.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/Liveability-of-Melbourne/blob/master/LICENSE.txt
+[license-url]: https://github.com//MelodyJIN-Y/Liveability-of-Melbourne/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
