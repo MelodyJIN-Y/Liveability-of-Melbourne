@@ -35,7 +35,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This is a group project for COMP90024 Cluster and Cloud Computing (2022 Semester 1), The University of Melbourne. 
+This is a group project for COMP90024 Cluster and Cloud Computing (Semester 1， 2022), The University of Melbourne. 
 
 YouTube videos: https://www.youtube.com/playlist?list=PLhue6Y7TCUD3a12XNekhmNJNRnn6a2gsQ
 
@@ -99,16 +99,15 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 ### System deployment 
 1. launch instance 
 2. set up CouchDB and CouchDB cluster
 3. deploy backend applications
 4. deploy front-end applications
 ### Back-end
+
 ### Front-end 
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
