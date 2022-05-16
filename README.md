@@ -85,7 +85,7 @@
 This is a group project for COMP90024 Cluster and Cloud Computing (2022 Semester 1), The University of Melbourne. 
 
 ### Team members: 
-* [Xinyi Jin (Melody)](xinyij4@student.unimelb.edu.au)
+* [Xinyi Jin (Melody)](https://www.linkedin.com/in/melody-jin/)
 * [Yan Ying (Eliza)](yying4@student.unimelb.edu.au)
 * [Xinhao Hao (Budd)](xinhaoh1@student.unimelb.edu.au)
 * [Liqin Zhang](liqizhang@student.unimelb.edu.au)
@@ -163,10 +163,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Project Link: [https://github.com/MelodyJIN-Y/Liveability-of-Melbourne](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne) 
-* [Xinyi Jin (Melody)]: xinyij4@student.unimelb.edu.au
-* [Yan Ying (Eliza)]: yying4@student.unimelb.edu.au
-* [Xinhao Hao (Budd)]: xinhaoh1@student.unimelb.edu.au
-* [Liqin Zhang]: liqizhang@student.unimelb.edu.au
+* [Xinyi Jin (Melody)]:xinyij4@student.unimelb.edu.au
+* [Yan Ying (Eliza)]:yying4@student.unimelb.edu.au
+* [Xinhao Hao (Budd)]:xinhaoh1@student.unimelb.edu.au
+* [Liqin Zhang]:liqizhang@student.unimelb.edu.au
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
