@@ -19,7 +19,7 @@
 -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
-[![video][video-url]
+[![video][youtube-shield]][video-url]
 [![MIT License][license-shield]][license-url]
 
 
@@ -209,5 +209,5 @@ Project Link: [https://github.com/MelodyJIN-Y/Liveability-of-Melbourne](https://
 [license-url]: https://github.com//MelodyJIN-Y/Liveability-of-Melbourne/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[video-url]: https://google.com/
+[video-url]: https://img.shields.io/youtube/channel/views/:channelId
 [product-screenshot]: images/screenshot.png
