@@ -35,7 +35,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This is a group project for COMP90024 Cluster and Cloud Computing (Semester 1， 2022), The University of Melbourne. 
+This is a group project for COMP90024 Cluster and Cloud Computing (Semester 1, 2022), The University of Melbourne. 
 
 YouTube videos: https://www.youtube.com/playlist?list=PLhue6Y7TCUD3a12XNekhmNJNRnn6a2gsQ
 
@@ -43,8 +43,11 @@ YouTube videos: https://www.youtube.com/playlist?list=PLhue6Y7TCUD3a12XNekhmNJNR
 
 ### Team members: 
 * Xinyi Jin (Melody)  [![LinkedIn][linkedin-shield]][linkedin-url-Melody]
+
 * [Yan Ying (Eliza)](yying4@student.unimelb.edu.au)
+ 
 * [Xinhao Hao (Budd)](xinhaoh1@student.unimelb.edu.au)
+
 * [Liqin Zhang](liqizhang@student.unimelb.edu.au)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -70,10 +73,12 @@ YouTube videos: https://www.youtube.com/playlist?list=PLhue6Y7TCUD3a12XNekhmNJNR
 This is an example of how to list things you need to use the software and how to install them.
 * Twitter developer account 
 
-  list your twitter developer account token in the file 
-  ```json
+  list your twitter developer account tokens and named it as . See the format in `.json`
+* MRC access 
   
-  ```
+    * download the cloud file and named it as `clouds.yaml`. Put the file to `host_vars`. This file will be used by OpenStack tools as a source of configuration on how to connect to a cloud. See the example in `clouds-example.yaml`
+  
+    * get the openRC file for the project. For example, we are group 18 and our file is called `unimelb-COMP90024-2022-grp-18-openrc.sh`
 
 ### Installation
 
@@ -90,7 +95,7 @@ Clone the repo
 ## Usage
 
 ### System deployment 
-The entire system can be deployed with one single playbook `entire_process.yaml` and the file `run-entire-process.sh`
+We use Ansible and Docker to configure and deploy the system. The foder `Ansible` contains all the deployment files. The entire system can be deployed with one single playbook `entire_process.yaml` and the file `run-entire-process.sh`
 
 We also provide a step-by-step version to deploy the system for testing and illustration purpose. The `deployment-intermediate-step` folder contains breakdown steps to configure and deploy the system. We use dynamic inventory methods in the depoloyment thus no inventory files are provided. We need to run dynamic inventory in each intermediate deployment step to get the ip and group inforamtion.  
 * #### Option1: one-step deployment 
