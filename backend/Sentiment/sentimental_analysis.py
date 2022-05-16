@@ -126,7 +126,8 @@ def get_sentiment_label(df, text_column_name,db_name):
         if "text" in db_name:
             record = {"_id": str(df.iloc[i, list(df.columns).index('_id')]),
                       "label": str(df.iloc[i, list(df.columns).index('label')]),
-                      "date": str(df.iloc[i, list(df.columns).index('date')])}
+                      "date": str(df.iloc[i, list(df.columns).index('date')]),
+                      'text_processed': str(df.iloc[i, list(df.columns).index('text_processed')])}
         else:
             record = {"_id": str(df.iloc[i, list(df.columns).index('_id')]),
                       "label": str(df.iloc[i, list(df.columns).index('label')]),
@@ -135,12 +136,21 @@ def get_sentiment_label(df, text_column_name,db_name):
         write_data_to_db(destination=db_name + "_sentiment", record=record)
     print(str(datetime.utcnow()))
     print("--- Time to process", str(db_name), "tweets: ", str( round((time.time() - get_label_time)/60,2)), "min ---")
-    df["label"] = df["label"].astype("category")
-    return df
 
 
 def get_wordcloud_plot(df,text_column_name,db_name):
-    df = get_sentiment_label(df, text_column_name,db_name)
+    # store sentiment analysis to CouchDB
+    get_sentiment_label(df, text_column_name,db_name)
+
+    # get all sentiment label and processed text
+    couch = open_couchdb()
+
+    # read data from database
+    db = couch[db_name+"_sentiment"]
+    rows = db.view('_all_docs', include_docs=True)
+    data = [row['doc'] for row in rows]
+    df = pd.DataFrame(data)
+
     positive = df[df['label'] == 'Positive']
     draw_wc_pfig = time.time()
     wc_fig = WordCloud(max_font_size=50, max_words=500, background_color="white").generate(
@@ -148,14 +158,7 @@ def get_wordcloud_plot(df,text_column_name,db_name):
     wc_fig.to_file("wc_fig.png")
     print(str(datetime.utcnow()))
     print("--- Time to draw wordcloud figure for", str(db_name), "tweets: ", str(round((time.time() - draw_wc_pfig),2)), "s ---")
-    # plt.figure()
-    # plt.imshow(wc_fig, interpolation="bilinear")
-    # plt.axis("off")
-    # plt.savefig("wc_fig.pdf")
-    # plt.close()
-    # with open("wc_fig.png", "rb") as img:
-    #     base64_data = base64.b64encode(img.read())
-    #     print("encoded base64:", base64_data)
+
     record = {"_id": str(datetime.utcnow()), "name": "wordcloud"}
     write_data_to_db(destination=db_name+"_wordcloud", record=record)
     couch = open_couchdb()
@@ -173,17 +176,12 @@ if __name__ == "__main__":
             get_wordcloud_plot(get_tweets(db_name=database),"text", database)
             scheduler.add_job(func=get_wordcloud_plot, args=[get_tweets(db_name=database),
                                                              "text", database],
-                              trigger='interval', hours=8, misfire_grace_time=3600)
+                              trigger='interval', hours=6, misfire_grace_time=3600)
         else:
             get_sentiment_label(get_tweets(db_name=database),"text", database)
             scheduler.add_job(func=get_sentiment_label, args=[get_tweets(db_name=database),
                                                               "text", database],
-                              trigger='interval', hours=4, misfire_grace_time=3600)
+                              trigger='interval', hours=6, misfire_grace_time=3600)
     print(str(datetime.utcnow()))
     print("scheduler starts---")
     scheduler.start()
-
-    # plt.figure()
-    # sns.lineplot(data=df2, x="date", y="text_processed", hue="label")
-    # plt.savefig("sentiment_vs_time.pdf")
-
