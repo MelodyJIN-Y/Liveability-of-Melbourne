@@ -30,13 +30,10 @@
 <h3 align="center">The Liveability of Melbourne </h3>
 
   <p align="center">
-    project_description
-    <br />
-    <a href="https://github.com/MelodyJIN-Y/Liveability-of-Melbourne"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
+    Insights with Environment and health data of Melbourne
+    
     <a href="https://github.com/MelodyJIN-Y/Liveability-of-Melbourne">View Demo</a>
-    ·
+    
   </p>
 </div>
 
@@ -76,6 +73,7 @@
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 This is a group project for COMP90024 Cluster and Cloud Computing (2022 Semester 1), The University of Melbourne. 
+
 YouTube videos: https://www.youtube.com/playlist?list=PLhue6Y7TCUD3a12XNekhmNJNRnn6a2gsQ
 
 ### Team members: 
