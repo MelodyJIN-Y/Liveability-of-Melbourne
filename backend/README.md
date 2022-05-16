@@ -45,6 +45,8 @@ The main file has functions:
      
 ## Sentiment folder
 ### CouchDB_functions.py 
-Please refer to section \[twitter folder\]-\[Common files used\]-\[[2. CouchDB_functions.py]\](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/blob/main/backend/README.md#2-couchdb_functionspy) above for details.
+Please refer to section \[twitter folder\]-\[Common files used\]-\[[2. CouchDB_functions.py](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/blob/main/backend/README.md#2-couchdb_functionspy)\] above for details. The CouchDB_functions.py is the same with the above one.
 ### couchdb_address.json
-
+contians CouchDB information required when logging in like HTTP addresses, username, and password.
+### sentimental_analysis.py
+It is the main file to do sentimental analysis based on tweet text. It is used to do sentimental analyses and draw wordcloud graphs for four databases in CouchDB which are "environment_tweets_text", "health_tweets_text", "environment_tweets_coordinates", and "health_tweets_coordinates". Time triggers are set to execute the program every 8 hours to update sentimental analyses and wordcloud graphs for recently collected tweets.
