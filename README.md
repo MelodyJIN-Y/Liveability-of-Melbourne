@@ -153,7 +153,7 @@ Project Link: [https://github.com/MelodyJIN-Y/Liveability-of-Melbourne](https://
 [issues-shield]: https://img.shields.io/github/issues/MelodyJIN-Y/Liveability-of-Melbourne.svg?style=for-the-badge
 [issues-url]: https://github.com//MelodyJIN-Y/Liveability-of-Melbourne/issues
 [license-shield]: https://img.shields.io/github/license/MelodyJIN-Y/Liveability-of-Melbourne.svg?style=for-the-badge
-[license-url]: https://github.com//MelodyJIN-Y/Liveability-of-Melbourne/blob/master/LICENSE.txt
+[license-url]: https://github.com//MelodyJIN-Y/Liveability-of-Melbourne/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [video-shield]: https://img.shields.io/youtube/channel/views/UCLdeGdBHXeT1GqU83WmMy0w?style=social
 [product-screenshot]: images/screenshot.png
