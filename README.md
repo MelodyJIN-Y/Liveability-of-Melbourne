@@ -84,7 +84,13 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+This is a group project for COMP90024 Cluster and Cloud Computing (2022 Semester 1), The University of Melbourne. 
+
+### Team members: 
+* [Xinyi Jin] (xinyij4@student.unimelb.edu.au)
+* [Yan Ying] (yying4@student.unimelb.edu.au)
+* [Xinhao Hao]  (xinhaoh1@student.unimelb.edu.au)
+* [Liqin Zhang] (liqizhang@student.unimelb.edu.au)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
