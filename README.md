@@ -76,6 +76,9 @@ YouTube videos: https://www.youtube.com/playlist?list=PLhue6Y7TCUD3a12XNekhmNJNR
 * [Ansible](https://www.ansible.com)
 * [Docker](https://www.docker.com)
 * [Twitter API](https://dev.twitter.com/)
+* [Flask](https://palletsprojects.com/p/flask/)
+* [CouchDB](https://couchdb.apache.org)
+* [nltk](https://www.nltk.org)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
