@@ -292,10 +292,11 @@ def scenario1():
     weather_climate_data = get_data("environment_aurin_weather_climate", "_all_docs?include_docs=true")
     pos_data = get_data('environment_tweets_text_sentiment', '_design/label_date/_view/positive?group_level=1')
     pos = []
+    print(pos_data)
     for i in pos_data:
         if (i['key'] >= '2022-03-08' and i['key'] <= '2022-04-30'):
             pos.append(i)
-
+    print(pos)
     
     return render_template('env_rel.html', weather_climate_json = weather_climate_data, pos_data = pos)
 
