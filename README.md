@@ -184,7 +184,7 @@ With **Cisco connected**, you can access the front end by visiting one of the fo
 * [http://172.26.129.113/](http://172.26.129.113/)<br>
 * [http://172.26.132.132/](http://172.26.132.132/)<br>
 
-The front end(Flask app) should run instantly on two of our instances. However, if it is down for any reason or for the purpose of local testing, using command line `python3 app.py` in directory `/frontend/app/` should start the app.
+The front end(Flask app) should run instantly on two of our instances. However, if it is down for any reason or for the purpose of local testing, using command line `python3 app.py` in directory `/frontend` should start the app.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
