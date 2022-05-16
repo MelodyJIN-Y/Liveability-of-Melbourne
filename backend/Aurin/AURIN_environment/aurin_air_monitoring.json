@@ -1,0 +1,1367 @@
+{
+  "type": "FeatureCollection",
+  "bbox": [
+    144.3703,
+    -38.444100000919,
+    146.7856,
+    -37.6648100009129
+  ],
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:4283"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            145.0306,
+            -37.7784100009138
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10001,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "EAST",
+        "sites_longitude": 145.0306,
+        "sites_name": "Alphington",
+        "ogc_fid": 1,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.77841
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.1"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            144.8728,
+            -37.80488000091402
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10003,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "WEST",
+        "sites_longitude": 144.8728,
+        "sites_name": "Footscray",
+        "ogc_fid": 2,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.80488
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.2"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            144.7567,
+            -37.926320000915
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10005,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "WEST",
+        "sites_longitude": 144.7567,
+        "sites_name": "Point Cook",
+        "ogc_fid": 3,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.92632
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.3"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            144.998,
+            -37.9135500009149
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10007,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "EAST",
+        "sites_longitude": 144.998,
+        "sites_name": "Brighton",
+        "ogc_fid": 4,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.91355
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.4"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.5315,
+            -38.1942800009171
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10011,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LATROBE V2",
+        "sites_longitude": 146.5315,
+        "sites_name": "Traralgon",
+        "ogc_fid": 5,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.19428
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.5"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.4245,
+            -38.22939000091738
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10017,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LATROBE V2",
+        "sites_longitude": 146.4245,
+        "sites_name": "Morwell East",
+        "ogc_fid": 6,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.22939
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.6"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            145.1987,
+            -37.98576000091547
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10022,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "EAST",
+        "sites_longitude": 145.1987,
+        "sites_name": "Dandenong",
+        "ogc_fid": 7,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.98576
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.7"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            145.1324,
+            -37.82873000091421
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10042,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "EAST",
+        "sites_longitude": 145.1324,
+        "sites_name": "Box.Hill",
+        "ogc_fid": 8,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.82873
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.8"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            144.3703,
+            -38.17356000091694
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10107,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "GEELONG",
+        "sites_longitude": 144.3703,
+        "sites_name": "Geelong South",
+        "ogc_fid": 9,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.17356
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.9"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            145.3285,
+            -37.774970000913775
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10136,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "EAST",
+        "sites_longitude": 145.3285,
+        "sites_name": "Mooroolbark",
+        "ogc_fid": 10,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.77497
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.10"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            144.5669,
+            -37.70646000091322
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10169,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "WEST",
+        "sites_longitude": 144.5669,
+        "sites_name": "Melton",
+        "ogc_fid": 11,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.70646
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.11"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            144.84709999999995,
+            -37.82210000091416
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10213,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "WEST",
+        "sites_longitude": 144.8471,
+        "sites_name": "Brooklyn",
+        "ogc_fid": 12,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.8221
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.12"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.3873,
+            -38.23929000091745
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10217,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LATROBE V2",
+        "sites_longitude": 146.3873,
+        "sites_name": "Morwell South",
+        "ogc_fid": 13,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.23929
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.13"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.2583,
+            -38.18647000091704
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10218,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LATROBE V2",
+        "sites_longitude": 146.2583,
+        "sites_name": "Moe",
+        "ogc_fid": 14,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.18647
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.14"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.4149,
+            -38.30431000091794
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10219,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LATROBE V2",
+        "sites_longitude": 146.4149,
+        "sites_name": "Churchill",
+        "ogc_fid": 15,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.30431
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.15"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            145.0576,
+            -37.722280000913344
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10227,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "EAST",
+        "sites_longitude": 145.0576,
+        "sites_name": "Macleod",
+        "ogc_fid": 16,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.72228
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.16"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            144.97,
+            -37.80740000091404
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10239,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "EAST",
+        "sites_longitude": 144.97,
+        "sites_name": "Melbourne CBD",
+        "ogc_fid": 18,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.8074
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.18"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            144.9364,
+            -37.67937000091298
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Incident Tier 2",
+        "sites_hasincident": true,
+        "sites_siteid": 10242,
+        "sites_incidentsite_emvurl": "http://emergency.vic.gov.au/",
+        "sites_sitelist_name": "INCIDENT",
+        "sites_longitude": 144.9364,
+        "sites_name": "Coolaroo Fire 2",
+        "ogc_fid": 19,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.67937
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.19"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            144.9406,
+            -37.66503000091288
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Incident Tier 2",
+        "sites_hasincident": true,
+        "sites_siteid": 10243,
+        "sites_incidentsite_emvurl": "http://emergency.vic.gov.au/",
+        "sites_sitelist_name": "INCIDENT",
+        "sites_longitude": 144.9406,
+        "sites_name": "Coolaroo Fire 1",
+        "ogc_fid": 20,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.66503
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.20"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            144.944,
+            -37.66716000091288
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Incident Tier 2",
+        "sites_hasincident": true,
+        "sites_siteid": 10244,
+        "sites_incidentsite_emvurl": "http://emergency.vic.gov.au/",
+        "sites_sitelist_name": "INCIDENT",
+        "sites_longitude": 144.944,
+        "sites_name": "Coolaroo Fire 3",
+        "ogc_fid": 21,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.66716
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.21"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            144.9454,
+            -37.67155000091293
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Incident Tier 2",
+        "sites_hasincident": true,
+        "sites_siteid": 10249,
+        "sites_incidentsite_emvurl": "http://emergency.vic.gov.au/",
+        "sites_sitelist_name": "INCIDENT",
+        "sites_longitude": 144.9454,
+        "sites_name": "Coolaroo Fire 4",
+        "ogc_fid": 22,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.67155
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.22"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            144.9537,
+            -37.668730000912895
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Incident Tier 2",
+        "sites_hasincident": true,
+        "sites_siteid": 10250,
+        "sites_incidentsite_emvurl": "http://emergency.vic.gov.au/",
+        "sites_sitelist_name": "INCIDENT",
+        "sites_longitude": 144.9537,
+        "sites_name": "Coolaroo Fire 6",
+        "ogc_fid": 23,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.66873
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.23"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            144.94899999999996,
+            -37.666960000912894
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Incident Tier 2",
+        "sites_hasincident": true,
+        "sites_siteid": 10251,
+        "sites_incidentsite_emvurl": "http://emergency.vic.gov.au/",
+        "sites_sitelist_name": "INCIDENT",
+        "sites_longitude": 144.949,
+        "sites_name": "Coolaroo Fire 5",
+        "ogc_fid": 24,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.66696
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.24"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            144.938,
+            -37.66601000091288
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Incident Tier 2",
+        "sites_hasincident": true,
+        "sites_siteid": 10252,
+        "sites_incidentsite_emvurl": "http://emergency.vic.gov.au/",
+        "sites_sitelist_name": "INCIDENT",
+        "sites_longitude": 144.938,
+        "sites_name": "Coolaroo Fire 8",
+        "ogc_fid": 25,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.66601
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.25"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            144.9406,
+            -37.66602000091288
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Incident Tier 2",
+        "sites_hasincident": true,
+        "sites_siteid": 10253,
+        "sites_incidentsite_emvurl": "http://emergency.vic.gov.au/",
+        "sites_sitelist_name": "INCIDENT",
+        "sites_longitude": 144.9406,
+        "sites_name": "Coolaroo Fire 7",
+        "ogc_fid": 26,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.66602
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.26"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            144.9406,
+            -37.66481000091287
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Incident Tier 2",
+        "sites_hasincident": true,
+        "sites_siteid": 10254,
+        "sites_incidentsite_emvurl": "http://emergency.vic.gov.au/",
+        "sites_sitelist_name": "INCIDENT",
+        "sites_longitude": 144.9406,
+        "sites_name": "Coolaroo Fire 10",
+        "ogc_fid": 27,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.66481
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.27"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.3589,
+            -38.297340000917885
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10289,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.3589,
+        "sites_name": "West of Hazelwood Pondage",
+        "ogc_fid": 28,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.29734
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.28"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.3372,
+            -38.327690000918125
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10290,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.3372,
+        "sites_name": "Yinnar South",
+        "ogc_fid": 29,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.32769
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.29"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.275,
+            -38.36974000091843
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10292,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.275,
+        "sites_name": "Boolarra",
+        "ogc_fid": 30,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.36974
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.30"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.2743,
+            -38.44410000091898
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10293,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.2743,
+        "sites_name": "Boolarra South",
+        "ogc_fid": 31,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.4441
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.31"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.2927,
+            -38.187790000917055
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10294,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.2927,
+        "sites_name": "North of Moe",
+        "ogc_fid": 32,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.18779
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.32"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.4159,
+            -38.34475000091824
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10295,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.4159,
+        "sites_name": "Jeeralang",
+        "ogc_fid": 33,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.34475
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.33"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.5392,
+            -38.29576000091788
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10296,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.5392,
+        "sites_name": "Traralgon South",
+        "ogc_fid": 34,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.29576
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.34"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.5621,
+            -38.19655000091712
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10297,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.5621,
+        "sites_name": "East of Traralgon",
+        "ogc_fid": 35,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.19655
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.35"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.5621,
+            -38.19655000091712
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10298,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.5621,
+        "sites_name": "East of Traralgon",
+        "ogc_fid": 36,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.19655
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.36"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.2991,
+            -38.184380000917024
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10299,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.2991,
+        "sites_name": "Newborough",
+        "ogc_fid": 37,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.18438
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.37"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.4847,
+            -38.13080000091661
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10300,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.4847,
+        "sites_name": "Tyers",
+        "ogc_fid": 38,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.1308
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.38"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.363,
+            -38.161370000916854
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10301,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.363,
+        "sites_name": "Yallourn North",
+        "ogc_fid": 39,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.16137
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.39"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.5691,
+            -38.127370000916585
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10302,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.5691,
+        "sites_name": "Glengarry",
+        "ogc_fid": 40,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.12737
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.40"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.4783,
+            -38.15100000091677
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10303,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.4783,
+        "sites_name": "Glengarry West",
+        "ogc_fid": 41,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.151
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.41"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.6932,
+            -38.17104000091692
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10304,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.6932,
+        "sites_name": "West of Flynn",
+        "ogc_fid": 42,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.17104
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.42"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.6361,
+            -38.24400000091748
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10305,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.6361,
+        "sites_name": "Flynns Creek",
+        "ogc_fid": 43,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.244
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.43"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.7856,
+            -38.15129000091678
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10307,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.7856,
+        "sites_name": "East of Flynn",
+        "ogc_fid": 44,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.15129
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.44"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.1779,
+            -38.07040000091614
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10309,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.1779,
+        "sites_name": "Willow Grove",
+        "ogc_fid": 45,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.0704
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.45"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.2927,
+            -38.187790000917055
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10313,
+        "sites_incidentsite_emvurl": "",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.2927,
+        "sites_name": "North of Moe",
+        "ogc_fid": 46,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.18779
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.46"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.6933,
+            -38.17107000091691
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10329,
+        "sites_incidentsite_emvurl": "http://emergency.vic.gov.au/",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.6933,
+        "sites_name": "Flynn",
+        "ogc_fid": 47,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.17107
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.47"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.5691,
+            -38.12751000091659
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10332,
+        "sites_incidentsite_emvurl": "http://emergency.vic.gov.au/",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.5691,
+        "sites_name": "Glengarry",
+        "ogc_fid": 48,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.12751
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.48"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.4828,
+            -38.129670000916605
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10333,
+        "sites_incidentsite_emvurl": "http://emergency.vic.gov.au/",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.4828,
+        "sites_name": "Tyers North",
+        "ogc_fid": 49,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.12967
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.49"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.1779,
+            -38.07072000091615
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10336,
+        "sites_incidentsite_emvurl": "http://emergency.vic.gov.au/",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.1779,
+        "sites_name": "Willow Grove",
+        "ogc_fid": 50,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.07072
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.50"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.2751,
+            -38.369800000918424
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10339,
+        "sites_incidentsite_emvurl": "http://emergency.vic.gov.au/",
+        "sites_sitelist_name": "LV_SENSOR",
+        "sites_longitude": 146.2751,
+        "sites_name": "Boolarra",
+        "ogc_fid": 51,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.3698
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.51"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.2927,
+            -38.187520000917054
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10352,
+        "sites_incidentsite_emvurl": "http://emergency.vic.gov.au/",
+        "sites_sitelist_name": "LATROBE V2",
+        "sites_longitude": 146.2927,
+        "sites_name": "Newborough",
+        "ogc_fid": 52,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.18752
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.52"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.7842,
+            -38.1558800009168
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10354,
+        "sites_incidentsite_emvurl": "http://emergency.vic.gov.au/",
+        "sites_sitelist_name": "LATROBE V2",
+        "sites_longitude": 146.7842,
+        "sites_name": "Rosedale",
+        "ogc_fid": 53,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.15588
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.53"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            146.3278,
+            -38.320470000918064
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10360,
+        "sites_incidentsite_emvurl": "http://emergency.vic.gov.au/",
+        "sites_sitelist_name": "LATROBE V2",
+        "sites_longitude": 146.3278,
+        "sites_name": "Yinnar",
+        "ogc_fid": 54,
+        "sites_isstationoffline": false,
+        "sites_latitude": -38.32047
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.54"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            145.0576,
+            -37.72238000091335
+          ]
+        ]
+      },
+      "properties": {
+        "sites_incidenttype": "Non-incident",
+        "sites_hasincident": false,
+        "sites_siteid": 10377,
+        "sites_incidentsite_emvurl": "http://emergency.vic.gov.au/",
+        "sites_sitelist_name": "EAST",
+        "sites_longitude": 145.0576,
+        "sites_name": "Macleod",
+        "ogc_fid": 55,
+        "sites_isstationoffline": false,
+        "sites_latitude": -37.72238
+      },
+      "id": "vic_epa_air_monitoring_stations_sep_2019.55"
+    }
+  ]
+}

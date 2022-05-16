@@ -1,0 +1,11 @@
+version: '3'
+services:
+  historicaldata:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - .:/twitter_historical
+
+

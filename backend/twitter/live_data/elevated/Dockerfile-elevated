@@ -1,0 +1,11 @@
+FROM python:3.8.6
+
+ADD ./ /twitter_live_elevated
+
+WORKDIR /twitter_live_elevated
+
+RUN pip install --upgrade pip
+
+RUN pip install -r requirements.txt
+
+CMD ["python","ElevatedAPI_process_search+timeline.py"]

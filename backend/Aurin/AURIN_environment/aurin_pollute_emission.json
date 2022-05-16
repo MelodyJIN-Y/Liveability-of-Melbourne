@@ -1,0 +1,497 @@
+{
+    "type": "FeatureCollection",
+    "bbox": [
+        146.462361,
+        -38.179045,
+        146.462361,
+        -38.179045
+    ],
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "EPSG:4283"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    146.462361,
+                    -38.179045
+                ]
+            },
+            "properties": {
+                "air_point_eet": "__3__",
+                "state": "VIC",
+                "facility_id": 529222,
+                "jurisdiction_code": "VIC",
+                "jurisdiction_facility_id": "00004715",
+                "facility_name": "Paper Australia Maryvale Mill",
+                "suburb": "Morwell",
+                "oid": 29307,
+                "longitude": 146.462361,
+                "air_total_emission_kg": 60.7,
+                "air_fugitive_eet": null,
+                "air_fugitive_emission_kg": null,
+                "air_point_emission_kg": 60.7,
+                "water_emission_kg": null,
+                "substance_name": "Chlorine dioxide",
+                "substance_id": 22,
+                "postcode": 3840,
+                "land_emission_kg": null,
+                "primary_anzsic_class_code": 1510,
+                "land_eet": null,
+                "report_year": "2016/2017",
+                "water_eet": null,
+                "primary_anzsic_class_name": "Pulp, Paper and Paperboard Manufacturing",
+                "report_id": 491558,
+                "latitude": -38.179045,
+                "registered_business_name": "PAPER AUSTRALIA PTY LTD                                                                                                                                                                                                                                   ",
+                "substance_sort_order": 23
+            },
+            "id": "national_pollutant_inventory_emission_2018.29307"
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    146.462361,
+                    -38.179045
+                ]
+            },
+            "properties": {
+                "air_point_eet": "__3__",
+                "state": "VIC",
+                "facility_id": 529222,
+                "jurisdiction_code": "VIC",
+                "jurisdiction_facility_id": "00004715",
+                "facility_name": "Paper Australia Maryvale Mill",
+                "suburb": "Morwell",
+                "oid": 72293,
+                "longitude": 146.462361,
+                "air_total_emission_kg": 9.27,
+                "air_fugitive_eet": null,
+                "air_fugitive_emission_kg": null,
+                "air_point_emission_kg": 9.27,
+                "water_emission_kg": null,
+                "substance_name": "Chlorine dioxide",
+                "substance_id": 22,
+                "postcode": 3840,
+                "land_emission_kg": null,
+                "primary_anzsic_class_code": 1510,
+                "land_eet": null,
+                "report_year": "2015/2016",
+                "water_eet": null,
+                "primary_anzsic_class_name": "Pulp, Paper and Paperboard Manufacturing",
+                "report_id": 482826,
+                "latitude": -38.179045,
+                "registered_business_name": "PAPER AUSTRALIA PTY LTD                                                                                                                                                                                                                                   ",
+                "substance_sort_order": 23
+            },
+            "id": "national_pollutant_inventory_emission_2018.72293"
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    146.462361,
+                    -38.179045
+                ]
+            },
+            "properties": {
+                "air_point_eet": "__3__",
+                "state": "VIC",
+                "facility_id": 529222,
+                "jurisdiction_code": "VIC",
+                "jurisdiction_facility_id": "00004715",
+                "facility_name": "Paper Australia Maryvale Mill",
+                "suburb": "Morwell",
+                "oid": 115018,
+                "longitude": 146.462361,
+                "air_total_emission_kg": 8.3,
+                "air_fugitive_eet": null,
+                "air_fugitive_emission_kg": null,
+                "air_point_emission_kg": 8.3,
+                "water_emission_kg": null,
+                "substance_name": "Chlorine dioxide",
+                "substance_id": 22,
+                "postcode": 3840,
+                "land_emission_kg": null,
+                "primary_anzsic_class_code": 1510,
+                "land_eet": null,
+                "report_year": "2014/2015",
+                "water_eet": null,
+                "primary_anzsic_class_name": "Pulp, Paper and Paperboard Manufacturing",
+                "report_id": 474372,
+                "latitude": -38.179045,
+                "registered_business_name": "PAPER AUSTRALIA PTY LTD                                                                                                                                                                                                                                   ",
+                "substance_sort_order": 23
+            },
+            "id": "national_pollutant_inventory_emission_2018.115018"
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    146.462361,
+                    -38.179045
+                ]
+            },
+            "properties": {
+                "air_point_eet": "__3__",
+                "state": "VIC",
+                "facility_id": 529222,
+                "jurisdiction_code": "VIC",
+                "jurisdiction_facility_id": "00004715",
+                "facility_name": "Paper Australia Maryvale Mill",
+                "suburb": "Morwell",
+                "oid": 157943,
+                "longitude": 146.462361,
+                "air_total_emission_kg": 73.6,
+                "air_fugitive_eet": null,
+                "air_fugitive_emission_kg": null,
+                "air_point_emission_kg": 73.6,
+                "water_emission_kg": null,
+                "substance_name": "Chlorine dioxide",
+                "substance_id": 22,
+                "postcode": 3840,
+                "land_emission_kg": null,
+                "primary_anzsic_class_code": 1510,
+                "land_eet": null,
+                "report_year": "2013/2014",
+                "water_eet": null,
+                "primary_anzsic_class_name": "Pulp, Paper and Paperboard Manufacturing",
+                "report_id": 466394,
+                "latitude": -38.179045,
+                "registered_business_name": "PAPER AUSTRALIA PTY LTD                                                                                                                                                                                                                                   ",
+                "substance_sort_order": 23
+            },
+            "id": "national_pollutant_inventory_emission_2018.157943"
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    146.462361,
+                    -38.179045
+                ]
+            },
+            "properties": {
+                "air_point_eet": "__3__",
+                "state": "VIC",
+                "facility_id": 529222,
+                "jurisdiction_code": "VIC",
+                "jurisdiction_facility_id": "00004715",
+                "facility_name": "Paper Australia Maryvale Mill",
+                "suburb": "Morwell",
+                "oid": 199964,
+                "longitude": 146.462361,
+                "air_total_emission_kg": 88.6,
+                "air_fugitive_eet": null,
+                "air_fugitive_emission_kg": null,
+                "air_point_emission_kg": 88.6,
+                "water_emission_kg": null,
+                "substance_name": "Chlorine dioxide",
+                "substance_id": 22,
+                "postcode": 3840,
+                "land_emission_kg": null,
+                "primary_anzsic_class_code": 1510,
+                "land_eet": null,
+                "report_year": "2012/2013",
+                "water_eet": null,
+                "primary_anzsic_class_name": "Pulp, Paper and Paperboard Manufacturing",
+                "report_id": 458430,
+                "latitude": -38.179045,
+                "registered_business_name": "PAPER AUSTRALIA PTY LTD                                                                                                                                                                                                                                   ",
+                "substance_sort_order": 23
+            },
+            "id": "national_pollutant_inventory_emission_2018.199964"
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    146.462361,
+                    -38.179045
+                ]
+            },
+            "properties": {
+                "air_point_eet": "__3__",
+                "state": "VIC",
+                "facility_id": 529222,
+                "jurisdiction_code": "VIC",
+                "jurisdiction_facility_id": "00004715",
+                "facility_name": "Maryvale Mill",
+                "suburb": "Morwell",
+                "oid": 242097,
+                "longitude": 146.462361,
+                "air_total_emission_kg": 87,
+                "air_fugitive_eet": null,
+                "air_fugitive_emission_kg": null,
+                "air_point_emission_kg": 87,
+                "water_emission_kg": null,
+                "substance_name": "Chlorine dioxide",
+                "substance_id": 22,
+                "postcode": 3840,
+                "land_emission_kg": null,
+                "primary_anzsic_class_code": 1510,
+                "land_eet": null,
+                "report_year": "2011/2012",
+                "water_eet": null,
+                "primary_anzsic_class_name": "Pulp, Paper and Paperboard Manufacturing",
+                "report_id": 445530,
+                "latitude": -38.179045,
+                "registered_business_name": "PAPER AUSTRALIA PTY LTD                                                                                                                                                                                                                                   ",
+                "substance_sort_order": 23
+            },
+            "id": "national_pollutant_inventory_emission_2018.242097"
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    146.462361,
+                    -38.179045
+                ]
+            },
+            "properties": {
+                "air_point_eet": "__3__",
+                "state": "VIC",
+                "facility_id": 529222,
+                "jurisdiction_code": "VIC",
+                "jurisdiction_facility_id": "00004715",
+                "facility_name": "Maryvale Mill",
+                "suburb": "Morwell",
+                "oid": 283041,
+                "longitude": 146.462361,
+                "air_total_emission_kg": 536,
+                "air_fugitive_eet": null,
+                "air_fugitive_emission_kg": null,
+                "air_point_emission_kg": 536,
+                "water_emission_kg": null,
+                "substance_name": "Chlorine dioxide",
+                "substance_id": 22,
+                "postcode": 3840,
+                "land_emission_kg": null,
+                "primary_anzsic_class_code": 1510,
+                "land_eet": null,
+                "report_year": "2010/2011",
+                "water_eet": null,
+                "primary_anzsic_class_name": "Pulp, Paper and Paperboard Manufacturing",
+                "report_id": 436602,
+                "latitude": -38.179045,
+                "registered_business_name": "PAPER AUSTRALIA PTY LTD                                                                                                                                                                                                                                   ",
+                "substance_sort_order": 23
+            },
+            "id": "national_pollutant_inventory_emission_2018.283041"
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    146.462361,
+                    -38.179045
+                ]
+            },
+            "properties": {
+                "air_point_eet": "__3__",
+                "state": "VIC",
+                "facility_id": 529222,
+                "jurisdiction_code": "VIC",
+                "jurisdiction_facility_id": "00004715",
+                "facility_name": "Paper Aust - Maryvale Mill",
+                "suburb": "Morwell",
+                "oid": 322967,
+                "longitude": 146.462361,
+                "air_total_emission_kg": 3,
+                "air_fugitive_eet": null,
+                "air_fugitive_emission_kg": null,
+                "air_point_emission_kg": 3,
+                "water_emission_kg": null,
+                "substance_name": "Chlorine dioxide",
+                "substance_id": 22,
+                "postcode": 3840,
+                "land_emission_kg": null,
+                "primary_anzsic_class_code": 1510,
+                "land_eet": null,
+                "report_year": "2009/2010",
+                "water_eet": null,
+                "primary_anzsic_class_name": "Pulp, Paper and Paperboard Manufacturing",
+                "report_id": 427660,
+                "latitude": -38.179045,
+                "registered_business_name": "PAPER AUST P/L                                                                                                                                                                                                                                            ",
+                "substance_sort_order": 23
+            },
+            "id": "national_pollutant_inventory_emission_2018.322967"
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    146.462361,
+                    -38.179045
+                ]
+            },
+            "properties": {
+                "air_point_eet": "__3__",
+                "state": "VIC",
+                "facility_id": 529222,
+                "jurisdiction_code": "VIC",
+                "jurisdiction_facility_id": "00004715",
+                "facility_name": "Paper Aust - Maryvale Mill",
+                "suburb": "Morwell",
+                "oid": 401596,
+                "longitude": 146.462361,
+                "air_total_emission_kg": 643,
+                "air_fugitive_eet": null,
+                "air_fugitive_emission_kg": null,
+                "air_point_emission_kg": 643,
+                "water_emission_kg": null,
+                "substance_name": "Chlorine dioxide",
+                "substance_id": 22,
+                "postcode": 3840,
+                "land_emission_kg": null,
+                "primary_anzsic_class_code": 1510,
+                "land_eet": null,
+                "report_year": "2007/2008",
+                "water_eet": null,
+                "primary_anzsic_class_name": "Pulp, Paper and Paperboard Manufacturing",
+                "report_id": 410266,
+                "latitude": -38.179045,
+                "registered_business_name": "PAPER AUST P/L                                                                                                                                                                                                                                            ",
+                "substance_sort_order": 23
+            },
+            "id": "national_pollutant_inventory_emission_2018.401596"
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    146.462361,
+                    -38.179045
+                ]
+            },
+            "properties": {
+                "air_point_eet": "__3__",
+                "state": "VIC",
+                "facility_id": 529222,
+                "jurisdiction_code": "VIC",
+                "jurisdiction_facility_id": "00004715",
+                "facility_name": "Paper Aust - Maryvale Mill",
+                "suburb": "Morwell",
+                "oid": 437830,
+                "longitude": 146.462361,
+                "air_total_emission_kg": 1420,
+                "air_fugitive_eet": null,
+                "air_fugitive_emission_kg": null,
+                "air_point_emission_kg": 1420,
+                "water_emission_kg": null,
+                "substance_name": "Chlorine dioxide",
+                "substance_id": 22,
+                "postcode": 3840,
+                "land_emission_kg": null,
+                "primary_anzsic_class_code": 1510,
+                "land_eet": null,
+                "report_year": "2006/2007",
+                "water_eet": null,
+                "primary_anzsic_class_name": "Pulp, Paper and Paperboard Manufacturing",
+                "report_id": 393540,
+                "latitude": -38.179045,
+                "registered_business_name": "PAPER AUST P/L                                                                                                                                                                                                                                            ",
+                "substance_sort_order": 23
+            },
+            "id": "national_pollutant_inventory_emission_2018.437830"
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    146.462361,
+                    -38.179045
+                ]
+            },
+            "properties": {
+                "air_point_eet": "__3__",
+                "state": "VIC",
+                "facility_id": 529222,
+                "jurisdiction_code": "VIC",
+                "jurisdiction_facility_id": "00004715",
+                "facility_name": "Paper Aust - Maryvale Mill",
+                "suburb": "Morwell",
+                "oid": 473304,
+                "longitude": 146.462361,
+                "air_total_emission_kg": 655,
+                "air_fugitive_eet": null,
+                "air_fugitive_emission_kg": null,
+                "air_point_emission_kg": 655,
+                "water_emission_kg": null,
+                "substance_name": "Chlorine dioxide",
+                "substance_id": 22,
+                "postcode": 3840,
+                "land_emission_kg": null,
+                "primary_anzsic_class_code": 1510,
+                "land_eet": null,
+                "report_year": "2005/2006",
+                "water_eet": null,
+                "primary_anzsic_class_name": "Pulp, Paper and Paperboard Manufacturing",
+                "report_id": 393542,
+                "latitude": -38.179045,
+                "registered_business_name": "PAPER AUST P/L                                                                                                                                                                                                                                            ",
+                "substance_sort_order": 23
+            },
+            "id": "national_pollutant_inventory_emission_2018.473304"
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    146.462361,
+                    -38.179045
+                ]
+            },
+            "properties": {
+                "air_point_eet": "__3__",
+                "state": "VIC",
+                "facility_id": 529222,
+                "jurisdiction_code": "VIC",
+                "jurisdiction_facility_id": "00004715",
+                "facility_name": "Maryvale Mill",
+                "suburb": "Morwell",
+                "oid": 507274,
+                "longitude": 146.462361,
+                "air_total_emission_kg": 2510,
+                "air_fugitive_eet": null,
+                "air_fugitive_emission_kg": null,
+                "air_point_emission_kg": 2510,
+                "water_emission_kg": null,
+                "substance_name": "Chlorine dioxide",
+                "substance_id": 22,
+                "postcode": 3840,
+                "land_emission_kg": null,
+                "primary_anzsic_class_code": 1510,
+                "land_eet": null,
+                "report_year": "2004/2005",
+                "water_eet": null,
+                "primary_anzsic_class_name": "Pulp, Paper and Paperboard Manufacturing",
+                "report_id": 393544,
+                "latitude": -38.179045,
+                "registered_business_name": "PAPER AUST P/L                                                                                                                                                                                                                                            ",
+                "substance_sort_order": 23
+            },
+            "id": "national_pollutant_inventory_emission_2018.507274"
+        }
+    ]
+}

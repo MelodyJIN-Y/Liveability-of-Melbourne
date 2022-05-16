@@ -1,0 +1,314 @@
+{
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 87,
+                "lga_name": "Banyule (C)",
+                "lga_code": 20660,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 84
+            },
+            "id": "phidu_median_age_death_lga_2014_18.134"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 88,
+                "lga_name": "Bayside (C)",
+                "lga_code": 20910,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 87
+            },
+            "id": "phidu_median_age_death_lga_2014_18.137"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 89,
+                "lga_name": "Boroondara (C)",
+                "lga_code": 21110,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 87
+            },
+            "id": "phidu_median_age_death_lga_2014_18.139"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 83,
+                "lga_name": "Brimbank (C)",
+                "lga_code": 21180,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 80
+            },
+            "id": "phidu_median_age_death_lga_2014_18.140"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 82,
+                "lga_name": "Cardinia (S)",
+                "lga_code": 21450,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 80
+            },
+            "id": "phidu_median_age_death_lga_2014_18.143"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 83,
+                "lga_name": "Casey (C)",
+                "lga_code": 21610,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 80
+            },
+            "id": "phidu_median_age_death_lga_2014_18.144"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 85,
+                "lga_name": "Darebin (C)",
+                "lga_code": 21890,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 83
+            },
+            "id": "phidu_median_age_death_lga_2014_18.148"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 83,
+                "lga_name": "Frankston (C)",
+                "lga_code": 22170,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 80
+            },
+            "id": "phidu_median_age_death_lga_2014_18.150"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 88,
+                "lga_name": "Glen Eira (C)",
+                "lga_code": 22310,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 86
+            },
+            "id": "phidu_median_age_death_lga_2014_18.152"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 84,
+                "lga_name": "Greater Dandenong (C)",
+                "lga_code": 22670,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 82
+            },
+            "id": "phidu_median_age_death_lga_2014_18.156"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 84,
+                "lga_name": "Hobsons Bay (C)",
+                "lga_code": 23110,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 82
+            },
+            "id": "phidu_median_age_death_lga_2014_18.161"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 79,
+                "lga_name": "Hume (C)",
+                "lga_code": 23270,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 76
+            },
+            "id": "phidu_median_age_death_lga_2014_18.163"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 85,
+                "lga_name": "Kingston (C)",
+                "lga_code": 23430,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 83
+            },
+            "id": "phidu_median_age_death_lga_2014_18.165"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 85,
+                "lga_name": "Knox (C)",
+                "lga_code": 23670,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 82
+            },
+            "id": "phidu_median_age_death_lga_2014_18.166"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 86,
+                "lga_name": "Manningham (C)",
+                "lga_code": 24210,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 85
+            },
+            "id": "phidu_median_age_death_lga_2014_18.170"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 86,
+                "lga_name": "Maribyrnong (C)",
+                "lga_code": 24330,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 82
+            },
+            "id": "phidu_median_age_death_lga_2014_18.172"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 87,
+                "lga_name": "Maroondah (C)",
+                "lga_code": 24410,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 84
+            },
+            "id": "phidu_median_age_death_lga_2014_18.173"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 85,
+                "lga_name": "Melbourne (C)",
+                "lga_code": 24600,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 80
+            },
+            "id": "phidu_median_age_death_lga_2014_18.174"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 78,
+                "lga_name": "Melton (C)",
+                "lga_code": 24650,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 74
+            },
+            "id": "phidu_median_age_death_lga_2014_18.175"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 86,
+                "lga_name": "Monash (C)",
+                "lga_code": 24970,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 85
+            },
+            "id": "phidu_median_age_death_lga_2014_18.179"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 85,
+                "lga_name": "Moonee Valley (C)",
+                "lga_code": 25060,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 83
+            },
+            "id": "phidu_median_age_death_lga_2014_18.180"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 86,
+                "lga_name": "Moreland (C)",
+                "lga_code": 25250,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 84
+            },
+            "id": "phidu_median_age_death_lga_2014_18.182"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 85,
+                "lga_name": "Mornington Peninsula (S)",
+                "lga_code": 25340,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 83
+            },
+            "id": "phidu_median_age_death_lga_2014_18.183"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 84,
+                "lga_name": "Nillumbik (S)",
+                "lga_code": 25710,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 80
+            },
+            "id": "phidu_median_age_death_lga_2014_18.187"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 84,
+                "lga_name": "Port Phillip (C)",
+                "lga_code": 25900,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 80
+            },
+            "id": "phidu_median_age_death_lga_2014_18.189"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 87,
+                "lga_name": "Stonnington (C)",
+                "lga_code": 26350,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 85
+            },
+            "id": "phidu_median_age_death_lga_2014_18.194"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 87,
+                "lga_name": "Whitehorse (C)",
+                "lga_code": 26980,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 85
+            },
+            "id": "phidu_median_age_death_lga_2014_18.203"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 82,
+                "lga_name": "Whittlesea (C)",
+                "lga_code": 27070,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 80
+            },
+            "id": "phidu_median_age_death_lga_2014_18.204"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 80,
+                "lga_name": "Wyndham (C)",
+                "lga_code": 27260,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 76
+            },
+            "id": "phidu_median_age_death_lga_2014_18.206"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 82,
+                "lga_name": "Yarra (C)",
+                "lga_code": 27350,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 79
+            },
+            "id": "phidu_median_age_death_lga_2014_18.207"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "median_age_at_death_of_females_2014_to_2018_median_age_years": 83,
+                "lga_name": "Yarra Ranges (S)",
+                "lga_code": 27450,
+                "median_age_at_death_of_persons_2014_to_2018_median_age_years": 80
+            },
+            "id": "phidu_median_age_death_lga_2014_18.208"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  essential:
+    build:
+      context: ./essential
+      dockerfile: Dockerfile-essential
+    restart: always
+    volumes:
+      - ./essential:/twitter_live_essential
+
+
+
+  elevated:
+    build:
+      context: ./elevated
+      dockerfile: Dockerfile-elevated
+    restart: always
+    volumes:
+      - ./elevated:/twitter_live_elevated

@@ -1,0 +1,469 @@
+{
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 26.5,
+                "females_who_attended_a_specialist_perc": 42,
+                "gp_attendances_bulk_billed_perc": 78.5,
+                "lga_name": "Banyule (C)",
+                "lga_code": 20660,
+                "males_who_attended_a_gp_perc": 86.4,
+                "females_who_attended_a_gp_perc": 95.3,
+                "males_who_attended_a_specialist_perc": 34.2,
+                "ppl_who_attended_a_gp_perc": 91
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-3b8"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 18.6,
+                "females_who_attended_a_specialist_perc": 46.8,
+                "gp_attendances_bulk_billed_perc": 56.4,
+                "lga_name": "Bayside (C)",
+                "lga_code": 20910,
+                "males_who_attended_a_gp_perc": 84.6,
+                "females_who_attended_a_gp_perc": 92.9,
+                "males_who_attended_a_specialist_perc": 38.8,
+                "ppl_who_attended_a_gp_perc": 88.9
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-3b5"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 17.1,
+                "females_who_attended_a_specialist_perc": 44,
+                "gp_attendances_bulk_billed_perc": 62.4,
+                "lga_name": "Boroondara (C)",
+                "lga_code": 21110,
+                "males_who_attended_a_gp_perc": 79.3,
+                "females_who_attended_a_gp_perc": 89.7,
+                "males_who_attended_a_specialist_perc": 36.2,
+                "ppl_who_attended_a_gp_perc": 84.7
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-3b3"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 46.3,
+                "females_who_attended_a_specialist_perc": 32.8,
+                "gp_attendances_bulk_billed_perc": 93.2,
+                "lga_name": "Brimbank (C)",
+                "lga_code": 21180,
+                "males_who_attended_a_gp_perc": 90.2,
+                "females_who_attended_a_gp_perc": 97.2,
+                "males_who_attended_a_specialist_perc": 26.7,
+                "ppl_who_attended_a_gp_perc": 93.7
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-3b2"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 32.1,
+                "females_who_attended_a_specialist_perc": 34.7,
+                "gp_attendances_bulk_billed_perc": 87.6,
+                "lga_name": "Cardinia (S)",
+                "lga_code": 21450,
+                "males_who_attended_a_gp_perc": 86.6,
+                "females_who_attended_a_gp_perc": 95.7,
+                "males_who_attended_a_specialist_perc": 28.6,
+                "ppl_who_attended_a_gp_perc": 91.2
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-3af"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 34.1,
+                "females_who_attended_a_specialist_perc": 33.1,
+                "gp_attendances_bulk_billed_perc": 90.4,
+                "lga_name": "Casey (C)",
+                "lga_code": 21610,
+                "males_who_attended_a_gp_perc": 90.8,
+                "females_who_attended_a_gp_perc": 97.7,
+                "males_who_attended_a_specialist_perc": 26.9,
+                "ppl_who_attended_a_gp_perc": 94.3
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-3ae"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 37.4,
+                "females_who_attended_a_specialist_perc": 35.6,
+                "gp_attendances_bulk_billed_perc": 86.2,
+                "lga_name": "Darebin (C)",
+                "lga_code": 21890,
+                "males_who_attended_a_gp_perc": 82.9,
+                "females_who_attended_a_gp_perc": 90.6,
+                "males_who_attended_a_specialist_perc": 28.9,
+                "ppl_who_attended_a_gp_perc": 86.9
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-3aa"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 29.7,
+                "females_who_attended_a_specialist_perc": 37,
+                "gp_attendances_bulk_billed_perc": 83.4,
+                "lga_name": "Frankston (C)",
+                "lga_code": 22170,
+                "males_who_attended_a_gp_perc": 90.7,
+                "females_who_attended_a_gp_perc": 99.8,
+                "males_who_attended_a_specialist_perc": 29.8,
+                "ppl_who_attended_a_gp_perc": 95.3
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-3a8"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 23.3,
+                "females_who_attended_a_specialist_perc": 43.4,
+                "gp_attendances_bulk_billed_perc": 72.9,
+                "lga_name": "Glen Eira (C)",
+                "lga_code": 22310,
+                "males_who_attended_a_gp_perc": 80.2,
+                "females_who_attended_a_gp_perc": 89.6,
+                "males_who_attended_a_specialist_perc": 34.8,
+                "ppl_who_attended_a_gp_perc": 85
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-3a6"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 42.8,
+                "females_who_attended_a_specialist_perc": 33.2,
+                "gp_attendances_bulk_billed_perc": 93.6,
+                "lga_name": "Greater Dandenong (C)",
+                "lga_code": 22670,
+                "males_who_attended_a_gp_perc": 91,
+                "females_who_attended_a_gp_perc": 97,
+                "males_who_attended_a_specialist_perc": 26.6,
+                "ppl_who_attended_a_gp_perc": 93.9
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-3a2"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 36.2,
+                "females_who_attended_a_specialist_perc": 37.6,
+                "gp_attendances_bulk_billed_perc": 84.8,
+                "lga_name": "Hobsons Bay (C)",
+                "lga_code": 23110,
+                "males_who_attended_a_gp_perc": 85.9,
+                "females_who_attended_a_gp_perc": 95.5,
+                "males_who_attended_a_specialist_perc": 29.3,
+                "ppl_who_attended_a_gp_perc": 90.7
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-39d"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 46.5,
+                "females_who_attended_a_specialist_perc": 35.6,
+                "gp_attendances_bulk_billed_perc": 94.9,
+                "lga_name": "Hume (C)",
+                "lga_code": 23270,
+                "males_who_attended_a_gp_perc": 92.6,
+                "females_who_attended_a_gp_perc": 98.5,
+                "males_who_attended_a_specialist_perc": 29.2,
+                "ppl_who_attended_a_gp_perc": 95.6
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-39b"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 27.2,
+                "females_who_attended_a_specialist_perc": 39,
+                "gp_attendances_bulk_billed_perc": 79.6,
+                "lga_name": "Kingston (C)",
+                "lga_code": 23430,
+                "males_who_attended_a_gp_perc": 88,
+                "females_who_attended_a_gp_perc": 95.7,
+                "males_who_attended_a_specialist_perc": 31.8,
+                "ppl_who_attended_a_gp_perc": 91.9
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-399"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 24.6,
+                "females_who_attended_a_specialist_perc": 39.7,
+                "gp_attendances_bulk_billed_perc": 83.1,
+                "lga_name": "Knox (C)",
+                "lga_code": 23670,
+                "males_who_attended_a_gp_perc": 90.9,
+                "females_who_attended_a_gp_perc": 99.5,
+                "males_who_attended_a_specialist_perc": 31.9,
+                "ppl_who_attended_a_gp_perc": 95.2
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-398"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 20.6,
+                "females_who_attended_a_specialist_perc": 42.7,
+                "gp_attendances_bulk_billed_perc": 81.1,
+                "lga_name": "Manningham (C)",
+                "lga_code": 24210,
+                "males_who_attended_a_gp_perc": 89.4,
+                "females_who_attended_a_gp_perc": 96.2,
+                "males_who_attended_a_specialist_perc": 36.8,
+                "ppl_who_attended_a_gp_perc": 92.9
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-394"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 41.9,
+                "females_who_attended_a_specialist_perc": 31.5,
+                "gp_attendances_bulk_billed_perc": 85.3,
+                "lga_name": "Maribyrnong (C)",
+                "lga_code": 24330,
+                "males_who_attended_a_gp_perc": 79.2,
+                "females_who_attended_a_gp_perc": 90.3,
+                "males_who_attended_a_specialist_perc": 24.2,
+                "ppl_who_attended_a_gp_perc": 84.6
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-392"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 21.5,
+                "females_who_attended_a_specialist_perc": 38.8,
+                "gp_attendances_bulk_billed_perc": 77.8,
+                "lga_name": "Maroondah (C)",
+                "lga_code": 24410,
+                "males_who_attended_a_gp_perc": 88.4,
+                "females_who_attended_a_gp_perc": 97.5,
+                "males_who_attended_a_specialist_perc": 31.7,
+                "ppl_who_attended_a_gp_perc": 93
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-391"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 30.3,
+                "females_who_attended_a_specialist_perc": 26.9,
+                "gp_attendances_bulk_billed_perc": 78.5,
+                "lga_name": "Melbourne (C)",
+                "lga_code": 24600,
+                "males_who_attended_a_gp_perc": 65.8,
+                "females_who_attended_a_gp_perc": 71.8,
+                "males_who_attended_a_specialist_perc": 22.8,
+                "ppl_who_attended_a_gp_perc": 68.8
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-390"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 44.7,
+                "females_who_attended_a_specialist_perc": 30.1,
+                "gp_attendances_bulk_billed_perc": 92.1,
+                "lga_name": "Melton (C)",
+                "lga_code": 24650,
+                "males_who_attended_a_gp_perc": 86.7,
+                "females_who_attended_a_gp_perc": 95.1,
+                "males_who_attended_a_specialist_perc": 24.1,
+                "ppl_who_attended_a_gp_perc": 90.9
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-38f"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 25.3,
+                "females_who_attended_a_specialist_perc": 38.6,
+                "gp_attendances_bulk_billed_perc": 81.4,
+                "lga_name": "Monash (C)",
+                "lga_code": 24970,
+                "males_who_attended_a_gp_perc": 81.5,
+                "females_who_attended_a_gp_perc": 90,
+                "males_who_attended_a_specialist_perc": 32,
+                "ppl_who_attended_a_gp_perc": 85.8
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-38b"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 29,
+                "females_who_attended_a_specialist_perc": 42.4,
+                "gp_attendances_bulk_billed_perc": 79.6,
+                "lga_name": "Moonee Valley (C)",
+                "lga_code": 25060,
+                "males_who_attended_a_gp_perc": 85.5,
+                "females_who_attended_a_gp_perc": 92.5,
+                "males_who_attended_a_specialist_perc": 35.6,
+                "ppl_who_attended_a_gp_perc": 89.1
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-38a"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 35.6,
+                "females_who_attended_a_specialist_perc": 36.4,
+                "gp_attendances_bulk_billed_perc": 86.7,
+                "lga_name": "Moreland (C)",
+                "lga_code": 25250,
+                "males_who_attended_a_gp_perc": 81.5,
+                "females_who_attended_a_gp_perc": 91.2,
+                "males_who_attended_a_specialist_perc": 28.9,
+                "ppl_who_attended_a_gp_perc": 86.4
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-388"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 22.5,
+                "females_who_attended_a_specialist_perc": 42.2,
+                "gp_attendances_bulk_billed_perc": 72.4,
+                "lga_name": "Mornington Peninsula (S)",
+                "lga_code": 25340,
+                "males_who_attended_a_gp_perc": 89.1,
+                "females_who_attended_a_gp_perc": 96.3,
+                "males_who_attended_a_specialist_perc": 36.8,
+                "ppl_who_attended_a_gp_perc": 92.8
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-387"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 22.2,
+                "females_who_attended_a_specialist_perc": 41.3,
+                "gp_attendances_bulk_billed_perc": 72.4,
+                "lga_name": "Nillumbik (S)",
+                "lga_code": 25710,
+                "males_who_attended_a_gp_perc": 89.7,
+                "females_who_attended_a_gp_perc": 99.5,
+                "males_who_attended_a_specialist_perc": 33.5,
+                "ppl_who_attended_a_gp_perc": 94.6
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-383"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 25.9,
+                "females_who_attended_a_specialist_perc": 39.7,
+                "gp_attendances_bulk_billed_perc": 68.9,
+                "lga_name": "Port Phillip (C)",
+                "lga_code": 25900,
+                "males_who_attended_a_gp_perc": 74.4,
+                "females_who_attended_a_gp_perc": 87.9,
+                "males_who_attended_a_specialist_perc": 30.1,
+                "ppl_who_attended_a_gp_perc": 81.2
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-381"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 18.9,
+                "females_who_attended_a_specialist_perc": 43.6,
+                "gp_attendances_bulk_billed_perc": 59.5,
+                "lga_name": "Stonnington (C)",
+                "lga_code": 26350,
+                "males_who_attended_a_gp_perc": 75.4,
+                "females_who_attended_a_gp_perc": 86.9,
+                "males_who_attended_a_specialist_perc": 35.2,
+                "ppl_who_attended_a_gp_perc": 81.3
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-37c"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 21.8,
+                "females_who_attended_a_specialist_perc": 40.4,
+                "gp_attendances_bulk_billed_perc": 79.7,
+                "lga_name": "Whitehorse (C)",
+                "lga_code": 26980,
+                "males_who_attended_a_gp_perc": 84.1,
+                "females_who_attended_a_gp_perc": 92.2,
+                "males_who_attended_a_specialist_perc": 33.2,
+                "ppl_who_attended_a_gp_perc": 88.3
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-373"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 45.7,
+                "females_who_attended_a_specialist_perc": 34.5,
+                "gp_attendances_bulk_billed_perc": 94.2,
+                "lga_name": "Whittlesea (C)",
+                "lga_code": 27070,
+                "males_who_attended_a_gp_perc": 85.2,
+                "females_who_attended_a_gp_perc": 92.5,
+                "males_who_attended_a_specialist_perc": 27.2,
+                "ppl_who_attended_a_gp_perc": 88.9
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-372"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 41.2,
+                "females_who_attended_a_specialist_perc": 29.1,
+                "gp_attendances_bulk_billed_perc": 94.6,
+                "lga_name": "Wyndham (C)",
+                "lga_code": 27260,
+                "males_who_attended_a_gp_perc": 85.8,
+                "females_who_attended_a_gp_perc": 93.4,
+                "males_who_attended_a_specialist_perc": 22.9,
+                "ppl_who_attended_a_gp_perc": 89.6
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-370"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 25.8,
+                "females_who_attended_a_specialist_perc": 34.4,
+                "gp_attendances_bulk_billed_perc": 74.2,
+                "lga_name": "Yarra (C)",
+                "lga_code": 27350,
+                "males_who_attended_a_gp_perc": 76.2,
+                "females_who_attended_a_gp_perc": 87.1,
+                "males_who_attended_a_specialist_perc": 27.6,
+                "ppl_who_attended_a_gp_perc": 81.7
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-36f"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "specialist_attendances_bulk_billed_perc": 25.2,
+                "females_who_attended_a_specialist_perc": 36.4,
+                "gp_attendances_bulk_billed_perc": 79.3,
+                "lga_name": "Yarra Ranges (S)",
+                "lga_code": 27450,
+                "males_who_attended_a_gp_perc": 89,
+                "females_who_attended_a_gp_perc": 97.8,
+                "males_who_attended_a_specialist_perc": 29.9,
+                "ppl_who_attended_a_gp_perc": 93.4
+            },
+            "id": "vic_govt_dhhs_lga_profiles_2015.fid-13603162_1807994e848_-36e"
+        }
+    ]
+}

@@ -1,0 +1,314 @@
+{
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Banyule (C)",
+                "gpsrv_meas": 5.7,
+                "lga2011": 20660,
+                "hs_meas": 0.0543
+            },
+            "id": "rai_services_indicators_lga_2011.156"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Bayside (C)",
+                "gpsrv_meas": 5.2,
+                "lga2011": 20910,
+                "hs_meas": 0.0107
+            },
+            "id": "rai_services_indicators_lga_2011.159"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Boroondara (C)",
+                "gpsrv_meas": 4.7,
+                "lga2011": 21110,
+                "hs_meas": 0.0093
+            },
+            "id": "rai_services_indicators_lga_2011.161"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Brimbank (C)",
+                "gpsrv_meas": 6.6,
+                "lga2011": 21180,
+                "hs_meas": 0.0097
+            },
+            "id": "rai_services_indicators_lga_2011.162"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Cardinia (S)",
+                "gpsrv_meas": 5,
+                "lga2011": 21450,
+                "hs_meas": 0.0014
+            },
+            "id": "rai_services_indicators_lga_2011.165"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Casey (C)",
+                "gpsrv_meas": 6.1,
+                "lga2011": 21610,
+                "hs_meas": 0.0057
+            },
+            "id": "rai_services_indicators_lga_2011.166"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Darebin (C)",
+                "gpsrv_meas": 6.2,
+                "lga2011": 21890,
+                "hs_meas": 0.0044
+            },
+            "id": "rai_services_indicators_lga_2011.170"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Frankston (C)",
+                "gpsrv_meas": 5.9,
+                "lga2011": 22170,
+                "hs_meas": 0.0243
+            },
+            "id": "rai_services_indicators_lga_2011.172"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Greater Dandenong (C)",
+                "gpsrv_meas": 6.8,
+                "lga2011": 22670,
+                "hs_meas": 0.0196
+            },
+            "id": "rai_services_indicators_lga_2011.178"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Hobsons Bay (C)",
+                "gpsrv_meas": 5.7,
+                "lga2011": 23110,
+                "hs_meas": 0.0039
+            },
+            "id": "rai_services_indicators_lga_2011.183"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Glen Eira (C)",
+                "gpsrv_meas": 5.5,
+                "lga2011": 22310,
+                "hs_meas": 0.0142
+            },
+            "id": "rai_services_indicators_lga_2011.174"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Hume (C)",
+                "gpsrv_meas": 6.7,
+                "lga2011": 23270,
+                "hs_meas": 0.003
+            },
+            "id": "rai_services_indicators_lga_2011.185"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Kingston (C)",
+                "gpsrv_meas": 5.7,
+                "lga2011": 23430,
+                "hs_meas": 0.0064
+            },
+            "id": "rai_services_indicators_lga_2011.187"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Knox (C)",
+                "gpsrv_meas": 5.8,
+                "lga2011": 23670,
+                "hs_meas": 0.013
+            },
+            "id": "rai_services_indicators_lga_2011.188"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Manningham (C)",
+                "gpsrv_meas": 6.1,
+                "lga2011": 24210,
+                "hs_meas": 0.0023
+            },
+            "id": "rai_services_indicators_lga_2011.192"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Maribyrnong (C)",
+                "gpsrv_meas": 5.5,
+                "lga2011": 24330,
+                "hs_meas": 0.0308
+            },
+            "id": "rai_services_indicators_lga_2011.194"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Maroondah (C)",
+                "gpsrv_meas": 5.5,
+                "lga2011": 24410,
+                "hs_meas": 0.0154
+            },
+            "id": "rai_services_indicators_lga_2011.195"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Melbourne (C)",
+                "gpsrv_meas": 3.1,
+                "lga2011": 24600,
+                "hs_meas": 0.1775
+            },
+            "id": "rai_services_indicators_lga_2011.196"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Melton (S)",
+                "gpsrv_meas": 5.5,
+                "lga2011": 24650,
+                "hs_meas": 0.0014
+            },
+            "id": "rai_services_indicators_lga_2011.197"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Monash (C)",
+                "gpsrv_meas": 5.8,
+                "lga2011": 24970,
+                "hs_meas": 0.0319
+            },
+            "id": "rai_services_indicators_lga_2011.201"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Moonee Valley (C)",
+                "gpsrv_meas": 6,
+                "lga2011": 25060,
+                "hs_meas": 0.002
+            },
+            "id": "rai_services_indicators_lga_2011.202"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Moreland (C)",
+                "gpsrv_meas": 6.3,
+                "lga2011": 25250,
+                "hs_meas": 0.0043
+            },
+            "id": "rai_services_indicators_lga_2011.204"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Mornington Peninsula (S)",
+                "gpsrv_meas": 5.2,
+                "lga2011": 25340,
+                "hs_meas": 0.009
+            },
+            "id": "rai_services_indicators_lga_2011.205"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Nillumbik (S)",
+                "gpsrv_meas": 5.1,
+                "lga2011": 25710,
+                "hs_meas": 0.0004
+            },
+            "id": "rai_services_indicators_lga_2011.209"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Port Phillip (C)",
+                "gpsrv_meas": 5.3,
+                "lga2011": 25900,
+                "hs_meas": 0.0017
+            },
+            "id": "rai_services_indicators_lga_2011.211"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Stonnington (C)",
+                "gpsrv_meas": 5,
+                "lga2011": 26350,
+                "hs_meas": 0.0247
+            },
+            "id": "rai_services_indicators_lga_2011.216"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Whitehorse (C)",
+                "gpsrv_meas": 5.7,
+                "lga2011": 26980,
+                "hs_meas": 0.025
+            },
+            "id": "rai_services_indicators_lga_2011.225"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Whittlesea (C)",
+                "gpsrv_meas": 6.3,
+                "lga2011": 27070,
+                "hs_meas": 0.0143
+            },
+            "id": "rai_services_indicators_lga_2011.226"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Wyndham (C)",
+                "gpsrv_meas": 5.1,
+                "lga2011": 27260,
+                "hs_meas": 0.0047
+            },
+            "id": "rai_services_indicators_lga_2011.228"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Yarra (C)",
+                "gpsrv_meas": 5.3,
+                "lga2011": 27350,
+                "hs_meas": 0.0782
+            },
+            "id": "rai_services_indicators_lga_2011.229"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "lga_name": "Yarra Ranges (S)",
+                "gpsrv_meas": 5,
+                "lga2011": 27450,
+                "hs_meas": 0.0021
+            },
+            "id": "rai_services_indicators_lga_2011.230"
+        }
+    ]
+}

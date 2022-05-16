@@ -1,0 +1,53 @@
+{
+  "Essential":
+  {
+    "environment_token": {
+      "API_Key": "74cVGL3te7OiS8Sy8SwU7EWSE",
+      "API_Key_Secret": "NEkmizUXiDLrPXBdiCpyKxDt3VvQJqMZjKrw4JJrbd0KuvdVwV",
+      "Access_Token": "1512643614018465792-skVsbQKIYdaSayyGU4StDavMxFImcL",
+      "Access_Token_Secret": "nrPgHRLCiHEf10FLI91xPt1e1lUf0Dfigd57oi4k4IT47",
+      "Bearer Token": "AAAAAAAAAAAAAAAAAAAAAOwtbQEAAAAAjMZCIfVOHmlyOajuao%2FgIrFhfzs%3DoErBSLntnaF80YtAhV392Sj4N9pyJQOC5oJFInlcgEihERU7jW"
+    },
+    "health_token":
+    {
+      "API_Key": "6dAGFu9ZNdVqSG4I5252RnV8I",
+      "API_Key_Secret": "tI4TE70UpNaUbHHhr7NYmzOu2rSJRnwYLIjHIbJwHR6CGit0Ha",
+      "Access_Token": "1512622970119761920-mqbXhjMf14rpFOZwpRGeUNRKQ2B4iU",
+      "Access_Token_Secret": "36UMiIx5VvbYguFHvWq3OmCoHAgXzxsKWhTZqPaLFhpV3",
+      "Bearer Token": "AAAAAAAAAAAAAAAAAAAAALUrbQEAAAAAIW%2FdGelVnwcXrT7iuKMOSuJZxKA%3DOH3e3GqwZOGMXik7dbi5iHDtl16zfrPp3kc7cnCoJNDSzylyMG"
+    },
+    "query": {
+      "environment": "(Melbourne OR \"Carlton, vic\" OR \"Docklands, vic\" OR \"Kensington, vic\" OR \"Flemington, vic\" OR \"Parkville, vic\" OR \"Southbank, vic\" OR \"South Yarra, vic\") (environment OR \"air quality\" OR \"water quality\" OR pollution OR \"plastic waste\" OR cloudy OR sunny OR rainy OR temperature OR warming OR weather) -is:retweet",
+      "health": "(Melbourne OR \"Carlton, vic\" OR \"Docklands, vic\" OR \"Kensington, vic\" OR \"Flemington, vic\" OR \"Parkville, vic\" OR \"Southbank, vic\" OR \"South Yarra, vic\") (health OR \"health care\" OR doctor OR hospital OR medicine OR medical OR gym OR diet OR fitness OR wellness) -is:retweet"
+    }
+  },
+  "Elevated":
+  {
+    "environment_token":
+    {
+      "API_Key": "7FhEOopTiZQhinEIXcSNk2DjA",
+      "API_Key_Secret": "aoL7SPibaCVQSaNekgev6z6fSYIQ9DzEaayOrb3hlfMqXrzAoz",
+      "Access_Token": "1131741593411526657-0we4qlZZ0PsB6eajmmJoxZT5p5QvLm",
+      "Access_Token_Secret": "JdnjPC3o2CjVKMYXJSdqZthzP3jpAJOjDmEa6aLxVObDR",
+      "Bearer Token": "AAAAAAAAAAAAAAAAAAAAAMaVbAEAAAAAKfLvSsFzB2P5YzH1f4WAs1jSox8%3DsPmWgDo18c7A6JMpLwBeKobCA4ixnIDYQF7tAxfCl7IJ0gGB1j"
+    },
+    "health_token":
+    {
+      "API_Key": "dZzRgASvF1yr3KQUwHCCp2zfI",
+      "API_Key_Secret": "ugA22FrzhwHDbrCnSLKGJdu99UkVusJ0ImN40F7pUAkP864rhc",
+      "Access_Token": "1514837013257920512-iWkrr94gQrthaR6krcT1JKOt35FIyE",
+      "Access_Token_Secret": "zf0tEJtKCdMfpiPFG3agwJi3Zr8KYlupYkAwu8eKKMjE2",
+      "Bearer Token": "AAAAAAAAAAAAAAAAAAAAAHcMbgEAAAAAbXuUenhaJ3LgLb6eHffMOObR%2FYE%3Dmp6TEqHtCp7LlK3r5WjGmsaHzpd3pcV9stLZyfnqAMqe5Clr9M"
+    },
+    "query": {
+      "environment": "(environment OR \"air quality\" OR \"water quality\" OR pollution OR \"plastic waste\" OR cloudy OR sunny OR rainy OR temperature OR warming OR weather) -filter:retweets",
+      "health": "(health OR \"health care\" OR doctor OR hospital OR medicine OR medical OR gym OR diet OR fitness OR wellness) -filter:retweets"
+    }
+  },
+
+  "Cookie": "guest_id=v1%3A164994173881675656; guest_id_ads=v1%3A164994173881675656; guest_id_marketing=v1%3A164994173881675656; personalization_id='v1_EmJ3RjYKb5eYSoYKirNiHQ=='",
+  "areas": ["Melbourne", "Carlton, vic", "Docklands, vic", "Kensington, vic", "Flemington, vic", "Parkville, vic", "Southbank, vic", "South Yarra, vic"],
+  "environment_keys": ["environment", "air quality", "water quality", "pollution", "plastic waste", "cloudy", "sunny", "rainy", "temperature", "warming", "weather"],
+  "health_keys": ["health", "health care", "doctor", "hospital", "medicine", "medical", "gym", "diet", "fitness", "wellness"],
+  "CouchDB": {"IP":["http://172.26.132.125:5984/","http://172.26.129.113:5984/", "http://172.26.132.132:5984/"], "username": "admin", "password": "admin"}
+}

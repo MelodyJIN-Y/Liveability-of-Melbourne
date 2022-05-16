@@ -1,0 +1,221 @@
+{
+  "type": "FeatureCollection",
+  "bbox": [
+    0,
+    0,
+    -1,
+    -1
+  ],
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "lymphoma_c81_c86_rt_ratio": 0.98,
+        "pancreas_c25_rt_ratio": 1.02,
+        "gccsa_code": "1GSYD",
+        "all_cancs_combined_rt_ratio": 0.94,
+        "lung_c33_c34_rt_ratio": 0.94,
+        "colortl_c18_c20_rt_ratio": 0.94,
+        "gccsa_name": "Greater Sydney",
+        "leukaemia_c91_c95_rt_ratio": 0.97
+      },
+      "id": "aihw_cimar_mortality_persons_gccsa_2009_13.1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "lymphoma_c81_c86_rt_ratio": 0.99,
+        "pancreas_c25_rt_ratio": 1.04,
+        "gccsa_code": "1RNSW",
+        "all_cancs_combined_rt_ratio": 1.08,
+        "lung_c33_c34_rt_ratio": 1.12,
+        "colortl_c18_c20_rt_ratio": 0.98,
+        "gccsa_name": "Rest of NSW",
+        "leukaemia_c91_c95_rt_ratio": 0.96
+      },
+      "id": "aihw_cimar_mortality_persons_gccsa_2009_13.2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "lymphoma_c81_c86_rt_ratio": 1.01,
+        "pancreas_c25_rt_ratio": 1.01,
+        "gccsa_code": "2GMEL",
+        "all_cancs_combined_rt_ratio": 0.94,
+        "lung_c33_c34_rt_ratio": 0.89,
+        "colortl_c18_c20_rt_ratio": 1.01,
+        "gccsa_name": "Greater Melbourne",
+        "leukaemia_c91_c95_rt_ratio": 1
+      },
+      "id": "aihw_cimar_mortality_persons_gccsa_2009_13.3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "lymphoma_c81_c86_rt_ratio": 1.11,
+        "pancreas_c25_rt_ratio": 1.05,
+        "gccsa_code": "2RVIC",
+        "all_cancs_combined_rt_ratio": 1.09,
+        "lung_c33_c34_rt_ratio": 1.04,
+        "colortl_c18_c20_rt_ratio": 1.17,
+        "gccsa_name": "Rest of Vic",
+        "leukaemia_c91_c95_rt_ratio": 1.01
+      },
+      "id": "aihw_cimar_mortality_persons_gccsa_2009_13.4"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "lymphoma_c81_c86_rt_ratio": 0.86,
+        "pancreas_c25_rt_ratio": 0.95,
+        "gccsa_code": "3GBRI",
+        "all_cancs_combined_rt_ratio": 1.02,
+        "lung_c33_c34_rt_ratio": 1.02,
+        "colortl_c18_c20_rt_ratio": 1.11,
+        "gccsa_name": "Greater Brisbane",
+        "leukaemia_c91_c95_rt_ratio": 1.08
+      },
+      "id": "aihw_cimar_mortality_persons_gccsa_2009_13.5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "lymphoma_c81_c86_rt_ratio": 0.92,
+        "pancreas_c25_rt_ratio": 0.94,
+        "gccsa_code": "3RQLD",
+        "all_cancs_combined_rt_ratio": 1.04,
+        "lung_c33_c34_rt_ratio": 1.08,
+        "colortl_c18_c20_rt_ratio": 1.01,
+        "gccsa_name": "Rest of Qld",
+        "leukaemia_c91_c95_rt_ratio": 1.05
+      },
+      "id": "aihw_cimar_mortality_persons_gccsa_2009_13.6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "lymphoma_c81_c86_rt_ratio": 1.19,
+        "pancreas_c25_rt_ratio": 0.98,
+        "gccsa_code": "4GADE",
+        "all_cancs_combined_rt_ratio": 0.97,
+        "lung_c33_c34_rt_ratio": 0.99,
+        "colortl_c18_c20_rt_ratio": 1.02,
+        "gccsa_name": "Greater Adelaide",
+        "leukaemia_c91_c95_rt_ratio": 0.97
+      },
+      "id": "aihw_cimar_mortality_persons_gccsa_2009_13.7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "lymphoma_c81_c86_rt_ratio": 0.98,
+        "pancreas_c25_rt_ratio": 0.97,
+        "gccsa_code": "4RSAU",
+        "all_cancs_combined_rt_ratio": 1.02,
+        "lung_c33_c34_rt_ratio": 0.92,
+        "colortl_c18_c20_rt_ratio": 1.02,
+        "gccsa_name": "Rest of SA",
+        "leukaemia_c91_c95_rt_ratio": 1.18
+      },
+      "id": "aihw_cimar_mortality_persons_gccsa_2009_13.8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "lymphoma_c81_c86_rt_ratio": 0.99,
+        "pancreas_c25_rt_ratio": 0.97,
+        "gccsa_code": "5GPER",
+        "all_cancs_combined_rt_ratio": 0.96,
+        "lung_c33_c34_rt_ratio": 1,
+        "colortl_c18_c20_rt_ratio": 0.86,
+        "gccsa_name": "Greater Perth",
+        "leukaemia_c91_c95_rt_ratio": 0.97
+      },
+      "id": "aihw_cimar_mortality_persons_gccsa_2009_13.9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "lymphoma_c81_c86_rt_ratio": 0.9,
+        "pancreas_c25_rt_ratio": 0.95,
+        "gccsa_code": "5RWAU",
+        "all_cancs_combined_rt_ratio": 1.01,
+        "lung_c33_c34_rt_ratio": 1.09,
+        "colortl_c18_c20_rt_ratio": 0.8,
+        "gccsa_name": "Rest of WA",
+        "leukaemia_c91_c95_rt_ratio": 0.97
+      },
+      "id": "aihw_cimar_mortality_persons_gccsa_2009_13.10"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "lymphoma_c81_c86_rt_ratio": 1.14,
+        "pancreas_c25_rt_ratio": 1.02,
+        "gccsa_code": "6GHOB",
+        "all_cancs_combined_rt_ratio": 1.07,
+        "lung_c33_c34_rt_ratio": 1,
+        "colortl_c18_c20_rt_ratio": 1.24,
+        "gccsa_name": "Greater Hobart",
+        "leukaemia_c91_c95_rt_ratio": 1
+      },
+      "id": "aihw_cimar_mortality_persons_gccsa_2009_13.11"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "lymphoma_c81_c86_rt_ratio": 1.15,
+        "pancreas_c25_rt_ratio": 1.16,
+        "gccsa_code": "6RTAS",
+        "all_cancs_combined_rt_ratio": 1.13,
+        "lung_c33_c34_rt_ratio": 1.18,
+        "colortl_c18_c20_rt_ratio": 1.12,
+        "gccsa_name": "Rest of Tas",
+        "leukaemia_c91_c95_rt_ratio": 0.94
+      },
+      "id": "aihw_cimar_mortality_persons_gccsa_2009_13.12"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "lymphoma_c81_c86_rt_ratio": 0.94,
+        "pancreas_c25_rt_ratio": 0.82,
+        "gccsa_code": "7GDAR",
+        "all_cancs_combined_rt_ratio": 1.24,
+        "lung_c33_c34_rt_ratio": 1.39,
+        "colortl_c18_c20_rt_ratio": 1.39,
+        "gccsa_name": "Greater Darwin",
+        "leukaemia_c91_c95_rt_ratio": 1.16
+      },
+      "id": "aihw_cimar_mortality_persons_gccsa_2009_13.13"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "lymphoma_c81_c86_rt_ratio": null,
+        "pancreas_c25_rt_ratio": 0.96,
+        "gccsa_code": "7RNTE",
+        "all_cancs_combined_rt_ratio": 1.21,
+        "lung_c33_c34_rt_ratio": 1.6,
+        "colortl_c18_c20_rt_ratio": 0.82,
+        "gccsa_name": "Rest of NT",
+        "leukaemia_c91_c95_rt_ratio": null
+      },
+      "id": "aihw_cimar_mortality_persons_gccsa_2009_13.14"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "lymphoma_c81_c86_rt_ratio": 0.89,
+        "pancreas_c25_rt_ratio": 0.89,
+        "gccsa_code": "8ACTE",
+        "all_cancs_combined_rt_ratio": 0.88,
+        "lung_c33_c34_rt_ratio": 0.72,
+        "colortl_c18_c20_rt_ratio": 1,
+        "gccsa_name": "Australian Capital Territory",
+        "leukaemia_c91_c95_rt_ratio": 0.8
+      },
+      "id": "aihw_cimar_mortality_persons_gccsa_2009_13.15"
+    }
+  ]
+}

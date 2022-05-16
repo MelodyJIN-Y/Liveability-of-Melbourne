@@ -1,0 +1,6 @@
+couchdb
+nltk
+wordcloud
+apscheduler
+datetime
+pandas

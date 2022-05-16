@@ -1,0 +1,15 @@
+# -----------------------------------------------
+# Author        = Xinyi Jin (Melody)
+# Date          = 2022-05-01 17:12
+# Description   = docker-compose file for Aurin data
+# Version       = 2022/5/1   
+# -----------------------------------------------
+
+version: '3'
+services:
+  aurin:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/sentiment

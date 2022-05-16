@@ -1,0 +1,11 @@
+FROM python:3.8.6
+
+ADD ./ /twitter_live_essential
+
+WORKDIR /twitter_live_essential
+
+RUN pip install --upgrade pip
+
+RUN pip install -r requirements.txt
+
+CMD ["python","EssentialAPI_process_search+stream.py"]
