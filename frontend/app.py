@@ -43,7 +43,7 @@ def env():
     day_list_text = get_data("environment_tweets_text", "_design/weekday/_view/weekday_or_weekend?group_level=1")
 
     day_total_dict = concat_lists_of_dicts(day_list_text, day_list_coord)
-    print(day_total_dict)
+    # print(day_total_dict)
     # day_total_list = [{'key': key, 'value': day_total_dict[key]} for key in day_total_dict]
     day_labels = list(day_total_dict.keys())
     day_values = [day_total_dict[key] for key in day_labels]
@@ -53,7 +53,7 @@ def env():
     each_day_text = get_data('environment_tweets_text', '_design/weekday/_view/each_day?group_level=1')
     # merge lists
     each_day_total = concat_lists_of_dicts(each_day_text, each_day_coord)
-    print(each_day_total)
+    # print(each_day_total)
     # order keys for chart drawing
     day_order = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     sorted_each_day = {}
@@ -106,7 +106,7 @@ def env():
     simple_date = []
     for day in date_range:
         simple_date.append(day.strftime("%Y-%m-%d"))
-    print(simple_date)
+    # print(simple_date)
 
 
     return render_template('environment.html', lang_json = json.dumps(lang_total_list), lang_labels = json.dumps(lang_labels), lang_values = json.dumps(lang_values),
@@ -143,7 +143,7 @@ def health():
     each_day_text = get_data("health_tweets_text", "_design/weekday/_view/each_day?group_level=1")
 
     each_day_total = concat_lists_of_dicts(each_day_text, each_day_coord)
-    print(each_day_total)
+    # print(each_day_total)
     # order keys for chart drawing
     day_order = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     sorted_each_day = {}
@@ -292,11 +292,11 @@ def scenario1():
     weather_climate_data = get_data("environment_aurin_weather_climate", "_all_docs?include_docs=true")
     pos_data = get_data('environment_tweets_text_sentiment', '_design/label_date/_view/positive?group_level=1')
     pos = []
-    print(pos_data)
+    # print(pos_data)
     for i in pos_data:
         if (i['key'] >= '2022-03-08' and i['key'] <= '2022-04-30'):
             pos.append(i)
-    print(pos)
+    # print(pos)
     
     return render_template('env_rel.html', weather_climate_json = weather_climate_data, pos_data = pos)
 
