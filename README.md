@@ -43,13 +43,29 @@ YouTube videos: https://www.youtube.com/playlist?list=PLhue6Y7TCUD3a12XNekhmNJNR
 
 ### Team members: 
 * [Xinyi Jin (Melody)](https://www.linkedin.com/in/melody-jin/)
-
+  * design the system and the role of each instance 
+  * set up the couchDB cluster 
+  * deploy the back-end and front-end application with Ansible and docker 
+  * perform sentimental analysis for the tweets 
+  * find related environment data from AURIN and BOM
+  * contribute to report writing and video recording 
 * [Yan Ying (Eliza)](https://www.linkedin.com/in/yan-ying-602848218/)
- 
+  * design overall structure of Twitter harvesting
+  * build the four Twitter harvesters
+  * store processed tweets and AURIN datasets in CouchDB
+  * design the structures of databases in CouchDB
+  * perform sentimental analysis for the tweets
+  * contribute to report writing and video recording 
 * [Xinhao Hao (Budd)](https://www.linkedin.com/in/xinhao-hao-3a199b23a/)
-
+  * front end design and implementation
+  * Twitter data visualisation
+  * scenario 3 and 4
+  * prepare the live presentation 
+  * contribute to report writing and video recording
 * [Liqin Zhang](https://www.linkedin.com/in/liqin-zhang-1480ba1a2)
-
+  * find appropriate data from AURIN to work on
+  * visualisation on the AURIN and other data
+  * contribute to report writing and video recording 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
