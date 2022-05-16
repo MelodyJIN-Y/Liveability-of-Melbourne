@@ -44,11 +44,11 @@ YouTube videos: https://www.youtube.com/playlist?list=PLhue6Y7TCUD3a12XNekhmNJNR
 ### Team members: 
 * Xinyi Jin (Melody)  [![LinkedIn][linkedin-shield]][linkedin-url-Melody]
 
-* [Yan Ying (Eliza)](yying4@student.unimelb.edu.au)
+* Yan Ying (Eliza)  [![LinkedIn][linkedin-shield]][linkedin-url-Eliza]
  
-* [Xinhao Hao (Budd)](xinhaoh1@student.unimelb.edu.au)
+* Xinhao Hao (Budd) [![LinkedIn][linkedin-shield]][linkedin-url-Budd]
 
-* [Liqin Zhang](liqizhang@student.unimelb.edu.au)
+* Liqin Zhang  [![LinkedIn][linkedin-shield]][linkedin-url-liqin]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -180,5 +180,8 @@ Project Link: [https://github.com/MelodyJIN-Y/Liveability-of-Melbourne](https://
 [license-url]: https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url-Melody]: https://www.linkedin.com/in/melody-jin/
+[linkedin-url-Eliza]: linkedin.com/in/yan-ying-602848218
+[linkedin-url-Budd]: https://www.linkedin.com/in/xinhao-hao-3a199b23a/
+[linkedin-url-Liqin]: www.linkedin.com/in/liqin-zhang-1480ba1a2
 [video-shield]: https://img.shields.io/youtube/channel/views/UCLdeGdBHXeT1GqU83WmMy0w?style=social
 [product-screenshot]: images/webpage.png
