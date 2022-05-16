@@ -19,7 +19,7 @@
 -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
-[![MIT License][license-shield]][license-url]
+[![GNU License][license-shield]][license-url]
 
 
 
