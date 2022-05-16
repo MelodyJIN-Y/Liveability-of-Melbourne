@@ -92,9 +92,9 @@ This is an example of how to list things you need to use the software and how to
   list your twitter developer account tokens and named it as . See the format in `.json`
 * MRC access 
   
-    * download the cloud file and named it as `clouds.yaml`. Put the file to `host_vars`. This file will be used by OpenStack tools as a source of configuration on how to connect to a cloud. See the example in `clouds-example.yaml`
+    * download the related cloud file and rename it as `clouds.yaml`. Put the file to `host_vars`. This file will be used by OpenStack tools as a source of configuration on how to connect to a cloud. See the example in `clouds-example.yaml`
   
-    * get the openRC file for the project. For example, we are group 18 and our file is called `unimelb-COMP90024-2022-grp-18-openrc.sh`
+    * get the OpenStack RC file for the project. For example, we are group 18 and our file is called `unimelb-COMP90024-2022-grp-18-openrc.sh`
 
 ### Installation
 
@@ -125,28 +125,28 @@ We also provide a step-by-step version to deploy the system for testing and illu
       realted playbook: `s1-create-instances.yaml`
     
       ```sh
-      ./s1-run.sh
+      ./example-s1-run.sh
       ```
   2. set up CouchDB and CouchDB cluster  
       
       realted playbook: `s2-setup-couchdb.yaml`
     
       ```sh
-      ./s2-run.sh
+      ./example-s2-run.sh
       ```
   3. deploy backend applications  
       
       realted playbook: `s3-deploy-backend.yaml`
     
       ```sh
-      ./s3-run.sh
+      ./example-s3-run.sh
       ```
   4. deploy front-end applications  
       
       realted playbook: `s4-deploy-frontend.yaml`
     
       ```sh
-      ./s4-run.sh
+      ./example-s4-run.sh
       ```
 ### Back-end
 Functionalities of back-end multiprocessing programs are to to collect tweets, transmit AURIN data, and do sentiment analysis concurrently. Thus, under the "back-end" folder, there are three separate folders consist of their corresponding programs. Within each folder, execution can starts by using "python" command on the main program. The following commands show how to run main functions. Since the overall design of the back-end system is complexed, some more details are described in another [README.md](https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/blob/main/backend/README.md) file under the "backend" folder.
