@@ -152,7 +152,7 @@ We also provide a step-by-step version to deploy the system for testing and illu
 
 ### Front-end 
 
-With Cisco connected, you can access the front end by visiting one of the following links:<br>
+With **Cisco connected**, you can access the front end by visiting one of the following links:<br>
 * [172.26.129.113](172.26.129.113)<br>
 * [172.26.132.132](172.26.132.132)<br>
 
