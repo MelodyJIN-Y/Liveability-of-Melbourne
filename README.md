@@ -37,9 +37,6 @@
     <br />
     <a href="https://github.com/MelodyJIN-Y/Liveability-of-Melbourne">View Demo</a>
     ·
-    <a href="https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/MelodyJIN-Y/Liveability-of-Melbourne/issues">Request Feature</a>
   </p>
 </div>
 
