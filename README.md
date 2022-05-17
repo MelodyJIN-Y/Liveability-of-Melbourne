@@ -22,15 +22,11 @@
 [![GNU License][license-shield]][license-url]
 
 
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
 <h1 align="center">The Liveability of Melbourne </h1>
-  <p align="center">
-    <br />
-    <a href="https://github.com/MelodyJIN-Y/Liveability-of-Melbourne">View Demo</a>  
-  </p>
+
 </div>
 
 <!-- ABOUT THE PROJECT -->
