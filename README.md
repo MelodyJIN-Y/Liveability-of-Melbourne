@@ -18,8 +18,6 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![GNU License][license-shield]][license-url]
 
 
 <!-- PROJECT LOGO -->
